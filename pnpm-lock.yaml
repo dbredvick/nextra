@@ -93,7 +93,7 @@ importers:
       date-fns: ^2.26.0
       form-data: ^4.0.0
       gray-matter: ^4.0.2
-      next: ^12.2.5
+      next: ^12.2.4
       nextra: workspace:*
       nextra-theme-blog: workspace:*
       react: ^18.2.0
