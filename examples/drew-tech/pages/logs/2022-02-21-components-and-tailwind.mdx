@@ -1,0 +1,39 @@
+---
+title: '44/1000 — Components and Tailwind'
+date: 2022-02-21
+tag: log, script-cron
+description: One of the most critical steps for building with TailwindCSS is to lean into component-driven development.
+---
+
+# 44/1000 — Components and Tailwind
+
+One of the most critical steps for building with TailwindCSS is to lean into component-driven development.
+
+Lots of folks make the argument that "Tailwind results in too much duplication of code."
+
+The fix here, at least in JS framework development, is to **lean into componentization**.
+
+![componentization-tailwind-react-next](/images/componentization-tailwind-react-next.png)
+
+In this case, I've created a wrapper `<Layout>` component that wraps the entire application when the visitor is logged in.
+
+```jsx
+function CustomApp({ Component, pageProps, router }: AppProps) {
+  return (
+    <Provider value={client}>
+      <Layout path={router.pathname}>
+        <Component {...pageProps} />
+        <Toaster position="top-center" />
+      </Layout>
+    </Provider>
+  )
+}
+```
+
+The `<Layout>` component properly renders the layout type based on which path the user is on.
+
+Now, I'm able to create individual pages more quickly and have cut down on some of that duplicate code.
+
+### 🏎 Performance note
+
+Your `<Layout>` component might not be tree-shaken since the layouts are determined by each route. If you've got heavy dependencies in your layouts, consider wrapping each Next.js page individually rather than at the `_app.tsx` level.

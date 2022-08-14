@@ -1,0 +1,155 @@
+---
+title: On good tech debt
+created: May 17, 2021 2:00 PM
+date: 2021/5/17
+featured: true
+tag: building-products, tech-decisions
+tweet: 1383822225871052808
+description: There's good debt and bad debt. Here's a look at technical debt through a financial lens. Believe it or not, some technical debt is good.
+author: Drew Bredvick
+---
+
+import TweetEmbed from 'react-tweet-embed'
+import OGImage from '../../components/OGImage'
+
+<OGImage
+  title="On good tech debt"
+  image="https://uxwing.com/wp-content/themes/uxwing/download/16-banking-finance/debt.svg"
+/>
+
+# On good tech debt
+
+Buying a home — AKA creating a massive list of homes you're interested in, going to open houses, clicking through virtual Zillow tours, narrowing it down to two homes, and then losing to all-cash offers that were over asking price.
+
+That's the process my wife and I went through last year. We're all fighting over these homes for the right to pay a bank 3%+ interest on massive debt. **Why?** For starters, everyone needs a place to live. [Home demand soared](https://www.jchs.harvard.edu/blog/extraordinary-and-unexpected-pandemic-increase-house-prices-causes-and-implications) during the pandemic as we quarantined in our apartment while cheap interest rates fueled the increase.
+
+We're not going to talk about homes in this post, but rather debt. Specifically, we'll look at tech debt and compare it to other types of more familiar debt.
+
+import Image from 'next/image'
+import homeImage from '/public/images/5A5C44EB-ABF0-4DF9-91B6-28F8094ADF3F.jpeg'
+
+<Image src={homeImage} placeholder="blur" alt="My home under construction" />
+
+We decided to build after getting outbid so many times.
+
+## Going against my instincts
+
+Debt generally feels bad. When we signed our names on the dotted line agreeing to pay back a massive amount of money over the next 30 years, I cringed.
+
+My instincts are to avoid debt at all costs. But our instincts aren't always right.
+
+I'm realizing the same thing while transitioning my side projects to be **more business, less project.** This means getting out of my developer mindset and into my entrepreneur mindset, _which can be_ _really tough._
+
+I tweeted a list of things that were hardest for me, and a software engineer replied to my first bullet, "tech debt is good."
+
+<TweetEmbed id="1383822225871052808" />
+
+I think this point is worth expanding on, as my instinct is to side with Rodrigo here.
+
+Just like regular debt, **tech debt feels bad.** But as I mentioned earlier, not all debt is created equal.
+
+There are two categories of debt:
+
+1. Good debt
+2. Bad debt
+
+Good debt can help you, bad debt generally hurts you. This article from Investopedia titled [Good Debt vs. Bad Debt](https://www.investopedia.com/articles/pf/12/good-debt-bad-debt.asp) talks about some of the nuances, but their summary is perfect for this discussion:
+
+**Good debt** has the potential to increase your net worth or improve your quality of life. **Bad debt** involves borrowing money to purchase rapidly depreciating assets or only for consumption. Determining whether a debt is good or bad sometimes **depends on an individual's financial situation**, including how much they can afford to lose. — [Good Debt vs. Bad Debt](https://www.investopedia.com/articles/pf/12/good-debt-bad-debt.asp)
+
+So how do we decide if something is "good debt"? Well it's a little tricky. Let's look into a mortgage as an example.
+
+## Is a mortgage good debt?
+
+The general answer is yes, but there are lots of qualifying factors to that yes.
+
+And if debt is scary, why use a mortgage at all?
+
+To start, it would take a very long time to save enough cash to buy a home. [According to Zillow](https://www.zillow.com/travis-county-tx/home-values/), the typical home in Travis County (Austin, TX) goes for **$506,074.** I'd have to skip out on quite a few lattes to save that much money.
+
+Debt is simply a financial tool to move up your future earnings to the present moment with a slight fee. If you can afford the fees and you're using the debt to pay for an asset, it's likely considered good debt.
+
+Questions to figure out if a loan is good debt:
+
+- Am I going to be able to repay this loan?
+- Will this strain my finances?
+- Do I already have lots of other debt?
+- Am I going to stay in this house for 3-5 years or more?
+- What's my credit score?
+- Is this a depreciating asset (car, clothing, computer)?
+
+Many financial advisers will tell you that the amount you can spend on a house should be guided by your debt-to-income ratio (DTI).
+
+Use this calculator from NerdWallet as a good starting point:
+
+[How Much House Can I Afford? | NerdWallet | Affordability Calculator](https://www.nerdwallet.com/mortgages/how-much-house-can-i-afford/calculate-affordability)
+
+If you're within your budget, have a good credit score, and plan not to move for a while, there's a chance buying a home is a great investment for you. This would be considered good debt.
+
+What would be considered bad debt? "Buying more house than you can afford" speaks to exactly that. If you're stretching your debt-to-income ratio, creating monthly payments that are too high, or paying insane interest rates, buying a home can be considered bad debt.
+
+## So what about tech debt?
+
+Tech debt is simply a subset of regular debt, but instead of borrowing from our future earnings, we're borrowing from our future dev time.
+
+<TweetEmbed id="1383891477382668289" />
+
+Good tech debt can be a tool to save money, time, and effort. I've [previously written about](/posts/how-i-pick-my-tech-stack-for-side-projects#businesses) how only 30% of incorporated businesses make it to the 10-year mark and barely over half make it to five years.
+
+import chartImage from '/public/images/bdm_chart3.png'
+
+<Image
+  src={chartImage}
+  placeholder="blur"
+  alt="Charge of business failure over time."
+/>
+
+If businesses are only making it this far, how long do you think the feature you're about to code will last? If it's a greenfield project, what are the odds the project finds product-market fit?
+
+We're talking about the decisions that live in quadrant one of Martin Fowler's [Technical Debt Quadrant](https://martinfowler.com/bliki/TechnicalDebtQuadrant.html) — deliberate and prudent debt. Because we need feedback from the market, we need to ship. Like I said earlier, **you are likely not your target customer**. De-risking your project as quickly as possible. Don't worry about having the cleanest code. Why? You might throw it all away.
+
+import techDebtImage from '/public/images/techDebtQuadrant.png'
+
+<Image
+  src={techDebtImage}
+  placeholder="blur"
+  alt="Charge of tech debt quadrants."
+/>
+
+Deliberate and prudent technical debt is most likely "good tech debt". Deliberate and reckless technical debt can end up being good, but is more of a gamble.
+
+## Throwing away code
+
+I've worked at several companies where entire codebases have been thrown away, complete projects killed, and entire departments laid off. This is the reality for most projects. Very few businesses make it to the [default alive](http://www.paulgraham.com/aord.html) state.
+
+Business is a lot like [batting in baseball](<https://en.wikipedia.org/wiki/Batting_average_(baseball)#:~:text=In%20modern%20times%2C%20a%20season,400%20a%20nearly%20unachievable%20goal.>), **winning one out of three times is considered phenomenal**.
+
+Assume one in three features/projects sticks around. Does that change how you think about tech debt?
+
+**Instead of being scared of tech debt, think of it as a tool to borrow from your future dev time.** If your business or project succeeds, great. You should be able to pay down the loan. If it fails? Throw away the code and know you saved yourself time and frustration.
+
+If you do succeed and your project lives, you will have more experience, there will be fewer unknown variables, and you'll be better equipped to solve the technical challenges ahead of you.
+
+If you take a shortcut, and the project fails due to non-technical reasons, was it a shortcut?
+
+### So what's the takeaway?
+
+So go forth and write scrappy code in your new projects (you'll be able to get rid of it later if your project is still around).
+
+### Disclaimer
+
+This is not permission to add tech debt in proven business units. There is **bad tech debt**, and it largely looks like bad financial debt. It will slow you down, stop you from hitting your goals, and weigh on your motivation. **Pay down this debt aggressively, the same way you'd aggressively pay down credit card debt.**
+
+---
+
+### Related links
+
+- [U.S. Bureau of Labor Statistics data](https://www.bls.gov/bdm/entrepreneurship/bdm_chart3.htm)
+- I previously wrote [How I Pick My Tech Stack for Side Projects](/posts/how-i-pick-my-tech-stack-for-side-projects)
+- [House calculator from NerdWallet](https://www.nerdwallet.com/mortgages/how-much-house-can-i-afford?)
+- [Good Debt vs. Bad Debt](https://www.investopedia.com/articles/pf/12/good-debt-bad-debt.asp)
+- Martin Fowler's [Technical Debt Quadrant](https://martinfowler.com/bliki/TechnicalDebtQuadrant.html)
+
+### Appears in
+
+- [Issue 8 of Drew's Journal](https://signup.drew.tech/posts/is-there-good-tech-debt-issue-8)

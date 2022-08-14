@@ -1,0 +1,164 @@
+---
+type: page
+title: About
+date: 2021-03-19
+---
+
+<h1>Drew Bredvick</h1>
+
+Hey there 👋
+
+My name is Drew – I'm making the web faster at ▲[Vercel](/posts/vercel) while [bootstrapping SaaS](/posts/bootstrap-1000) on the side.
+
+I'm building [TrySlater.com](https://tryslater.com), the best way to create cron jobs for serverless apps.
+
+I write about web dev, startups, and Next.js. See my back catalog of posts [here](/posts).
+
+## Tools I've built
+
+- [FitVitals.dev](http://fitvitals.dev) — Check your website performance using Core Web Vitals
+- [PlzDM.me](http://plzdm.me) — Superpowers for your Twitter DMs
+- [BeeSocial.io](https://beesocial.io) — Automate social media follow up after Zoom calls
+- [TrySlater.com](https://tryslater.com) — Built-in scheduling in Next.js (cron jobs)
+
+## My featured writing
+
+- [Why Next.js?](/posts/why-nextjs) — Next.js is my default choice when starting a new project, big or small. Here's why I think you should use it.
+- [Ecom manifesto](/posts/ecom-manifesto) — Ecommerce is hard. Here's a path to making it easier, at least technically.
+- [On good tech debt](/posts/on-good-tech-debt) — There’s good debt and bad debt. Here's a look at technical debt through a financial lens.
+- [The stair-step approach for profitable side projects](/posts/bootstrap-1000) — I'm starting a challenge to bootstrap my way to financial freedom in 1000 days of effort.
+
+## Uses
+
+My current tech stack is:
+
+- Next.js
+- Vercel
+- TailwindCSS & UI
+- NextAuth
+- tRPC
+- Prisma
+- Planetscale
+
+---
+
+<div>
+  <div
+    style={{
+      display: 'block',
+      border: '.5px solid #bfdbfe',
+      padding: '12px',
+      borderRadius: '4px',
+      marginTop: '12px'
+    }}
+  >
+    <h3  style={{ margin: '0px', marginBottom: '4px', padding: '0px' }}>
+      Interested in reading more?
+    </h3>
+    <p style={{ margin: '0px', padding: '0px', marginBottom: '16px' }}>
+      Get each post sent to your inbox about once or twice a month.
+    </p>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault()
+        fetch('/api/subscribe', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            email: e.target.email.value
+          })
+        }).then(async (res) => {
+          if (res.status === 200) {
+            alert(
+              'Thanks for subscribing! Check your email for a confirmation email.'
+            )
+            e.target.email.value = ''
+          } else {
+            const data = await res.json()
+            alert(data.message)
+          }
+        })
+      }}
+      style={{ position: 'relative' }}
+    >
+      <input
+        name="email"
+        placeholder="hey@drew.tech"
+        className=""
+        style={{
+          border: '1px solid #e5e7eb',
+          padding: '0.4rem',
+          width: '50%',
+          borderRadius: '4px',
+          width: '100%'
+        }}
+        type="email"
+      />
+      <button
+        type="submit"
+        className="text-gray-400
+                hover:text-gray-500
+                dark:text-gray-300
+                dark:hover:text-gray-200
+                bg-gray-200
+                hover:bg-gray-300
+                dark:bg-gray-600
+                dark:hover:bg-gray-700"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyItems: 'center',
+          position: 'absolute',
+          right: 6,
+          top: 6,
+          paddingTop: '6px',
+          paddingRight: '12px',
+          paddingBottom: '6px',
+          paddingLeft: '12px',
+          fontWeight: 'bold',
+          height: '2rem',
+          borderRadius: '4px'
+        }}
+      >
+        Subscribe
+      </button>
+    </form>
+    <div >
+      <a href="https://signup.drew.tech/" className="
+                select-none
+                transition-colors
+                text-sm
+                text-gray-400
+                hover:text-gray-500
+                dark:text-gray-300
+                dark:hover:text-gray-200
+                bg-gray-200
+                hover:bg-gray-300
+                dark:bg-gray-600
+                dark:hover:bg-gray-700
+              " target="_blank">
+        Read the latest issue
+      </a>
+    </div>
+  </div>
+
+  <div>
+    <a
+      href="https://twitter.com/dbredvick"
+      className="umami--click--twitter-link"
+    >
+      Twitter
+    </a>
+    <a
+      className="umami--click--github-link"
+      href="https://github.com/dbredvick"
+    >
+      GitHub
+    </a>
+    <a className="umami--click--email-link" href="mailto:hey@drew.tech">
+      hey@drew.tech
+    </a>
+  </div>
+</div>

@@ -1,0 +1,89 @@
+---
+title: Sales engineering problems
+created: November 20, 2021 5:24 PM
+tag: building-products, software-as-a-service, tech-decisions
+date: 2021/11/20
+description: A runing list of all the sales engineering problems I have encountered and potential solutions.
+author: Drew Bredvick
+---
+
+import TweetEmbed from 'react-tweet-embed'
+
+import OGImage from '../../components/OGImage'
+
+<OGImage />
+
+# Sales engineering problems
+
+As part of the [Bootstrap 1000 Challenge](/posts/bootstrap-1000), I'll be building a new product each quarter.
+
+A few product requirements for the challenge:
+
+- I must be a memeber of the target audience
+- focus on a level one stair step business (one-time sale, plugin, extension, etc)
+
+That's led me to looking into problems I have at my day job as a sales engineer at Vercel.
+
+I joined [Vercel](/posts/vercel) several months ago as a Sales Engineer. I love helping people build their Next.js applications and scale them with ease.
+
+What's been really surprising to me is the total lack of tooling for folks in the Sales Engineering role.
+
+<TweetEmbed id="1461903505279512580" />
+
+## Problem one: connecting with customers
+
+Because I'm hopping on calls with new customers very frequently, it's hard to keep track of all of the people I've met. Ideally, I'd be able to automatically conenct to folks on Twitter and LinkedIn.
+
+My ideal flow is:
+
+1. Join Zoom call
+2. As participants join the meeting, add them to a list
+3. The meeting ends
+4. Slack me a list of all participants, their emails, and their Twitter/LinkedIn handles
+5. (optional) automatically follow all participants to connect on Twitter/LinkedIn
+
+I've looked into a lot of the existing Zoom apps, but none of them are great for this purpose.
+
+I've even tried to set up a Zapier automation, but there's no way to get a list of all Zoom participants at the end of the meeting.
+
+### The MVP
+
+There are a few things I need to build:
+
+1. an integration with Zoom so I can call [their API](https://marketplace.zoom.us/docs/api-reference/zoom-api/meetings/pastmeetingdetails)
+2. a webhook that can handle Zoom meeting end [event subscription](https://marketplace.zoom.us/docs/api-reference/webhook-reference)
+3. a Next.js application as the UI for listing out people I've met with using [TailwindUI](http://tailwindui.com/)
+
+## Problem two: sharing code snippets
+
+Our team has a bunch of code snippets that we want to share with our customers. These snippets are hard to keep track of, largely because a full repository is not often needed.
+
+I'd love to have organizational-level snippets that the whole team can keep up to date & share.
+
+### The MVP
+
+To build:
+
+1. A basic CRUD Next.js app for storing snippets
+2. The abillity to share snippets with team members
+3. The ability to share snippets with customers
+
+## Problem three: knowledge base
+
+Our team asks and answers questions quite frequently in Slack. Those answers often get lost in Slack and are hard to keep track of.
+
+A lot of these questions could be pulled out of Slack and into a database.
+
+### The MVP
+
+To build:
+
+1. A basic CRUD app for storing questions
+2. A Next.js application for viewing questions and answers
+3. A Slack bot that can pull in threads where sales engineers have asked questions or answered them
+
+## Being a member of my audience
+
+It's been great brainstorming these ideas. Honestly, it wasn't a ton of work. And I think that's the point. The point is that by serving yourself (especially at your day job), finding a problem to solve is easier.
+
+I'm not sure which of these problems I'm going to tackle first. My next step will be to ask my coworkers about these problems & see if they've come up with any workarounds.

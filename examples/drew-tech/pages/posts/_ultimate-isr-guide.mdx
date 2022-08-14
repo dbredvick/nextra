@@ -1,0 +1,173 @@
+---
+title: The ultimate ISR guide
+created: December 21, 2021 8:19 PM
+tag: vercel, next.js
+date: 2021/12/21
+description: Incremental Static Regeneration can be tricky. Let's dig into why it exists and how you can configure it in your app.
+author: Drew Bredvick
+---
+
+import Image from 'next/image'
+import regenerationSource from '../../public/images/regeneration.png'
+
+# The ultimate ISR guide
+
+## An overview of ISR
+
+First, what the heck is ISR? Incremental Static Regeneration (ISR for short) is a Next.js feature that gives you more flexibility than traditional static applications. It's a feature that solves a very difficult problem: how to build very large sites and keep the content fresh.
+
+<p className="text-green-500">
+  Have you ever waited on a long build to generate thousands of pages? Or waited
+  on a build due to someone changing CMS content? This feature is built
+  specifically for you and your team.
+</p>
+
+<Image
+  priority
+  layout="responsive"
+  src={regenerationSource}
+  alt="regeneration"
+/>
+
+This diagram does a great job showing the lifecycle of ISR, but let's dig into some of the reasons you might use ISR as well as some of the sticking points.
+
+## Why ISR
+
+Here's a quick list of questions that will let you know if ISR is for you:
+
+- You have a large site
+- You have a CMS
+- Your data updates somewhat frequently
+- Performance is important
+- You want to keep your content fresh
+
+If any of these are clear, you should definitely consider ISR.
+
+If you normally build your site in an entirely static way, you probably are familiar with this process:
+
+1. Push a commit
+2. Wait for CI/CD to build and deploy thousands of pages (10-15 mins)
+3. Deploy & test
+4. Change CMS content and repeat
+
+ISR is the leap frog of this normal static site generation.
+
+### Landline vs cellular
+
+// todo: photo of telephone poles and cell towers
+
+For a comparison, there are places in the world that don't have landline telephones. Why? Because cellular technology is better. Cell phones are better than landline phones in every way.
+
+So if you haven't made your entire site static yet, don't. Instead, use ISR. Don't bother installing telephone lines.
+
+_Future hint — React Server Components is essentially ISR at the component level._
+
+## How it works
+
+There are two ways to talk about the workings of ISR: one is when hosted on a server, the other is when hosted on Vercel.
+
+First, we're going to talk about the self-hosted version of ISR and then cover the automatic improvements Vercel makes.
+
+// TODO: explain a lot here
+
+## Gotchas
+
+There are a few gotchas that you should be aware of when using ISR.
+
+### Too short of `revalidate` period
+
+ISR is simply specifying a `revalidate` period on your `getStaticProps` method. This revalidate period tells the application (and infrastructure if on Vercel) how long a page is valid for. The `stale-while-revalidate` influenced the development of ISR.
+
+#### Usage
+
+If you set this timeout too low, your application will have to constantly rerender the content in the background. On Vercel, your static assets are pushed to the edge automatically. While this is great for performance, you'll likely use a lot of bandwidth and serverless compute in the process.
+
+Most ISR `revalidate` periods should be set to `60` seconds at a minimum, although there is no upper or lower limit.
+
+#### Performance
+
+For the best performance, consider setting a value of `10800` (3 hours) or longer. This will ensure your visitors are consistently served fresh content with a high likelyhood of a cache in their region having your static files.
+
+#### Solution
+
+For both of these issues, simply setting a higher `revalidate` period fixes the underlying issues.
+
+### Not using the advanced features
+
+blocking
+
+SEO fallbacks
+
+"loading" basic state
+
+#### Solution
+
+By configuring ISR correctly for your use case, you can get the most out of the feature at both the app and infra layer.
+
+### Fetching everything in `getStaticProps`
+
+// todo: rethink this, maybe use middleware & geo to route to correct pages here? Could be a pretty cool example
+
+ISR is meant to fetch data that can be shared for all visits to that URL. Let's look at an example of a product page in an ecommerce store for stationary.
+
+It's not possible to fetch state that's not one-to-one with the URL. This means if I'm on a product page, I shouldn't fetch personalized information for a user if the URL isn't specific to that user (query string included).
+
+Why?
+
+It's pretty simple: we can't cache user data on pages not specific to users.
+
+In ecommerce, it's tricky to fetch:
+
+- personalized data
+- tax ra
+
+// TODO: personalization, tax rate, availability, etc
+
+#### Solution
+
+There are two possible solutions:
+
+1. Add state to the URL and use Next.js Middleware to dynamically rewrite
+2. Fetch on the client
+
+At the moment, these are the best answers. In the long term _React Server Components fixes this™️_
+
+## FAQ
+
+### How do I increase my revalidate period in ISR?
+
+In order to increase your ISR revalidation time period, move some of the more time-sensitive data fetching to the client.
+
+To do this, remove the data that needs to be updated from the getStaticProps function. Then, fetch the data with a useEffect on the client.
+
+After doing this refactor, you can increase your timeout significantly (a few hours ranging to a few days).
+
+Vercel will then keep your page in our Edge cache for up to 31 days (best effort).
+
+### How do I purge the cache in ISR?
+
+This isn't possible yet. I'd reccomend moving your data fetching to the client as mentioned above.
+
+Currently, deploying on Vercel will clear the entire cache. I'd bet on improvements here in the future as Next.js adopts `next/data` or similar debuted at Next Conf 2021.
+
+If deployed to a server and self-hosting, ISR will cache both in memory and to disk and purging would require wiping both ([or configuring it](https://github.com/vercel/next.js/blob/1a6a1e5fdfcc6c9d829d89b337852a55f7e72960/packages/next/server/config-shared.ts#L146))
+
+### How does ISR work when deployed to a Kubernetes cluster?
+
+This is a great question, the answer is: it's a little complicated. ISR does work, but the cache is not shared across pods, largely because the cache is either in memory or on disk. This means an inconsistent cache at the application layer. Since you probably are using something like Cloudflare or Akami in front of your K8s cluster, keeping these two caches in sync can be a challenege and lead to strange rollouts.
+
+### How does ISR impact my serverless usage?
+
+This all depends on the revalidation period, which is completely configurable. ISR uses serverless functions to render your static assets that get pushed to edge regions automatically. If the timeout is short (anything less than an hour), expect higher usage.
+
+I encourage teams to push this revalidate prop as high as possible (3 hours plus is ideal).
+
+### I have a lot of pages, will ISR overflow my storage?
+
+Maybe. It depends on the storage of your server and what you've got it configured to. The default limit is [set to 50MB](https://github.com/vercel/next.js/blob/1a6a1e5fdfcc6c9d829d89b337852a55f7e72960/packages/next/server/config-shared.ts#L250). You could increase this depending on your hardware.
+
+### Is ISR really better than SSR + caching?
+
+Short answer: it depends.
+
+If you're deployed to Vercel, ISR is the way to go. If you're self hosting and using a tool like Cloudflare in front of your Node Next.js app, SSR + caching might feel more natural (keeping the caching layer in Cloudflare, not at the app layer).

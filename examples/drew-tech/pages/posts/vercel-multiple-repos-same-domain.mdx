@@ -1,0 +1,87 @@
+---
+title: Multiple repos on the same domain in Vercel
+created: December 15, 2020 10:16 AM
+tag: next.js, vercel
+tweet: 1374860621813067784
+date: 2020/12/15
+description: How to do micro-frontends on Vercel with a single domain.
+slug: vercel-multiple-repos-same-domain
+author: Drew Bredvick
+---
+
+import OGImage from '../../components/OGImage'
+
+<OGImage />
+
+# Multiple repos on the same domain in Vercel
+
+In order to host multiple disjoint repos on Vercel, here's what I had to do:
+
+1. Deploy each app to `subdomain.domain.com`
+2. Create a parent Vercel project with a `vercel.json` file to configure routing
+3. Configure Next.js `basePath` in `next.config.js`
+
+### DNS
+
+For step one, you'll need to have an A record setup with Vercel so they can provision your site.
+
+This can be tricky if you're using Cloudflare, as some of the settings you'll need to change are buried in settings menus that are defaulted to "on".
+
+This guide covers it pretty well:
+
+[How do I use a Cloudflare domain with Vercel? - Vercel Knowledge Base](https://vercel.com/knowledge/using-cloudflare-with-vercel)
+
+The principle is the same in all DNS setups, even if you're not using Cloudflare.
+
+### Parent Vercel project
+
+In order to configure ingress routing inside of Vercel, you'll need to document you infrastructure as code. Vercel uses a `vercel.json` file. The documentation around this is pretty good, but can be a bit tricky if you're not accustomed to IaC (infra as code).
+
+[Configuration - Vercel](https://vercel.com/docs/configuration)
+
+I used this to setup to:
+
+- host a marketing landing page a `domain.com`
+- host a blog at `domain.com/blog`
+- (coming soon) the admin tooling at `domain.com/admin`
+
+and each of these is in it's own repo hosted at `splat.domain.com`
+
+My code looks like this:
+
+```jsx
+{
+  "rewrites": [
+    {
+      "source": "/blog/:match*",
+      "destination": "https://blog.fitvitals.dev/:match*"
+    },
+    {
+      "source": "/:match*",
+      "destination": "https://home.fitvitals.dev/:match*"
+    }
+  ]
+}
+```
+
+I used a rewrite here because I want the content to actually be served under the `source` path. If I wanted to actually redirect in these cases, I could change `rewrites` to `redirects`.
+
+My file structure looks like:
+
+- parent
+  - project-parent (vercel.json lives here)
+  - blog
+  - home
+  - admin
+
+Each of these is deployed via the Vercel CLI, but you could easily connect them to a git repository and have commits to `main` trigger deployments.
+
+### Next.js basePath
+
+Next.js has support for this as of version 9.5. Basically, this is a way of telling your entire Next application that it will be served from `domain.com/basePath`. That makes loading all of the assets, Next.js Link tags, and other portions of Next function correctly without any additional work.
+
+Warning: this only applies to Next.js features. Hard-coded links or other references on your domain will need to be updated accordingly.
+
+Overall, I'm a fan of this setup. It lets me ship only the code I need to for each section, while leaning on the `_app.js` and `_document.js` functionality Next.js provides.
+
+I do think I would prefer a multiple layouts approach, as the complexity that comes from micro frontends & separate GitHub repositories might not be warranted here. Micro-services generally exist to solve cultural problems, not technical ones ([read more](https://eng.uber.com/microservice-architecture/)).

@@ -1,0 +1,91 @@
+---
+title: TailwindUI and Next.js styling issues
+created: November 28, 2021 9:05 PM
+tag: next.js, building-products, tailwind
+date: 2021/11/28
+description: TailwindUI layouts and Next.js styling issues
+author: Drew Bredvick
+---
+
+import tailwindUIScroling from '../../public/images/tailwind-ui-scrolling.gif'
+import Image from 'next/image'
+import TweetEmbed from 'react-tweet-embed'
+
+import OGImage from '../../components/OGImage'
+
+<OGImage />
+
+# TailwindUI and Next.js styling issues
+
+Are you using TailwindUI and Next.js? If so, you might be here because you Google'd like this:
+
+```html
+This example requires updating your template:
+
+<html class="h-full bg-white">
+  <body class="h-full overflow-hidden"></body>
+</html>
+```
+
+If you don't apply these, there's a high chance your layout copied over from TailwindUI won't scroll.
+
+Getting your layout working requires adding those classes to the correct elements of your DOM.
+
+<Image
+  quality={85}
+  alt={
+    'Animation of scrolling working inside of a TailwindUI Next.js app with a multi-part layout.'
+  }
+  src={tailwindUIScroling}
+  layout="responsive"
+/>
+
+While this is pretty easy to address, it can be tricky because of some of the underlying elements added to the DOM by Next.js.
+
+## The solution
+
+#### Create a CSS file with the following styles:
+
+```css
+#__next {
+  @apply h-full overflow-hidden;
+}
+html {
+  @apply h-full bg-white;
+}
+body {
+  @apply h-full overflow-hidden;
+}
+```
+
+#### Import the styles into your `_app.js` file:
+
+```jsx
+import './styles.css'
+```
+
+### And that's it
+
+Now that you've got your layout working, you can go ahead and start building your site.
+
+A special thanks to _demonz_ and _IncognitoQQ_ for posting about this in the TailwindUI Discord 🙏
+
+<TweetEmbed id="1465061809426157577" />
+
+<br />
+<div className="pt-4">
+  <span style={{ fontStyle: 'italic', margin: '0 0 0 0', padding: '0 0 0 0' }}>
+    See you on the other side,
+  </span>
+  <span
+    className="text-xl"
+    style={{
+      fontStyle: 'italic',
+      marginTop: '0px',
+      paddingTop: '0px',
+      fontFamily: 'Qwigley'
+    }}
+  >
+    Drew
+  </span>
+</div>

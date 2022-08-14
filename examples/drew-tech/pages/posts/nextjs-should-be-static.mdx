@@ -1,0 +1,134 @@
+---
+title: HEY – let's talk about static sites
+created: December 28, 2020 11:45 AM
+tag: next.js, tech-decisions
+date: 2020/6/21
+description: Next goes static, the death of custom servers (on Vercel), and serverless function recipes.
+slug: nextjs-should-be-static
+author: Drew Bredvick
+---
+
+import OGImage from '../../components/OGImage'
+
+<OGImage />
+
+# HEY – let's talk about static sites
+
+# **Framework updates**
+
+Last time we covered Next.js 9.4.0, so let's dive into all the releases since then. After that, we'll take a look into the new commits on the canary.
+
+### **9.4.4**
+
+- Improved documentation for `getServerSideProps` ([pull request](https://github.com/vercel/next.js/pull/13475/files))
+- Removed an extra import
+
+### **9.4.3**
+
+- Better Saas errors ([pull request](https://github.com/vercel/next.js/pull/13211))
+- Inferred static props types
+
+![/images/inferredStaticProps-example.gif](/images/inferredStaticProps-example.gif)
+
+**.gif credits belong to [manuschillerdev](https://github.com/manuschillerdev) ([pull request](https://github.com/vercel/next.js/pull/11842))**
+
+### **9.4.2**
+
+- Experimental production browser source maps ([pull request](https://github.com/vercel/next.js/pull/13018))
+- Experimental catch all routes ([pull request](https://github.com/vercel/next.js/pull/12887))
+
+### **9.4.1**
+
+- Tons of documentation cleanup
+
+# **Notes from recent commits on canary**
+
+### **Custom servers**
+
+It's worth noting Next is updating the official documentation to discourage custom servers.
+
+> A custom server **can not** be deployed on [Vercel](https://vercel.com/solutions/nextjs), the platform Next.js was made for. - [commit](https://github.com/vercel/next.js/pull/14147/commits/5292171cfbe568ceba0255f7d83896bd3b8cb149)
+
+What's this mean for you? Well, custom servers make adopting the new features of Next.js very difficult. Since you can do *just about anything* in a custom server, the Next team can't build features around that configuration.
+
+**Consider removing your custom servers so you can stay up-to-date with the latest Next.js features.**
+
+The happy path is the happy path for a reason 🙂
+
+### **React Fast Refresh**
+
+After Next.js 9.4 was released with React Fast Refresh, some users were reporting problems with it not working. The Next team is adding documentation that helps debug common issues.
+
+What is React Fast Refresh?
+
+> Next.js' Fast Refresh is a new hot reloading experience that gives you instantaneous feedback on edits made to your React components. - [commit](https://github.com/vercel/next.js/commit/0426694ce0cdd6cd8cef26347e35559fb4bf265a)
+
+The list of common issues that causes Fast Refresh to be broken includes:
+
+- Fast Refresh does not work for class components
+- The file you're editing exports things other than a React component
+- Higher-order components don't work with Fast Refresh if it is implemented with a class component
+- Fast Refresh works with functional components and Hooks
+
+Check out the canary commit to read the full markdown of the documentation below 👇
+
+**[Add Fast Refresh Documentation (#14273)](https://github.com/vercel/next.js/commit/0426694ce0cdd6cd8cef26347e35559fb4bf265a)**
+
+### **Removing getInitialProps where possible**
+
+There are quite a few recent commits removing `getInitialProps` where possible. Instead, developers are adding in `getStaticProps` and `getStaticPaths`. This sticks with the recent trend the Next.js team has been preaching:
+
+> Well, “static” does *not* mean “motionless!” - [@brandon_duffany](https://twitter.com/brandon_duffany)
+
+[Brandon Duffany](https://twitter.com/brandon_duffany/status/1274388162652131333) recently wrote an amazing article on how Next.js evolved overtime and the problems it solves. It's a deep dive and is 100% worth taking the time to read, especially if you're new to Next.js.
+
+**[The Hitchhiker’s Guide to Next.js](https://medium.com/swlh/the-hitchhikers-guide-to-next-js-fd7aa14ae8d0)**
+
+One takeaway is clear: **your site should be static when possible**.
+
+_Update: the Next team seems to be systematically tackling custom server use cases._
+
+- _Internationalization (I18n) routing: [/next.js/discussions/17078](https://github.com/vercel/next.js/discussions/17078)_
+- _Incremental static regeneration: [/next.js/discussions/11552](https://github.com/vercel/next.js/discussions/11552)_
+
+I have a feeling Brandon's article will end up in onboarding documentation at employers that use Next.
+
+Brandon isn't the only one saying this, either. Arunoda Susiripala ([@arunoda](https://twitter.com/arunoda)) recently posted an article titled "Hey Next.js, Is Server Side Rendering Dead?"
+
+**[Hey Next.js, Is Server Side Rendering Dead?](https://arunoda.me/blog/hey-nextjs-is-server-side-rendering-dead)**
+
+### **Next is migrating to Webpack 5**
+
+This won't probably impact visitors much, but will likely improve developer experience quite a bit. Webpack 5 introduced some cool caching, which will likely mean a **faster dev experience**. Read about it below
+
+**[New features in webpack 5](https://blog.logrocket.com/new-features-in-webpack-5-2559755adf5e/)**
+
+# **Cool product of the week**
+
+JAMstack Functions (update: moved to [https://leerob.io/snippets](https://leerob.io/snippets)) is a useful resource when creating API methods in Next.js that integrate with other services.
+
+You can host these functions anywhere, but Lee provides documentation to get up and running on Vercel quickly.
+
+It includes functions for quite a few services:
+
+![/images/functions.png](/images/functions.png)
+
+The code snippets are well done and explained very clearly:
+
+**Stripe Vercel function example**
+
+![/images/stripe-snippet.png](/images/stripe-snnippet.png)
+
+The guide even includes setup steps for setting up your environment variables. Yay for security 🎉
+
+![/images/stripe-snippet-2.png](/images/stripe-snippet-2.png)
+
+Check it out below:
+
+[Code Snippets - Lee Robinson](https://leerob.io/snippets)
+
+# **Feedback**
+
+Want to chat about Next.js or have a problem with Next you'd like someone to look at? **Message me on Twitter [@dbredvick](https://twitter.com/DBredvick).**
+
+I'd love to hear how I can make this newsletter more useful to you.

@@ -1,0 +1,96 @@
+---
+title: Should I use Google Analytics or one of these new privacy-friendly options?
+created: January 28, 2021 7:17 PM
+tag: building-products, software-as-a-service, tech-decisions
+tweet: 1358077192295624706
+date: 2021/2/3
+description: Google Analytics is a great tool, but there are plenty of new privacy-friendly paid options. Should you use them? Maybe, maybe not.
+slug: should-i-use-google-analytics-or-not
+author: Drew Bredvick
+---
+
+import OGImage from '../../components/OGImage'
+
+<OGImage />
+
+# Should I use Google Analytics or one of these new privacy-friendly options?
+
+![/images/CleanShot_2021-02-01_at_10.26.45.png](/images/CleanShot_2021-02-01_at_10.26.45.png)
+
+## Why not use Google Analytics?
+
+GA is a great product. You **should default to using it** if:
+
+- You are doing ecommerce (GA Ecom is an _amazing_ product and will help you make good financial decisions)
+- You're a big company with lots of traffic and a 1% bump in conversion is a HUGE win (GA funnels are great)
+- You serve any industry except tech. The tech industry is the pickiest about privacy. Avoid putting GA on a site meant to serve developers (their adblockers will likely mess up your metrics anyway)
+- You have a decent legal department that understands GDPR, CCPA, CCPA2, etc.
+
+For everyone else, the hassle of using Google Analytics may not be worth it.
+
+**Why?**
+
+- Those annoying cookie pop ups
+- Scaring away privacy-focused customers
+- The legally required processes around data retention, deletion, etc.
+
+So what can you do instead? Use an alternative analytics provider.
+
+## Google Analytics Alternatives
+
+### Umami (free) – [link](https://umami.is/)
+
+![/images/CleanShot_2021-02-03_at_17.11.46.png](/images/CleanShot_2021-02-03_at_17.11.46.png)
+
+Umami is an open-source Next.js project that is super clean. You host it yourself (one-click deploy with Vercel), store the data yourself, and control every aspect of your analytics.
+
+Pros? You own it all and aren't exposing any of your users to Google's tracking abilities.
+
+Cons? Check out the "A caveat" section below.
+
+### Getting started
+
+1. Create a [Supabase.io](http://supabase.io) project
+2. Clone and deploy Umami
+3. Add secrets to Umami
+4. Add script to your site
+
+[Jakob Bouchard](https://twitter.com/BouchardJakob/status/1356709313314779136) wrote up an amazing step-by-step guide, so I'm not going to re-invent the wheel here.
+
+[Setting up Umami with Vercel and Supabase](https://dev.to/jakobbouchard/setting-up-umami-with-vercel-and-supabase-3a73)
+
+### UPDATE: June Analytics - [link](https://june.so/)
+
+I have not used [June](https://june.so/) before, but they seem to be adding tons of great features lately. I'll be adding them to my next project. I'll update this post when I have a more in-depth opinion.
+
+### Fathom Analytics (paid) – [link](http://usefathom.com/)
+
+I previously used Fathom Analytics. Fathom is a pretty good product and has a bunch of nifty features (uptime checking being one of them).
+
+But they were missing a few things for me: an API, funnels, and costing less.
+
+If I'm serious about tracking a site I throw GA on it (again: funnels, events, Google Data Studio, BigQuery, Segment integrations, [getAnalytics.io](http://getanalytics.io) support — all great reasons to stick with GA).
+
+If I put all my serious projects on GA, why am I paying $15/mo for my non-serious analytics? I could buy three lattes with that money (and I do).
+
+_(If you do decide to go with Fathom, Jakob's article above has a discount to Fathom at the bottom of the post for $10 off your first month)_
+
+### Should you use Umami Analytics?
+
+If you've debated getting Fathom before, you should definitely check out [Umami](https://umami.is/). It can be free (depending on how you deploy it), has a slick shareable UI, and is privacy conscious.
+
+## A caveat
+
+To be clear – there is a price for privacy. **All of these products are worse than Google Analytics.**
+
+This post is not shilling for Google, but I've worked with product owners and marketers skilled in GA. The roadmap of a team that knows GA well is aligned with what its users want.
+
+Proper custom events throughout an app are basically user interviews at scale with very little setup cost.
+
+---
+
+See you on the other side,
+
+Drew
+
+P.s. — I'll be using Umami to measure engagement on this post.

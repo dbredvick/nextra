@@ -17,12 +17,16 @@ export const PostsLayout = ({ children }: { children: ReactNode }) => {
   } = opts
   const tagName = type === 'tag' ? router.query.tag : null
   const postList = posts.map(post => {
+    const tags = getTags(post)
     if (tagName) {
-      const tags = getTags(post)
       if (!Array.isArray(tagName) && !tags.includes(tagName)) {
         return null
       }
     } else if (type === 'tag') {
+      return null
+    } else if (tags.includes('podcast')) {
+      return null
+    } else if (tags.includes('log')) {
       return null
     }
 

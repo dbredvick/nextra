@@ -1,0 +1,163 @@
+---
+title: What not to work on
+created: December 13, 2020 8:22 PM
+tag: software-as-a-service
+date: 2020/2/1
+description: Avoiding what you shouldn't work on is easier than knowing what to work on, but it's a start.
+slug: what-not-to-work-on
+updated_at: Last updated on June 27 2021
+author: Drew Bredvick
+---
+
+import Image from 'next/image'
+import TweetEmbed from 'react-tweet-embed'
+import theMainThing from '../../public/images/the-main-thing.png'
+import theValueChain from '../../public/images/mapping-the-email-value-chain.png'
+import ecom from '../../public/images/ecom.png'
+import trendsPodcast from '../../public/images/trends-podcast.png'
+import OGImage from '../../components/OGImage'
+
+<OGImage />
+
+# What not to work on
+
+Knowing what _not_ to work on is as hard as knowing what you _should_ work on.
+
+Tim Ferriss has a (somewhat outdated) [list](https://tim.blog/2007/08/16/the-not-to-do-list-9-habits-to-stop-now/) written back in 2007.
+
+> “Not-to-do” lists are often more effective than to-do lists for upgrading performance.
+
+Allison Rimm wrote about this in [an article](https://hbr.org/2018/03/taming-the-epic-to-do-list) in Harvard Business Review.
+
+She maintains three lists of tasks:
+
+1. are important, non-time-sensitive
+2. need to be completed today
+3. aren’t worth the time
+
+Any item that’s on list number three Allison intentionally skips.
+
+## “Not-to-do” list for building products
+
+Most individual builders have rules about products they won’t build. Some have rules about avoiding products with long sales cycles, others have rules about avoiding business-to-consumer (B2C) products.
+
+Below are a few points from makers about what not to build.
+
+### 1. Don’t build an appetizer
+
+Justin Jackson of TransistorFM argues that you should try to be [“the main thing”](https://justinjackson.ca/the-main-thing) or “the entree”.
+
+<Image
+  quality={85}
+  alt={'The main thing image'}
+  src={theMainThing}
+  priority
+  layout="responsive"
+/>
+
+Most people order the entree when they go out to dinner and it’s often where restaurants make most of their profit.
+
+In the product world, this translates to:
+
+- generally avoid addons (unless the market supports it)
+- don’t niche-down too much
+- provide the bulk of the value
+
+The counter-intuitive point here is that sometimes that means taking on more scope, building a bigger project, and writing more code. It’s advice that runs against most of the “start small” and “niche down” logic.
+
+It’s all about analyzing the value chain of the market you serve:
+
+<Image
+  quality={85}
+  alt={'A map of the email value chain'}
+  src={theValueChain}
+  priority
+  layout="responsive"
+/>
+
+I highly recommend reading all of Justin’s post [here](https://justinjackson.ca/the-main-thing?ref=drew.tech).
+
+### Takeaways
+
+- Don’t build an appetizer or dessert (unless the market is large)
+- Pick a market with momentum
+- Pick parts of the value chain that are good for indie makers
+
+---
+
+### 2. Don’t build for the wrong market
+
+Sahil Lavingia took Gumroad from a weekend project to a venture-backed startup. The growth rate wasn’t enough to raise the next round. Check out his journey below:
+
+<TweetEmbed id="1207333860268077058" />
+
+### Examples
+
+If you’re building ecommerce software: Good news - ecommerce is growing.
+
+<Image
+  quality={85}
+  alt={'Growth rate of ecom'}
+  src={ecom}
+  priority
+  layout="responsive"
+/>
+
+Making podcasting tools or services? Interest is at an all time high and continues to grow.
+
+<Image
+  quality={85}
+  alt={'graph of the growth of podcasting'}
+  src={trendsPodcast}
+  priority
+  layout="responsive"
+/>
+
+### Takeaways
+
+- pick a market that’s growing
+- don’t assume you will grow faster than the market
+- not all business models require venture capital
+
+---
+
+### 3. Don’t build something for other people
+
+This one is my personal rule. Your mileage may vary. I have been working on a side project for a few months now and have been building it without being a user of the tool.
+
+That doesn’t work for me.
+
+### Quicker Questions
+
+[Quicker Questions](https://quickerquestions.com/) was fun to initially work on. I had started at a new company and the Q&A sessions were not efficient. I was very excited to fix this problem.
+
+I fiddled with what stack and tech I was going to use for a couple of days. The problem wasn’t the tech, it was **product-market-founder** fit.
+
+When considering HR software, question and presentation software is somewhat ancillary.
+
+Generally, most of the HR software budget will be spent on payroll or recruiting.
+
+Quicker Questions in its current state is not a useful addon to a growing market.
+
+Sli.do, the winner in the space, has seen more and more competition recently. Google even unveiled a tool to do Q&A inside of Google Slides.
+
+Companies change software like this infrequently, meaning growth in this market is heavily tied to the growth of new companies.
+
+### Takeaways
+
+- Personally, I need to build a tool that _I want_
+- Use tech that helps you ship quickly
+
+## Conclusion
+
+- I need to create something I wish existed in the world
+- It needs to be the main thing
+- It should map clearly to a job to be done
+
+## Questions for you
+
+1. What are you building?
+2. What should I build?
+3. What products do you refuse to build?
+
+I’d love to hear what you think on Twitter [@dbredvick](https://twitter.com/DBredvick) or [IndieHackers](https://www.indiehackers.com/dbredvick).

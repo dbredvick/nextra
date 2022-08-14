@@ -1,0 +1,426 @@
+---
+title: Why Next.js?
+date: 2020/6/28
+description: Next.js is my default choice when starting a new project, big or small. Here's why I think you should use it, pros and cons included.
+tag: next.js, react
+author: Drew Bredvick
+---
+
+import OGImage from '../../components/OGImage'
+
+<OGImage
+  title="Why Next.js?"
+  image="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg"
+/>
+
+# Why Next.js?
+
+Next.js is a fast-growing React framework that is used by over **300,000** repositories now [[source](https://github.com/vercel/next.js/network/dependents?package_id=UGFja2FnZS0xNDIzMDMwOA%3D%3D)]. Next.js has a broad set of features that both **IndieHackers** and **Fortune 500** companies love. Check out the large number of sites in their [showcase](https://nextjs.org/showcase).
+
+This post is an investigation that attempts to answer the following:
+
+- Why React?
+- What has made Next.js successful?
+- What are the pros and cons of Next.js?
+
+# **First, why React?**
+
+To understand the success of Next.js, we need to first look at the success of React.
+
+## **The numbers**
+
+Is React *really* that popular? Let's check out some data points.
+
+### **Installs**
+
+As of this writing, React gets about **7.75 million** weekly installs and is a dependency to over **3.9 million** GitHub repositories [[installs source](https://www.npmjs.com/package/react), [dependencies source](https://github.com/facebook/react/network/dependents)].
+
+That's a lot of `npm install react@latest` going on.
+
+If we look historically at this weekly download metric on [npmtrends.com](https://www.npmtrends.com/react-vs-vue-vs-angular-vs-@angular/core), the lead React has is staggering.
+
+![/images/react-vs-vue-vs-angular.png](/images/react-vs-vue-vs-angular.png)
+
+**React compared to Vue, Angular, and Angular core from [npmtrends](https://www.npmtrends.com/react-vs-vue-vs-angular-vs-@angular/core).**
+
+Three notes from this graph:
+
+1. WOW, things really shut down in December.
+2. GitHub stars mean less than you think they do.
+3. Angular is hard to measure because of the split ([angular.js vs angular explanation](https://www.simplilearn.com/angularjs-vs-angular-2-vs-angular-4-differences-article)).
+
+I started building applications using React in late 2017. It wasn't until mid-2018 that my job fully embraced React and started building a shareable internal component library.
+
+Speaking of work, let's talk about employment.
+
+### **Jobs**
+
+Another proxy for popularity is the number of jobs associated with a framework.
+
+[https://www.youtube.com/watch?v=8bl19RoR7lc](https://www.youtube.com/watch?v=8bl19RoR7lc)
+
+**"jobs, jobs, jobs" - every politician, ever.**
+
+Searching for "React jobs" on Google yields tons of results: 293,000,000 as of this writing.
+
+LinkedIn has about **42,091 jobs** for the search "react" in the United States. Indeed has about the same job count: **43,315** for the search term "react" in the US. ZipRecruiter was showing over **850** remote "react" jobs.
+
+So why do the job numbers matter?
+
+It shows there is **demand**. Demand ensures that in five years, you'll be able to hire developers that know the framework. While this might not be important to you, businesses need to consider the ability to hire.
+
+We should consider the number of jobs AND the happiness of the people using the framework frequently.
+
+According to the [2019 Stack Overflow Developer Survey](https://insights.stackoverflow.com/survey/2019#development-practices), React ranked highest for "Most Loved Web Framework".
+
+![/images/react-next-most-loved.png](/images/react-next-most-loved.png)
+
+**"... jQuery are most dreaded"**
+
+![/images/frameworks-would-use-again.png](/images/frameworks-would-use-again.png)
+
+**2019 State of JS developer survey front end frameworks section**
+
+The [State of JS 2019 survey](https://2019.stateofjs.com/) shows that a ton of people are using React and wouldn't mind using it again, though there are a few detractors.
+
+The [2020 survey](https://2020.stateofjs.com/en-US/technologies/front-end-frameworks/) showed similar results with 80% of people having used React before:
+
+![/images/Untitled.png](/images/Untitled.png)
+
+### **Conclusion**
+
+The numbers show that React is a dominant player in the web framework landscape. Developers are eager to learn React and generally stick with it, either because of the job market or its technical fundamentals.
+
+## **The tech**
+
+We can't talk about a framework without mentioning a few of the key aspects of its technical fundamentals and how they contribute to its success.
+
+React:
+
+- focuses on one thing (the view layer)
+- supports componentized thinking & sharing
+- simplifies data flows
+
+### **Do one thing and do it well**
+
+Part of the equation of React's success is doing one thing and doing it exceptionally well. React's focus is printed on their [homepage](https://reactjs.org/):
+
+### A JavaScript library for building user interfaces
+
+That may sound simple, but it's critical.
+
+By focusing on **one thing**, React has been able to iterate on its core mission relentlessly.
+
+React does not focus on:
+
+- Data fetching (axios, fetch, superagent, SWR)
+- Advanced state management (redux, recoil, react-query)
+- Handle styling (styled-components, styled-jsx)
+
+### React only focuses on the view layer.
+
+That lets the framework excel at building user interfaces while ignoring all other problems.
+
+### **Open-source community**
+
+By ignoring a lot of problems, React created a void. Developers happily filled the void with their solutions and contributed them back to the community.
+
+![/images/CleanShot-2020-06-23-at-18.41.27.gif](/images/CleanShot-2020-06-23-at-18.41.27.gif)
+
+**npm has 162300 packages when searching `react-`**
+
+Many companies intentionally do this.
+
+- Salesforce could add all the features their users are requesting, *or* they could continue to let third-party developers build those solutions.
+- Shopify could add all of the necessary features to run any store you can think of, *or* they could let third-party developers build a robust ecosystem around them.
+
+The open-source software around React is a natural moat. ([What's an economic moat?](https://www.investopedia.com/ask/answers/05/economicmoat.asp))
+
+As a developer, it helps me get my job done faster (and likely with higher quality). Each open-source package is a few hundred lines of code not written or maintained by my team, yet we benefit from its vast list of contributors.
+
+### **One-way binding vs. two-way binding**
+
+I've built single-page applications (SPAs) in Knockout, Angular, and React. The way React thinks about your data and DOM is entirely different.
+
+React uses a one-way data bindings, whereas Knockout and Angular take a two-way data binding approach.
+
+One-way data bindings make thinking about how data flows through your application much more straightforward.
+
+React is often seen as the transition point in the modern JavaScript world to [declarative programming instead of imperative](https://codeburst.io/declarative-vs-imperative-programming-a8a7c93d9ad2).
+
+The documentation from the React team will explain it far better than I ever could 👇
+
+**[Hello World – React](https://reactjs.org/docs/hello-world.html)**
+
+### **Other tech reasons**
+
+There are a lot of other factors that make React a great framework choice. We're not digging into those in this post.
+
+## **It's a business decision**
+
+Patrick McKenzie ([@patio11](https://twitter.com/patio11)) put it best in a 2011 essay called ["Don't Call Yourself A Programmer, And Other Career Advice"](https://www.kalzumeus.com/2011/10/28/dont-call-yourself-a-programmer/):
+
+> Engineers are hired to create business value, not to program things
+
+React provides plenty of value to businesses:
+
+- There are plenty of React devs in the job market
+- The community support and ecosystem make things simpler for my team
+- It's likely to be around for a long time (in the time scale of JS frameworks lifespans)
+
+It just makes business sense.
+
+Said another way, **it's a financially sound decision to use React**.
+
+### Use what you know
+
+What matters is **your team's efficiency**. On side projects, I am a team of one. So my final answer is:
+
+> I use React for projects because I know it.
+
+React was my gateway to Next.js.
+
+# Do I need a framework on top of React?
+
+Let's start a new project together as an example of why frameworks like Next.js and Gatsby are needed.
+
+Here's our project brief:
+
+Build a website that calculates if you should buy a house or not based on your current finances and the house price.
+
+The app needs to:
+
+- take in user data
+- calculate a result
+- make a shareable results page
+
+Our requirements sounds pretty simple overall, so we start with [create-react-app](https://github.com/facebook/create-react-app).
+
+![/images/create-react-app-terminal.svg](/images/create-react-app-terminal.svg)
+
+We launch our app, and it's a massive success on Product Hunt 🎉
+
+As a result, we decide to double down on our growth and try to market the product a little bit more. So how do we do that? Well, our Lighthouse audits are *pretty bad*. We also don't have any content pages. Google doesn't know what our site is about because we're not providing any extra content. Fixing those might improve our SEO. Maybe if we do all that, Google might send more traffic our way.
+
+We only have one goal: **make the site appear as fast as possible to our users and Google.**
+
+We start with the basic performance tweaks:
+
+- cache as many assets as possible
+- serve assets from the edge via a CDN
+- remove bloat from `node_modules`
+- lazy load images
+
+These improvements get us part of the way there but don't solve the problem of modern web development: **our bundle is too big**. Slower computers and mobile phones have a hard time processing all of the JavaScript.
+
+**So how do we improve performance even more?**
+
+### **SSR**
+
+One solution? Simply process the JavaScript on the server and deliver the HTML/CSS. This is server-side rendering (SSR).
+
+Once the client receives this payload, we can hydrate our React app state in the background. The user (human or Googlebot) sees a faster response and can more easily navigate the page.
+
+If we throw a cache (using Cloudflare or some other provider) in front of our server, we can dramatically improve performance for users who have a cache-hit.
+
+Slowly, people got fed up implementing SSR themselves (it's hard). Next.js evolved to fill this pain point.
+
+### **SSG**
+
+Another option is to simply process the JavaScript at build time and only send the client a smaller amount of data. This approach is called static site generation (SSG).
+
+SSG requires a few things:
+
+- all data needs to be present at build time
+- changing the site means regenerating it
+- longer build times
+
+Depending on the site you're building, these requirements are very doable.
+
+As with SSR, the SSG crowd did not enjoy doing this work, yet it was very essential development. [Gatsby](https://www.gatsbyjs.org/) evolved to fill this niche.
+
+_Note: with getStaticProps, getStaticPaths, Next.js has ventured into SSG + SSR_.
+
+### Can't we just implement SSR ourselves?
+
+Back in 2018, I was working at [Spreetail](https://www.wearespreetail.com/). The company was building its own ecommerce experience (instead of its usual B2B focus).
+
+At the beginning of the project, we had decided the Next.js framework was "too green" and didn't pick it (around version [5.1](https://nextjs.org/blog/next-5-1)). One engineer was convinced it was the right path, and we (me) didn't listen to him. Sorry, Michael.
+
+My co-worker, Stephen, wrote up his heroic effort to migrate months of React development to SSR.
+
+It was *a lot* of work.
+
+**[Approaching Server Side Rendering in an Existing React/Redux Application](https://medium.com/spreetail-engineering/approaching-server-side-rendering-in-an-existing-react-redux-application-2c403819a231)**
+
+![https://miro.medium.com/max/1041/1*E7Csl7m6mBfL-gLuzmtV8A.png](https://miro.medium.com/max/1041/1*E7Csl7m6mBfL-gLuzmtV8A.png)
+
+"We decided to go with a React/Redux application built off of [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate). Development had already started when I signed on, but I know we considered [Next.js](https://nextjs.org/) instead and ended up choosing not to use it. Looking back, it is much easier to use a framework that already handles server side rendering. **I would bias toward using those frameworks in the future**."
+
+I respect Stephen's opinion quite a bit, which led me to investigate Next.js for both work & side projects.
+
+**I have used Next.js on every greenfield project since.**
+
+# **Pros of Next.js**
+
+Let's dive into some of my favorite parts of Next.js and why it's my go-to framework at work and on side projects.
+
+## **User (developer) obsession**
+
+The pull requests in Next.js frequently included links to tweets. I think that's a great sign. It shows they're listening to their customers.
+
+Have a problem with a new version of Next? Tweet at the team. You'll likely get a detailed reply and steps to troubleshoot your issues. Still not working? The dev you were tweeting with will most likely file a Github issue and link to your Twitter thread.
+
+That's phenomenal customer service on FREE software (more on OSS perks later).
+
+_Update: since I originally wrote this, the Next team has published RFC's around some of the bigger issues their users are having_.
+
+- _An image component optimized Core Web Vitals: [next.js/discussions/16832](https://github.com/vercel/next.js/discussions/16832)_
+- _Internationalization (I18n) routing: [next.js/discussions/17078](https://github.com/vercel/next.js/discussions/17078)_
+- _Image optimization like Cloudinary built into the framework: [next.js/discussions/17141](https://github.com/vercel/next.js/discussions/17141)_
+
+_Even more proof they're listening to their customers_.
+
+### **Detailed examples**
+
+At this writing, there are **231** high-quality Next.js examples in the [repository](https://github.com/vercel/next.js/tree/canary/examples).
+
+From Auth0 to XState, they've got everything you can think of. See something they're missing? Perfect. Next.js is an open-source repository. Commit your example and have the community help you improve it over time.
+
+These examples have saved me countless hours.
+
+## **Performance**
+
+### **Static === speed**
+
+With Next.js adding `getStaticProps`, `getStaticPaths`, and creating [Incremental Static Regeneration (ISR)](https://www.smashingmagazine.com/2021/04/incremental-static-regeneration-nextjs/), Next is becoming an incredible framework for static sites.
+
+I talked about this in the last edition of the newsletter, [Next Sites Should Be Static](/posts/nextjs-should-be-static), quite a bit.
+
+_Note: ISR takes a little bit of configuration and doesn't work by default on all hosting providers. **Consider hosting on Vercel if you're interested in this feature**._
+
+### **SSR can be fast (with a cache)**
+
+If you're server-side rendering your app, it's likely going to be very fast for your users.
+
+In the example we talked about above, SSR provides:
+
+- faster [FCP](https://web.dev/fcp/) via smaller initial payload (first contentful paint)
+- better overall page load speed
+- improved SEO via shipping parseable HTML
+
+A downside of SSR is that it can take the server a while to render the page and respond.
+
+By inserting [Cloudflare](https://support.cloudflare.com/hc/en-us/articles/360023040812-Best-Practice-Caching-Everything-While-Ignoring-Query-Strings) (or some other cache) in-between your server and your users, you can lower the chance your users have to wait on the server.
+
+_Note: this works best for marketing pages and content that doesn't change from user to user_.
+
+## **Business value**
+
+### **SEO**
+
+Considering Next.js enables both SSG and SSR (two key methods for improving SEO), Next is a great candidate if SEO is a significant concern for you.
+
+P.s. - If you're building a business, SEO is a significant concern for you.
+
+### **Developer velocity**
+
+Similar to all prior frameworks, Next.js has opinions. Those opinions (good or bad) are baked into the way we use the tool. That might initially sound bad, but I would argue it's great.
+
+By being opinionated, Next.js saves us from implementing basic things and wasting time on the problems that don't matter.
+
+- How to implement SSR
+- How routing should work
+- What's the best way to split this JS bundle
+- How should app config work
+- How to build the site at build time
+
+Next.js has answers to all of these questions.
+
+That means, as developers, we get to focus on the problems related to the project domain. **Opinionated frameworks enable us to focus on the product**.
+
+Overall, this saves our developers time, our company money, and our brains from decision fatigue.
+
+### **Continuous improvement (via open source)**
+
+Because Next.js is open-source, we benefit from the improvements each individual or company makes to the framework.
+
+Rather than explain the perks of open source software myself, I'll let this Explain Like I'm Five (ELI5) Reddit thread explain.
+
+**The takeaway is this:** together, we can multiply our efforts to build much better software than we could alone.
+
+Read the full comment below 👇
+
+**[r/explainlikeimfive - ELI5: What is open source software and why is it such a big deal?38 votes and 36 comments so far on Reddit](https://www.reddit.com/r/explainlikeimfive/comments/21ik6j/eli5_what_is_open_source_software_and_why_is_it/)**
+
+# **Cons of Next.js**
+
+If you're new to the Next.js ecosystem, you likely will not find these as controversial as they once were. If you've been here for a while, let's take a trip down memory lane.
+
+## **Framework whiplash**
+
+With a team that listens takes developer feedback quite literally, there are bound to be some changes.
+
+A few notable changes are:
+
+- pivoting from SSR first to Incremental SSG ([ISR](https://www.smashingmagazine.com/2021/04/incremental-static-regeneration-nextjs/))
+- removing hosting support for custom servers ([GH issue](https://github.com/vercel/next.js/issues/9397#issuecomment-556215227))
+- adding `api` functions
+
+The Next.js team added these changes after listening to developer feedback. The problem is, some developers had already come up with bandaids to deal with these problems. Years later, these devs are dealing with bandaids leftover from the early days of the framework (AKA tech debt).
+
+Framework whiplash is a common problem for all fast-moving frameworks, which Next.js definitely is.
+
+This is the cost of relying on any fast-moving open source project.
+
+## **Some dislike file-based routing (or some other opinion)**
+
+One of the gaps that React left was routing. Since they focus purely on the "V" (view) part of MVC, many different options appeared for dealing with routing.
+
+Not supporting [React Router](https://reacttraining.com/react-router/) out of the box was a controversial stance Next took in the beginning.
+
+While there are plenty of great routers out there for React, I think Next Router is a great choice. File-based routing is simple to understand for both new developers and Next.js experts.
+
+As I said earlier, Next.js having opinions saves us time and stops us from debating the minutia.
+
+## **getInitialProps can be tricky**
+
+There are quite a few convenience methods that Next.js adds to the React paradigm:
+
+- getInitialProps
+- getStaticProps
+- getStaticPaths
+- getServerSideProps
+- reportWebVitals
+
+I agree that they can be hard to learn, but I 100% think they are worth learning anyway. They will greatly improve your productivity and the team has put together amazing supporting documentation.
+
+# Alternatives to Next.js
+
+## **Gatsby**
+
+Gatsby is a great tool – my personal site with my essays was created with it. The reason I still choose Next.js on most products is Next can handle both SSG and SSR.
+
+With the addition of ISR, I'd have a hard time opting for Gatsby these days. There are a lot great themes using Gatsby though, and if you found one you really liked I could see that making sense.
+
+## **Vue and Nuxt**
+
+I hear amazing things about Vue and Nuxt. I'll certainly be exploring them in the future. I would love to hear about your experience with Nuxt.
+
+Nuxt takes the same progressive approach to building web apps, which I think is the way we'll see modern web dev going.
+
+## **Create React App**
+
+Time to answer the age-old question: can't I just use create-react-app?
+
+Yes, feel free. Create-react-app is a great tool. **That said, I really encourage you to start with Next.js if you're serious about performance.**
+
+# **Conclusion**
+
+Next.js is an excellent framework for React developers building static or server-side rendered sites. The popularity of React helped boost Next. The Next.js team solves common problems with elegant solutions that are almost indistinguishable from magic.
+
+What a time to be a developer.
+
+See you on the other side,
+
+Drew

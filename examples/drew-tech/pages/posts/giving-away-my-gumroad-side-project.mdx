@@ -1,0 +1,150 @@
+---
+title: Giving away my side project - GumroadWidgets.com
+created: February 8, 2021 6:02 PM
+tag: building-products, tech-decisions
+tweet: 1359155549963759619
+date: 2021/2/8
+featured: false
+description: Looking for a new side project and like Gumroad? I've got the perfect project for you — and you can get started for free.
+slug: giving-away-my-gumroad-side-project
+updated_at: Last updated on June 27 2021
+author: Drew Bredvick
+---
+
+import OGImage from '../../components/OGImage'
+
+<OGImage
+  title="Giving away my side project: GumroadWidgets.com"
+  image="https://assets-global.website-files.com/6171b265e5c8aa59b42c3472/6195a323ebc74430470887d0_gum-coin-4.svg"
+/>
+
+# Giving away my side project: GumroadWidgets.com
+
+## The project
+
+[GumroadWidgets.com](http://gumroadwidgets.com) is a site I built that's goal is to generate Scriptable code for Gumroad sellers to embed their product sales data on their iOS home screen.
+
+**I'm giving it away.**
+
+### The motivation
+
+I'm always on the hunt for new side projects. Back in November of 2020 I saw a tweet from Pieter Levels about a Gumroad sales widget:
+
+[](https://twitter.com/levelsio/status/1330576085151588352)
+
+![/images/widgets.png](/images/Untitled.png)
+
+Here's the original image from [@levelsio](https://twitter.com/levelsio/status/1330573624827392003)
+
+Pieter posted a [gist](https://gist.github.com/levelsio/a1ca0dd434b77ef26f6a7c403beff4d0) showing how his script works:
+
+```
+// Modified from @mutsuda's https://medium.com/@mutsuda/create-an-ios-widget-showing-google-spreadsheets-data-856767a9447e
+// by @levelsio
+
+// HOW TO
+// 1) Make a Google Sheet, we'll pull the first cell e.g. A1
+// 2) Publish your Google Sheet, File -> Publish To Web
+// 3) Copy the SHEET_ID in the URL, put it in here below:
+const endpoint =
+  'https://spreadsheets.google.com/feeds/cells/SHEET_ID/1/public/full?alt=json'
+// 4) Install Scriptable @ https://apps.apple.com/us/app/scriptable/id1405459188
+// 5) Copy this entire script in to Scriptable (tip: you can send it to your iPhone via Whatsapp/Messenger/Telegram etc)
+
+// Function that performs the request to the JSON endpoint
+async function loadItems() {
+  let at = endpoint
+  let req = new Request(at)
+  let corpo = await req.loadJSON()
+  // We return just the cells
+  return corpo.feed.entry
+}
+// Request the spreadsheet data
+let json = await loadItems()
+
+// Obtaining the content of the exact cell we are looking for
+stockValue = json[0].content['$t']
+
+// Create the widget
+let w = new ListWidget()
+// w.backgroundColor = new Color("#000080")
+
+// Add the value of the stock to the widget
+t = w.addText(stockValue)
+t.textColor = Color.black()
+t.font = new Font('Avenir-Heavy', 24)
+
+Script.setWidget(w)
+Script.complete()
+```
+
+I realized quickly that I could build a no-code friendly version of this and generate all of the Scriptable widget logic that directly uses the Gumroad API (instead of reading from a Google Sheet).
+
+### Scriptable — what is it?
+
+[Scriptable](https://scriptable.app/) is a tool to "automate iOS with JavaScript".
+
+It's great for automating quite a few things on iOS if you know JS. Another great use case is creating these little display widgets for apps and services that do not yet have an iOS widget.
+
+### A landing page
+
+Around the same time I saw this tweet, I also saw [@derrickreimer's](https://twitter.com/derrickreimer) SavyCal landing page and it motivated me.
+
+[Scheduling Software Your Recipients Will Love · SavvyCal](https://savvycal.com/)
+
+_side note: check out their landing page if you haven't yet — it's amazing._
+
+What I really wanted to make was an interactive example of what using my product would be like. Getting users clicking is a great way to increase conversions.
+
+So I spent most of my time getting that interaction right. I'm actually super happy with what I came up with:
+
+![/images/CleanShot_2021-02-08_at_20.02.20.gif](/images/CleanShot_2021-02-08_at_20.02.20.gif)
+
+### What's next
+
+The only thing left to do is create a generator that takes in:
+
+- a user's color preferences
+- a user's Gumroad API keys (to make the calls)
+- a Gumroad product ID
+
+and generates a custom version of Pieter's Scriptable widget code above.
+
+Then you've got to list it on Gumroad and launch!
+
+## Why I'm giving it away
+
+I've currently got quite a few projects going on and don't have time to finish this.
+
+While I am a fan of [Daniel Vassallo's](https://twitter.com/dvassallo) "have lots of small bets" idea, there is also such a thing as spreading yourself too thin.
+
+![/images/side-projects.png](/images/side-projects.png)
+
+Rather than letting this project die and be thrown into my side project graveyard, I thought maybe it would be best to give it a new owner.
+
+**Maybe that person is you?**
+
+## How to enter
+
+Interested in taking this project over? I'll transfer the Github repo to you along with ownership of the domain.
+
+I'm going to select the winner on Friday.
+
+**To enter, do one of the following:**
+
+- [email me](mailto:drewb@hey.com)
+- [DM me](https://twitter.com/dbredvick) on Twitter
+- reply to [this thread](https://twitter.com/DBredvick/status/1359155549963759619) on Twitter
+- leave a top level comment on this [IndieHackers post](https://www.indiehackers.com/post/free-giving-my-project-gumroadwidgets-an-ios-widget-generator-inspired-by-levelsio-c101a282af)
+
+## What else am I working on?
+
+So if I'm giving up on Gumroad Widgets, I must be working on other things, right? Correct.
+
+I'm:
+
+- Building V1 of FitVitals (I wrote about it [here](/posts/rome-wasn't-built-in-a-day-and-neither-was-my-saas-app))
+- Shipping an MVP for for a site I use waaay too much (Twitter)
+- Writing these posts
+
+Stay tuned for an early access look at my Twitter project.

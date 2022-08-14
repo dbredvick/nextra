@@ -1,0 +1,215 @@
+---
+title: SaaS Starters — how to jump start your software as a service
+created: January 24, 2021 5:05 PM
+tag: building-products, software-as-a-service, tech-decisions, next.js
+tweet: 1352792699376689152
+date: 2021/1/30
+description: Don't waste your weekend writing boilerplate. Ship meaningful code on your side projects with help from these great tools.
+slug: saas-starters-jump-starting-your-saas
+author: Drew Bredvick
+---
+
+import OGImage from '../../components/OGImage'
+
+<OGImage />
+
+# SaaS Starters — how to jump start your software as a service
+
+Work in Progress – Still looking for Ruby on Rails starters to add. DM me if you have one!
+
+## Introduction
+
+In a quest to learn Django & Vue, I found a project, [SaaS Pegasus](https://www.saaspegasus.com/), that had great examples of how to build a software as a service using that stack.
+
+A few commands later I had a working project locally with:
+
+- Stripe integration
+- A Postgres database
+- A cron job runner connected to Redis
+- Authentication and authorization
+- Configured webpack
+- A project hierarchy
+- Naming conventions
+
+and I'm probably missing much more the project provides.
+
+### Should I use a SaaS starter?
+
+Yes. Unequivocally yes.
+
+Save yourself time, money, and effort & spend those resources finding product-market fit instead of setting up auth for the thousandth time.
+
+Node coding the app yourself? Cool. Generate the codebase in a language your developer knows and hand it to them. You'll save one week of consulting fees and plenty of wasted time.
+
+# List of SaaS Starters by language
+
+## React SaaS starters
+
+### Divjoy
+
+In the past, I've used [Divjoy](https://divjoy.com?via=drew) to jump start my Next.js software projects. I built:
+
+- QuickerQuestions (abandoned, wrote about it [here](/posts/what-not-to-work-on))
+- QuarantineCup (a [free to play remote drinking game](https://quarantinecup.live/))
+
+**What's included**
+
+- UI kit integration (Bootstrap, Bulma, or MaterialUI)
+- Can generate Next.js or Create-React-App projects
+- Auth (Firebase or Auth0)
+- Database (Firebase)
+- Stripe integration
+- Vercel or Netlify hosting configurations
+- Newsletter integration (Mailchimp)
+- Contact forms (Amazon SES, Google Sheets, Formspree, Airtable)
+- Analytics (Simple Analytics, Google Analytics)
+
+**Pros**
+
+- High quality React code
+- Author actively develops features & is easy to get in touch with
+- Long list of included features
+- Visual editor
+
+**Cons**
+
+- No TailwindUI integration
+- No Supabase or AWS Amplify option for database
+- No opinion on your backend architecture
+
+**Price**: $149 one-time purchase
+
+If you'd like more info, I've written an extensive [review of Divjoy](/posts/divjoy-is-it-worth-it) and keep it updated as new features launch.
+
+### Gravity
+
+~~Note: I have not used [Gravity](https://usegravity.app?ref=drew), this information is all publicly available info on their marketing website.~~
+
+Update: I am using [Gravity](https://usegravity.app?ref=drew) on a current project. Review inbound. So far, so good.
+
+**What's included**
+
+- Payments with Stripe
+- React UI
+- REST API with Auth
+- Email with Mailgun
+- Admin / user management UI
+- Onboarding flow
+- Pre-built components
+- Team support
+- Authentication and Authorization
+- Pick your database (MySQL, Mongo, Postgres, SQLite and more with Knex & Mongoose)
+
+**Pros**
+
+- Seems pretty fully featured
+- Comes with Slack Community & 1 yr of support
+- One of the few with "user onboarding"
+
+**Cons**
+
+- One of the higher prices
+
+**Price:** $795
+
+Their tagline is as follows:
+
+> Save $16,403 by not writing these 10,000+ lines of code
+
+A bold claim, but this starter includes _a lot_ of features and lines of code.
+
+## Next SaaS starters
+
+### Next.js Subscription Payments
+
+I'm using [this starter](https://github.com/vercel/nextjs-subscription-payments) right now for a project I have not yet launched. Under the hood it uses Supabase.
+
+**In depth review coming soon**
+
+**Price:** $0 – it's open source!
+
+### Divjoy
+
+We talked about [Divjoy](https://divjoy.com/?via=drew) a few sections up. It has the ability to generate Next.js projects as well as Create-React-App projects.
+
+## Django SaaS starters
+
+### SaaS Pegasus
+
+I purchased [this starter](https://www.saaspegasus.com/) to learn what a mature Django & Vue architecture could look like.
+
+**What's included**
+
+- Stripe integration
+- A Postgres database
+- A cron job runner connected to Redis
+- Authentication and authorization
+- Great documentation
+
+**Pros**
+
+- This is some of the best documentation I've seen with a starter project
+- The interactive examples make creating your own functionality a breeze. Copy and paste. Done.
+
+**Cons**
+
+- Honestly, hard to think of any if this is your tech stack of choice
+
+**Price: $295 for a single site, $750 for unlimited**
+
+## Laravel SaaS starters
+
+### [Jetstream](https://jetstream.laravel.com/) + [Spark](https://spark.laravel.com/)
+
+If you are a Laravel dev, I'm sure you've already heard of these options. They're amazing and should be your default choice.
+
+**Price:** $99 per project or $199 for unlimited (Spark only, Jetstream is free)
+
+## Ruby SaaS starters
+
+Used a good Ruby on Rails starter before? DM me and I'll add it to the list!
+
+## .NET SaaS starters
+
+### AspNetZero
+
+I couldn't find many .NET options, but [this one](https://aspnetzero.com/) seemed to be the most legit. Disclaimer: I didn't spend two grand on a .NET SaaS starter, so this info is all from their marketing pages.
+
+**What's included**
+
+- .NET Core and Angular SPA
+- .NET Core and jQuery web app
+- [ASP.NET](http://asp.NET) MVC Angular SPA
+- [ASP.NET](http://asp.NET) MVC jQuery web app
+- XAMARIN mobile app that integrates with the above apps
+
+**Pros**
+
+- includes 15 incident support
+- 30 day money back guarantee
+- Really includes the whole gamut (front end, back end, native)
+- If you're reading this section, you probably want a .NET solution (which this is)
+
+**Cons**
+
+- Price tag
+- .NET (all joking aside, I love .NET Core and think C# is an awesome language)
+- This offers so many features, I'm assuming it's a massive codebase. Probably too much code for simply starting a side project.
+
+**Price: $1,999** 🤯
+
+This is the by far the most expensive option, but I think this company's target market is companies and not developers trying to build a side project. (Check out the brands listed on their marketing page — Deloitte has a pretty big budget)
+
+### Have a starter to add?
+
+DM me your starter on Twitter and I'll add it do the list.
+
+### Twitter thread
+
+[Original Tweet](https://twitter.com/DBredvick/status/1352792699376689152?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed)
+
+---
+
+See you on the other side,
+
+Drew

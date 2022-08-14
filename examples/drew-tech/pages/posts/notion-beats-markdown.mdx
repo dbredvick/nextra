@@ -1,0 +1,111 @@
+---
+title: Rock beats scissors, paper beats rock, and Notion beats markdown.
+created: December 14, 2020 4:17 PM
+tag: next.js, notion
+tweet: 1339025011600973826
+date: 2020/12/14
+description: Making it easy to write my blog by making the backend powered by Notion as the CMS.
+slug: notion-beats-markdown
+author: Drew Bredvick
+---
+
+import OGImage from '../../components/OGImage'
+
+<OGImage />
+
+# Rock beats scissors, paper beats rock, and Notion beats markdown.
+
+---
+
+## Update: this is all wrong
+
+I'm back to markdown thanks to this great project, [Nextra](https://nextra.vercel.app).
+
+Leaving this old blog post up as a reminder that sometimes I'm wrong. Best to take all advice from this site with a grain of salt :)
+
+---
+
+For the longest time, I’ve wanted to write my blog posts inside Evernote & have them automatically available on my personal site.
+
+I looked into ways to do this in Evernote back in the day and it was tricky. With an intense if this then that (IFTTT) flow, you could _kinda_ get there.
+
+I gave up on that idea.
+
+Gatsby came out and made static sites cool again, so I moved my blog to a Gatsby theme called [Novela](https://github.com/narative/gatsby-theme-novela) (still a great theme, btw).
+
+My site was fast, beautiful, and simple. Yet, I still wanted my dream of typing a blog post in the gym on my phone while having complete control of the code.
+
+I could figure out a complex setup that let me code and commit to a GitHub repo on the go, but to me that seemed overly complex for a personal site.
+
+Then I saw a tweet from Paul Shen showing how he got [his blog](https://bypaulshen.com/) running with Notion.
+
+Following this guide from Splitbee, I got an initial version working.
+
+[Build a blazing fast blog using Notion & Next.js - Splitbee Blog](https://splitbee.io/blog/notion-as-cms-using-nextjs)
+
+The magic lies in `getStaticPaths` and `getStaticProps` data fetching methods in Next.js.
+
+```jsx
+// generates the paths that need to be statically rendered
+export async function getStaticPaths() {
+  const posts = await getAllPosts()
+  return {
+    paths: posts.map((row) => `/${row.slug}`),
+    fallback: true
+  }
+}
+// renders an individual post
+export async function getStaticProps({ params: { slug } }) {
+  // Get all posts again
+  const posts = await getAllPosts()
+
+  // Find the current blogpost by slug
+  const post = posts.find((t) => t.slug === slug)
+
+  if (!post) {
+    return {
+      props: {}
+    }
+  }
+
+  const blocks = await fetch(
+    `https://notion.drewtech.workers.dev/v1/page/${post.id}`
+  ).then((res) => res.json())
+
+  // I'm hosting my own instance of https://github.com/splitbee/notion-api-worker on Cloudflare
+
+  return {
+    props: {
+      blocks,
+      post
+    },
+    revalidate: 60
+  }
+}
+```
+
+The other magic piece is React-Notion, a library for rendering Notion elements in React.
+
+[splitbee/react-notion](https://github.com/splitbee/react-notion)
+
+Note: this is all running off of Notion's internal API. _Hopefully nothing breaks when they launch their public API in 2021_ 🤞
+
+I manually moved my back-catalog into Notion, deployed to Vercel, and made some DNS changes.
+
+Now, less than 24 hours later, I have a dynamic blog backed by my favorite note taking app deployed to a fast network powered by a great framework.
+
+Here's a link to the Notion doc powering this post:
+
+_no longer available_
+
+Super meta.
+
+What a great time to be a developer.
+
+I’m excited to start writing more on this new setup.
+
+---
+
+See you on the other side,
+
+Drew

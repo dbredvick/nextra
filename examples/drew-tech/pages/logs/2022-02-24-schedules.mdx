@@ -1,0 +1,58 @@
+---
+title: '45 and 46/1000 — Cron execution'
+date: 2022-02-24
+tag: log, script-cron
+description: Two updates in one.
+---
+
+# 45 and 46/1000 — Cron execution
+
+This update covers two days of work, partially because I don't feel the need to Tweet an update with the state of the world at this moment.
+
+## 45/1000 DynamoDB + Serverless
+
+I was able to process a cron job from end to end finally.
+
+Half of the battle was sharing a table between various serverless functions. It turns out that the easiest way is to use CloudFormation variables.
+
+```yaml
+Outputs:
+  scheduleTableArn:
+    Value:
+      Fn::GetAtt:
+        - ScheduleTable
+        - Arn
+    Export:
+      Name: scheduleTableArn
+  cronTableArn:
+    Value:
+      Fn::GetAtt:
+        - CronTable
+        - Arn
+    Export:
+      Name: cronTableArn
+```
+
+Then after exporting, consuming them in the other `serverless.yml` files
+
+```yaml
+Resource:
+  - ${cf:cron-scheduler-${self:provider.stage}.scheduleTableArn}
+```
+
+## 46/1000 Cron E2E
+
+After that, I figured out cron job execution from end-to-end.
+
+At the moment, I've included a limited scope for the MVP:
+
+- GET calls only
+- Three retries by default
+- Only storing status code of request
+- No support for custom headers
+- No support for custom payload
+- No failure alerts
+
+![](/images/cron-e2e.png)
+
+Victory.

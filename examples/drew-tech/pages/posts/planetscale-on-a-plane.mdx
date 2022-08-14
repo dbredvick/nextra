@@ -1,0 +1,30 @@
+---
+title: PlanetScale on a plane
+created: March 18, 2022
+tag: building-products, planetscale, next.js, prisma
+date: 2022/3/18
+description: Airplane WiFi and SaaS database solutions don't get along well. Here's the fix.
+author: Drew Bredvick
+---
+
+import OGImage from '../../components/OGImage'
+
+<OGImage />
+
+# PlanetScale on a plane ✈️
+
+If you're using Prisma + PlanetScale, the airplane WiFi (or any slow WiFi, really) might cause some issues for you.
+
+You might be seeing an error message like this:
+
+> Invalid `prisma.user.findUnique()` invocation: Can't reach database server at `127.0.0.1`:`3306` Please make sure your database server is running at `127.0.0.1`:`3306`.
+
+Edit your connection string like this, and you should be good to go:
+
+```bash
+DATABASE_URL=mysql://127.0.0.1:3306/<your-db-name>?pool_timeout=0&connect_timeout=30
+```
+
+The default Prisma timeouts are around 10 seconds. Changing these two should get you up and running.
+
+Have a safe flight 👋

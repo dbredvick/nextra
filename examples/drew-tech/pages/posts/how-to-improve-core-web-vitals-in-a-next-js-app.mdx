@@ -1,0 +1,165 @@
+---
+title: Intro to Core Web Vitals
+created: December 28, 2020 11:35 AM
+tag: core-web-vitals, nextjs, performance
+date: 2020/7/6
+description: Core Web Vitals are a game changer for web performance monitoring. Here's an intro to how to monitor them.
+slug: how-to-improve-core-web-vitals-in-a-next-js-app
+updated_at: Last updated on June 27 2021
+---
+
+import OGImage from '../../components/OGImage'
+
+<OGImage
+  title="Intro to Core Web Vitals"
+  image="https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/dYAbN2LdttJ1qYk1gssh.svg"
+/>
+
+# Intro to Core Web Vitals
+
+# **What are Web Vitals?**
+
+[Core Web Vitals](https://web.dev/vitals) is an initiative from Google to create clarity on what metrics matter most to users and for SEO.
+
+Here's what Google has to say about Vitals:
+
+> Web Vitals is an initiative by Google to provide unified guidance for quality signals that are essential to delivering a great user experience on the web. - web.dev/vitals
+
+**Core** Web Vitals are a subset of Web Vitals. Google has picked out three as the core main focus. If you get these three right, the rest of the metrics should naturally fall into place.
+
+## **Cumulative Layout Shift (CLS)**
+
+Avoiding shifting the page around as it loads is very important in giving your users a positive experience.
+
+Cumulative Layout Shift is the metric that measures these shifts.
+
+Check out this recording Google showed to emphasize the importance of CLS:
+
+### **How is CLS measured?**
+
+Anytime an element changes size and causes the start position of other elements to change, you've contributed to the CLS.
+
+Below are the ranges for CLS:
+
+![/images/cls_range.jpg](/images/cls_range.jpg)
+
+For more info, check out:
+
+- [web.dev/cls](https://web.dev/cls)
+- [learn.fitvitals.dev/metrics/cls](https://learn.fitvitals.dev/metrics/cls)
+
+## **Largest Contentful Paint (LCP)**
+
+The perceived performance of your site is probably one of the most important metrics – Largest Contentful Paint tries to measure just that.
+
+> The Largest Contentful Paint (LCP) metric reports the render time of the largest [image or text block](https://web.dev/lcp/#what-elements-are-considered) visible within the viewport. - [web.dev/lcp](https://web.dev/lcp)
+
+### **How is LCP measured?**
+
+The paint time is saved for each of the elements in your intial viewport.
+
+The following qualify for LCP measurement:
+
+- Images of all types
+- Videos
+- Background images loaded via CSS
+- All text blocks
+
+This means any of these elements that take up a lot of space in the initial viewport should load *very* quickly.
+
+Below are the ranges for LCP:
+
+![/images/lcp-range.jpg](/images/lcp-range.jpg)
+
+For more info, check out:
+
+- [web.dev/lcp](https://web.dev/lcp)
+- [learn.fitvitals.dev/metrics/lcp](https://learn.fitvitals.dev/metrics/lcp)
+
+## **First Input Delay (FID)**
+
+Responding to user input quickly is critical to a positive user experience.
+
+> The First Input Delay (FID) metric helps measure your user's first impression of your site's interactivity and responsiveness. - [web.dev/fid](https://web.dev/fid)
+
+This encourages a few things:
+
+- Shipping the minimum amount of required HTML/CSS/JS
+- Lazy loading where possible
+- Keeping the main thread less busy
+
+### **How is FID measured?**
+
+First Input Delay measures the time between when a user interacts with an input and when the event handler actually starts to process that input.
+
+Below are the ranges for FID:
+
+![/images/fid-range.jpg](/images/fid-range.jpg)
+
+For more info, check out:
+
+- [web.dev/fid](https://web.dev/fid)
+- [learn.fitvitals.dev/metrics/fid](https://learn.fitvitals.dev/metrics/fid)
+
+# **Why are they important?**
+
+Core Web Vitals measure:
+
+- site performance
+- user experience
+- SEO (soon)
+
+## **Site performance**
+
+Because Web Vitals are measured in the field, they represent the *real experience* your users are having.
+
+Lighthouse audits are great, but they don't represent what it's really like to visit your site in the wild.
+
+This means metrics are representative of your audience as well (at least the ones [using Chrome](https://developers.google.com/web/tools/chrome-user-experience-report)).
+
+Think of these new Vitals as mini-Lighthouse audits that each visitor runs locally and reports the results.
+
+## **User experience**
+
+Google made sure that the Core Web Vitals measure user-centric outcomes. CLS, LCP, and FID all impact UX and are generally safe from the [vanity metric](https://www.nngroup.com/articles/vanity-metrics/) problem.
+
+CLS is arguably entirely focused on creating a positive UX.
+
+Designers – please don't let your engineers forget about loading states.
+
+## **SEO**
+
+~~Google has announced they will rank you based on your Core Web Vitals, *just not yet*. When will the switch happen? It's too early to say. Google said in [a recent blogpost](https://webmasters.googleblog.com/2020/05/evaluating-page-experience.html) that they won't switch to the new ranking until next year. They will provide at least **six months** of lead time after making an official statement.~~
+
+Update: Google Core Web Vitals are going to start impacting ranking sometime in mid June 2021.
+
+So do you need to start fixing these issues now?
+
+~~Not technically.~~ YES!!
+
+But here's why you should: each Core Web Vital is impacted by many metrics Google already ranks you on.
+
+- Time to first byte (TTFB) greatly impacts Largest Contentful Paint (LCP)
+- First Contentful Paint (FCP) pretty closely mirrors LCP
+- Total Blocking Time (TBT) looks quite a bit like First Input Delay (FID)
+
+**Get started today**.
+
+## Are your vitals in good shape?
+
+I built a tool that queries Google’s data set of vitals so you can track your performance.
+
+[Fit Vitals - Are your Core Web Vitals in good shape?](https://fitvitals.dev)
+
+# **What's next?**
+
+If you're looking for more information on Core Web Vitals, check out Google's educational site: [web.dev/vitals](https://web.dev/vitals).
+
+I'm making a guide to help developers with practical Vitals issues like:
+
+- [How to track Core Web Vitals](https://learn.fitvitals.dev/tracking-core-web-vitals) (Next, Nuxt, & Gatsby)
+- [Quick fixes for CLS](https://learn.fitvitals.dev/metrics/cls)
+- [Quick fixes for LCP](https://learn.fitvitals.dev/metrics/lcp)
+- [Quick fixes for FID](https://learn.fitvitals.dev/metrics/fid)
+
+I'll be building tools and documenting what I learn about Web Vitals over the next few months.

@@ -1,0 +1,322 @@
+---
+title: Ecom Manifesto
+tag: building-products, software-as-a-service, tech-decisions, ecommerce
+date: 2022/02/15
+description: Ecommerce is hard. Here's a path to making it easier, at least technically.
+author: Drew Bredvick
+---
+
+import OGImage from '../../components/OGImage'
+
+<OGImage title="Ecom Manifesto" />
+
+# Ecom Manifesto
+
+_update: this post inspired a [webinar I presented](https://vercel.com/try/building-the-fastest-digital-storefronts) earlier in 2022._
+
+### Ecommerce is hard
+
+Margins are thin, you're competing with the best engineering teams in the world, and the next batch of inventory is stuck somewhere on a ship near Los Angeles.
+
+But you already know all of that.
+
+While I can't help you with your inventory situation, I can help you with your ecommerce technical strategy.
+
+### Who am I?
+
+Before you hear a bunch of advice, it's good to know who you're hearing it from.
+
+My name is Drew. I'm an engineer at Vercel and have been building ecom apps [with Next.js](/posts/why-nextjs) for the last five years.
+
+I've helped build internal ecom tools, worked on ecom platforms used by millions, and have worked with tons of Vercel ecom customers. I've been lucky enough to have tons of amazing mentors along the way with lots of ecommerce experience.
+
+This post serves as a summary of all the lessons I've learned or that have been passed down from my coworkers and mentors.
+
+This is my advice to all ecom brands, an ecom manifesto.
+
+## Tech decisions
+
+### NoOps where possible
+
+Waiting for the DevOps team to stand up the new CI/CD pipeline is fine if you're not on a tight deadline, but that's almost never the case in ecom. With deadlines from seasonal promotions and Black Friday, you've got to hit your mark.
+
+There's a reason it takes two weeks to stand up new services.
+
+It takes a long time to make sure you're properly:
+
+- installing app dependencies
+- running your CI tests
+- configuring environment variables
+- caching build artifacts
+- containerizing your app
+- configuring your Helm charts
+- scaling your Kubernetes pods up and down
+- ensuring sure your assets are in the CDN
+- running E2E tests
+- configuring database access and service roles
+
+While Infrastructure as Code (IaC) did a great job pulling these tasks out of thousands of UIs and into GitHub, IaC didn't solve the true problem: **setting this all up is complicated**.
+
+And you already know this. When's the last time you configured a Helm chart correctly on the first try or correctly named your service so that the environment variables were injected by Vault correctly?
+
+So what's the solution?
+
+Delete as much configuration as possible.
+
+What's the alternative to IaC? Code as Infrastructure.
+
+Use platforms that understand your code and automatically provision the correct infra for you.
+
+### Optimize images, scripts, fonts
+
+Your performance matters a ton. We all know the ecom studies show that 100ms of latency means a decrease in conversion rates. The main cause of that latency probably isn't your infrastructure; **it's your code**.
+
+Images make up about half of all data on the internet — I'd bet it's even higher on ecommerce pages.
+
+Your product detail page is only as good as the imagery of your product. Your landing page is only as good as the hero image. Your category pages are only as good as the seasonal photography the content team uploads.
+
+You'll need to use services that address image optimization and ship the smallest image possible for each device. There are a bunch of great services out there that handle this. Don't reinvent the wheel.
+
+For scripts, make sure you're not loading any scripts that are not necessary. And make sure you're deferring marketing scripts as late as possible. Don't waste round trips on tracking pixels.
+
+Fonts matter a ton. You'll probably need to self host your fonts, unless you're using something like Google Fonts. Cross-site caching doesn't work as a few Chrome versions ago, so keep that in mind when making your decision.
+
+If you're building with Next.js, there are built in components for all of these. Some work out of the box while self-hosting and some require additional configuration.
+
+### Measure performance, field data only
+
+It's 2022. We should be a little more scientific with our performance monitoring.
+
+[Core Web Vitals](/posts/the-ripple-of-web-vitals) are a game changer for monitoring performance.
+
+Does it matter if your site is fast on your MacBook Pro with an M1 chip with fiber internet? Does that represent your average visitor?
+
+Probably not.
+
+Instead, with Core Web Vitals measured in the field, every user is represented in your performance data.
+
+No more periodic Lighthouse audits; we're moving to event-driven monitoring where the performance degradations can be alerted on in real-time.
+
+The SEO, engineering, product, and design teams are all focused on the same problem: improving the user experience.
+
+**Lighthouse audits are the new "it works on my machine."**
+
+### Don't be afraid to fetch on the client
+
+Server-side rendering (SSR) is great. Caching the original output of your SSR near your users can give them a fast time to first byte (TTFB).
+
+It's the feature that Next.js was originally known for.
+
+But we've leaned a bit too hard into SSR.
+
+Don't be afraid to fetch dynamic data on the client, especially user-specific info like:
+
+- inventory
+- shipping rates
+- shipping methods
+- taxes
+- personalization data
+- auxiliary data (like product recommendations)
+
+Why? Because it lets you make your base page more static. And [static hoisting](https://rauchg.com/2014/7-principles-of-rich-web-applications#pre-rendered-pages-are-not-optional) has a lot of benefits.
+
+Don't box yourself into fetching everything in `getServerSideProps`; it's slow and unnecessary.
+
+### Static pages, dynamic routes
+
+If you [prerender your pages](https://rauchg.com/2014/7-principles-of-rich-web-applications#pre-rendered-pages-are-not-optional), how do you make your application dynamic?
+
+Right now, the answer is dynamic routing.
+
+In your Express applications, that looked like Express middleware. While Express middleware was great, it executed on each request at the origin and could slow things down.
+
+Move your [middleware](https://vercel.com/docs/concepts/functions/edge-functions#middleware) as close to your users as possible, and use it to make routing decisions.
+
+This looks like using:
+
+- Cloudflare Page Rules and Workers
+- Vercel Edge Functions (Next.js middleware)
+- Akamai Edge Workers
+- Your reverse proxy (e.g. Nginx)
+
+While the DX of all of these is quite different, the rule is simple.
+
+**Don't use on-demand rendering to solve a dynamic routing problem.**
+
+### Quotes, inventory, and taxes
+
+Some things will always be pulled forward in your checkout flow. Inventory level, taxes, and shipping rates will _always_ be pulled forward.
+
+Why?
+
+Customers want an accurate quote (price) as soon as possible.
+
+Design for this as early as possible, and save time.
+
+### A/B test, but don't hurt the user experience
+
+With your dynamic routing, try your best to pull in [A/B split testing](https://github.com/vercel/examples/tree/main/edge-functions/feature-flag-split) into the routing layer.
+
+Why?
+
+To avoid that insanely ugly "you're not seeing the right thing" page where the page flashes different content every time you refresh.
+
+This is required for a few reasons, but the most important is that you want to get proper results from your A/B test.
+
+If you're flashing one experience and then rendering another, you're not getting accurate results.
+
+### Personalize with the highest signal (and that means past orders)
+
+Personalization is another one of those buzzwords that was popular two years ago. From my point of view, it's starting to hit critical mass.
+
+What's the best way to get started with personalization?
+
+**Use the highest signal first.**
+
+In most cases, this is:
+
+1. previous orders
+2. recently viewed items
+3. recently viewed categories
+
+Any more than that requires _a ton_ of traffic to see an uplift from.
+
+Start small, measure results, and iterate. Don't buy a large personalization solution just because you can.
+
+## Marketing 🤝 Engineering
+
+### Collaborate early with design and marketing
+
+Ever built a feature only to have marketing veto most of the design before launch? Okay, maybe I'm projecting from my experience, but it's best to avoid throwaway work.
+
+To avoid throwaway work, share feature branch deployments with your marketing and design team **as** you're building the feature.
+
+We know it's best to keep PR size small and get feedback as we code, so why don't we get feedback on features as we build them?
+
+In the past, it was because standing up individual environments for each feature was too hard. That's no longer the case with modern hosting solutions & advanced CI/CD pipelines.
+
+Share your work early.
+
+### Let marketing market
+
+If the marketing team needs coding work to be done to ship a new campaign, **you've failed**.
+
+Let's face it, engineering a great ecom platform is table stakes these days.
+
+You've got to differentiate with your marketing materials, and that means shipping quickly.
+
+You've got to let them test without getting in their way.
+
+To accomplish this, you'll need to:
+
+- configure a CMS
+- integrate 3rd party marketing scripts (watch out for performance)
+- sync data to your email provider
+- configure a landing page service
+
+If you haven't done all of these, you already know the pain that comes from not having this list implemented. You've got to push code changes out the door at midnight so that the promotion goes live "at the right time".
+
+Do your team a favor and start integrating with these marketing tools ASAP.
+
+### Enable the marketing team to own email
+
+Email is a critical part of ecommerce.
+
+If you're not sending:
+
+- weekly newsletters
+- abandoned carts
+- order confirmations
+- shipping notifications
+- product recommendations
+- in-stock alerts
+
+you're missing out on free conversions.
+
+Spend the time to integrate with your email provider so that the marketing team can own these. If it takes engineering resources to send emails, you're behind.
+
+### Headless is real now
+
+You heard people start talking about "headless" three years ago and it was "just a buzzword."
+
+We've crossed the threshold now.
+
+Ecommerce providers are seeing a real value going headless, whether it's for performance, SEO, or customization.
+
+If you're a serious ecommerce company, you're probably already looking into going headless and this isn't news to you.
+
+## Engineering culture
+
+### Block deploys that break the site
+
+The number one rule of ecom: **never stop a customer from giving you their money if they want to.**
+
+That means:
+
+- E2E test your critical checkout flow
+- E2E test critical emails
+- E2E test authentication flows
+
+And when in doubt, add more E2E tests.
+
+Each outage should result in one additional E2E test.
+
+Each feature PR should include one additional E2E test.
+
+## Block deploys that break performance
+
+Breaking website performance is a big deal. It's almost as big of a deal as breaking the site.
+
+If you ship an 8.5MB page, you might as well have broken that page for someone browsing your site on 3G cell service.
+
+Automate checks on the PR level that ensure you're not breaking performance with new changes. Vercel supports this with Checks, but plenty of other platforms have features to address performance at the PR level.
+
+One small start would be monitoring the bundle size on PRs.
+
+### Accessibility is a non-negotiable
+
+You've got a lot of visitors on your site. Some of them are blind, some are deaf, and some are color blind.
+
+Your site needs to be accessible to everyone.
+
+It's good for the world, it's good for your SEO, and it's good for your sales.
+
+Do the right thing.
+
+Use tools like [HeadlessUI](https://headlessui.dev/) and [Radix](https://www.radix-ui.com/) to make your components accessible by default; just add your styles on top.
+
+### Everyone can see the metrics
+
+If your team is gating access to reports with site performance, conversion rates, or website analytics so that only the marketing team can see them, your engineering team is missing out on a lot of valuable data.
+
+A lot of the best ideas come from the bottom up and from random parts of the organization. Your new marketing campaign might come from something a product owner notices and talks about with the engineering team. The SEO team might notice a dip in website performance and alert the engineering team.
+
+Data needs to be shared across teams, especially in remote organizations.
+
+### Default to frameworks, buy SaaS where you can
+
+If you're a React shop, look to [Next.js](/posts/why-nextjs). If you need a tool for surveys, look to [Typeform](https://typeform.com/).
+
+Don't reinvent the wheel; you don't have time.
+
+### Polish your core competencies
+
+Since you decided to outsource the undifferentiated work, you've got time to make your core product the best it can be.
+
+Build an amazing VR try-on experience, make your design pop and match your recent marketing campaign, and build innovative new features.
+
+Now that you've got some time freed up, spend those innovation tokens on things that will drive the business forward and bring joy to your customers.
+
+### Don't look for silver bullets; your engineering culture is the fix
+
+This final item is the most important.
+
+Your engineering culture will decide your outcomes, not your tech decisions.
+
+> The factory is the product
+
+Just like what Elon Musk [said](https://twitter.com/elonmusk/status/1348716679774265344), your engineering culture is the product.
+
+How seriously you take performance, E2E testing, accessibility, and security are decided by the culture of your team.
+
+You need your team to say, **"People like us build great web experiences."**

@@ -1,0 +1,145 @@
+---
+title: Sent my first Next.js Newsletter (here's what was in it)
+created: December 13, 2020 8:20 PM
+tag: next.js, writing
+date: 2020/6/19
+description: My first Next.js newsletter went out this week. Here's what was in it.
+slug: sent-my-first-nextjs-newsletter-(here's-what-was-in-it)
+author: Drew Bredvick
+---
+
+import OGImage from '../../components/OGImage'
+
+<OGImage />
+
+# Sent my first Next.js Newsletter (here's what was in it)
+
+Update: I've moved this Next.js newsletter to this blog as I didn't see enough reason to keep them separate.
+
+I’ve been wanting to start a newsletter about Next.js and finally did it this weekend.
+
+I’m using [ghost](https://ghost.org/) to host the site, it’s a super awesome tool. V3 even has support for “membership” which is what I’m using.
+
+[https://ghost.org/members/](https://ghost.org/members/)
+
+I send out emails the morning the newsletter goes out. At the same time, the blog post goes live. It’s seriously awesome.
+
+**I’d encourage all devs to think about using no-code tools to run content-heavy sites.**
+
+In the newsletter I cover:
+
+- summaries of framework changes
+- cool new projects that use/integrate with Next.js
+- high-quality blog posts from the community
+- useful NPM packages
+- ??? still looking for more content categories
+
+My first post is archived [here](https://nextjsnotes.com/nextjs-9-4-overview/) but I’m putting the content below as well.
+
+I’ll be sending out the next edition this weekend. Sign up [here](https://nextjsnotes.com/initial-commit#subscribe) if you’re interested.
+
+---
+
+## Next.js 9.4 overview
+
+Welcome to the first edition of Next.js Notes!
+
+The last big change to the Next.js framework happened on May 11th. Version 9.4 was released and included amazing features mostly focused at improving developer experience.
+
+Before we get started, here’s a quick reminder on a somewhat recent security vulnerability.
+
+If you are:
+
+- using a version below 9.3.2
+- not targeting serverless
+
+**You need to update to > 9.3.2 as soon as possible. Check out the security warning [here](https://github.com/vercel/next.js/security/advisories/GHSA-fq77-7p7r-83rj).**
+
+As a starting point for this newsletter, let’s dig into the changes 9.4 brings.
+
+### Next.js 9.4 overview
+
+**React Fast Refresh** When you make a change in your editor, you keep **application state**. No more scrolling down to the correct spot on the page after fixing a typo. An interesting point on Fast Refresh is that it took a lot of community support to make it happen. The Next.js team helped, as well as contributors from React and Webpack.
+
+![https://nextjsnotes.com/content/images/2020/06/fash-refresh-gif.gif](https://nextjsnotes.com/content/images/2020/06/fash-refresh-gif.gif)
+
+fast refresh
+
+**Better environment variables configuration** I’m very excited for these updates. Next.js environment variables have been the cause of much pain (myself included).
+
+> You no longer have to add a next.config.js and add the env key to expose these variables. - Next.js 9.4 Blog Post
+
+Want your vars exposed to the browser? Prefix them with `NEXT_PUBLIC_`. Automatic .env support - no need to pull in dotenv into every Next.js project anymore 🎉 Read more about the environment variable changes here.
+
+**Incremental Static Regeneration (beta)** Incremental static regeneration is a game-changer. It’s joining beta at the moment, so don’t throw it in production yet (or do 🙂).
+
+How does incremental regeneration work?
+
+Imagine if each of your server-side-rendered (SSR) pages was statically output to a CDN and served each time (given that the request doesn’t change). That is basically incremental static regeneration (ISR).
+
+It’s going to change the way you create your site. **Most importantly, it’s going to change the performance of your site.**
+
+Speaking of performance, let’s dig into Web Vitals 👇
+
+**Web Vitals reporting** What are web vitals? Google is creating a new set of standards for how pages should behave. Vitals are similar to Lighthouse audits but focus on slightly different targets.
+
+![https://nextjsnotes.com/content/images/size/w2400/2020/06/CleanShot-2020-06-12-at-22.41.42@2x.png](https://nextjsnotes.com/content/images/size/w2400/2020/06/CleanShot-2020-06-12-at-22.41.42@2x.png)
+
+web vitals
+
+Given Google’s recent dedication to these metrics, I wouldn’t be surprised if they are already playing a big part in their search algorithm. Better get to fixing these to maximize your SEO!
+
+**Built-in fetch support** If you upgrade to Next.js 9.4, be sure to throw out those fetch polyfills for the front end. Create your `TECH DEBT` Jira ticket tomorrow as Next.js includes them by default.
+
+**Absolute import aliases** Cleaner code is better code. Absolute paths are a great way to handle super long import paths. You don’t have to use this feature, but if you set it up, expect to clean up some of those really long relative import paths.
+
+Example: The best use case I can think of is a utility file (`/utils/foo-helper.js`) that needs to be imported deep in the components folder (`/components/.../Component.js`).
+
+This feature will clean that up nicely. Read more about it [here](https://nextjs.org/docs/advanced-features/module-path-aliases).
+
+**Better logging** The dev console gets way less noisy. Here’s a before and after:
+
+![https://nextjsnotes.com/content/images/size/w2400/2020/06/before.png](https://nextjsnotes.com/content/images/size/w2400/2020/06/before.png)
+
+before
+
+![https://nextjsnotes.com/content/images/size/w2400/2020/06/after.png](https://nextjsnotes.com/content/images/size/w2400/2020/06/after.png)
+
+after
+
+**Updated CMS examples** The Next.js team updated some of the CMS examples more clearly explaining how to statically generate content against the individual CMS APIs. Great news for you if you use any of these:
+
+- Contentful
+- DatoCMS
+- Prismic
+- Sanity
+- TakeShape
+
+**Deep dive** Incremental static site regeneration is awesome, but it can be a little hard to wrap your mind around.
+
+[Static tweet example](https://static-tweet.now.sh/)
+
+Luis Alvarez ([@luis_fades](https://twitter.com/luis_fades)) put together the above example that shows its benefits. The first sentence of the RFC makes the goal of ISR clear. Fully automatic re-rendering of statically exported pages without a full rebuild. This means a couple of things:
+
+- To use ISR, your page needs to be static
+- ISR saves on rebuilds
+
+If you’re tired of waiting on your CMS change to rebuild your entire app, this feature is for you.
+
+Want to learn more? Check out the RFC and docs below 👇
+
+[RFC](https://github.com/vercel/next.js/discussions/11552)
+
+So do you think you understand ISR? Arunoda Susiripala ([@arunoda](https://twitter.com/arunoda)) made a blog post explaining it that even has quiz questions! Check it out below.
+
+[What is incremental static (re)generation](https://arunoda.me/blog/what-is-nextjs-issg)
+
+**Useful package of the week** The new Web Vitals reporting function in Next.js uses an open-source package from the Google team that reports web vitals ([link](https://github.com/GoogleChrome/web-vitals/))
+
+This package is not limited to Next.js apps and can even send the data to your analytics provider (Google Analytics in this case). [Next.js analytics example](https://nextjs.org/docs/advanced-features/measuring-performance#sending-results-to-analytics) [Other app analytics example](https://github.com/GoogleChrome/web-vitals#send-the-results-to-google-analytics)
+
+Thanks for reading!
+
+### This is the end of the newsletter
+
+👉 [sign up for the newsletter](https://signup.drew.tech/)

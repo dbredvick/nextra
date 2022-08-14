@@ -1,0 +1,125 @@
+---
+title: SaaS due diligence - Instafeed API
+created: January 17, 2021 1:06 PM
+tag: deal-memos, finance, side-projects
+date: 2021/1/19
+description: Should you buy your first SaaS? Maybe. Quite a few others have. Instafeed API is a tool I debated buying.
+slug: saas-diligence-instafeed
+updated_at: Last updated on June 27 2021
+author: Drew Bredvick
+---
+
+import OGImage from '../../components/OGImage'
+
+<OGImage />
+
+# SaaS due diligence: Instafeed API
+
+I've recently become more and more interested in acquiring small side projects, repositioning their marketing, tweaking pricing, and developing additional features if needed.
+
+This approach is inspired by quite a few people:
+
+- Rob Walling
+- Ryan Kulp
+- Louis Nicholls
+- Courtland Allen
+- Nathan Latka
+- Shaan Puri
+
+Why take this approach?
+
+Building isn't the most important part. While this isn't always true (building rockets that go to Mars is very hard and the engineering is definitely the most important part), it's largely true in the SaaS world.
+
+## Instafeed API – a no code solution for creating an Instagram feed
+
+Asking price: **3k**
+
+Where I found it: MicroAcquire
+
+[MicroAcquire - Startup acquisition marketplace](https://app.microacquire.com/startup/XzTC1fBnBEemuSQjO1vT7nhN1ik1/FZnP5f2E4Dtib9EN3e5C)
+
+Creator: [https://twitter.com/mddanishyusuf](https://twitter.com/mddanishyusuf)
+
+### What this project gets right
+
+- Adding Instagram to a site is trickier than it should be
+- Instagram just changed their API policy
+- OAuth is really tricky – devs & no-coders definitely don't want to deal with it
+- Rides a wave – Instagram is HUGE
+
+### Room for growth
+
+- Could target "no code" movement with a little work
+- Could integrate with other platforms
+- Build widgets for Wordpress, Shopify, Vanilla HTML/JS, React component
+- Change billing model (per site, not usage)
+  - add CORS policy to protect usage
+- Could run a basic content marketing and SEO playbook here
+
+### Downsides
+
+- Offers free plan, assuming most usage is there
+- Traffic spiky and is likely coming through a few blog posts (previous owner's posts)
+- Platform dependence (FB / Insta can change their APIs)
+- In the middle (need to know how to code, but don't want to integrate w/ Insta directly)
+  - Most devs will want to "build it themselves"
+  - Too technical for most no-coders
+
+### Tech diligence
+
+BuiltWith: [https://builtwith.com/instafeedapi.com](https://builtwith.com/instafeedapi.com)
+
+The tech stack uses tech I'm familiar with:
+
+- Next.js (React)
+- MongoDB
+- Vercel
+- Google Analytics
+
+I signed up for an account and tested out the product a bit.
+
+Findings:
+
+- Authorization and Authentication seem to be in place
+- Basic pen test passed
+
+Remaining questions:
+
+- Are backups in place?
+- Does rate limiting work?
+- What's the architecture of the system? Vercel vs. other hosting (see below)
+
+### Costs
+
+- Hosting ($5/mo)
+  - I'm kinda confused about this price listed. Vercel would be more expensive monthly if on the paid plan. Guessing this is a Digital Ocean droplet that handles some other part of the process?
+- Domain wasn't mentioned in the existing costs.
+- This is at least partially hosted on Vercel, which has a generous free tier. Be sure you're within [their limits](https://vercel.com/docs/platform/fair-use-policy).
+
+## Final verdict
+
+Is it worth 3k? **Probably**. With the traffic dependencies on the current owner's [blog post](https://dev.to/mddanishyusuf/get-instagram-feed-data-without-code-1df7) & personal brand, I'd be sure to add in the contract details about the posts staying up ([YT vid](https://www.youtube.com/watch?v=S-0Tp4_x9Z0) as well).
+
+There's room to change how this pricing works (per site instead of volume-based), remove the free tier and switch to free trial, and add some widgets to grow in different marketplaces.
+
+If you're familiar with the tech stack, these things shouldn't be difficult. Where the biggest investment will be is in building out plugins for marketplace exposure.
+
+**Can this be a great business?**
+
+It's definitely possible, but it's going to take a little development.
+
+**Am I going to put in an offer?**
+
+Not this time. I think the project is great, but lives a little bit outside of my interests. If I had experience building plugins and could think of a durable marketing channel for acquiring new customers I think I would pull the trigger.
+
+### Who is this for?
+
+I think this is a good opportunity for a developer who:
+
+- knows React
+- is interested in no-code / low-code
+- has experience building plugins
+
+By changing the pricing model, creating plugins and integrations (Wordpress, Shopify, Webflow), and doing a little SEO / content marketing you could have a good business on your hands.
+
+Questions? Let’s discuss [on Twitter](https://twitter.com/DBredvick).

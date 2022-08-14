@@ -1,0 +1,180 @@
+---
+title: Next.js Conf 2020 Highlights
+created: December 28, 2020 11:24 AM
+tag: next.js, vercel
+date: 2020/10/28
+description: Next.js Conf 2020 revealed Next 10 along with some other great work.
+slug: next-js-conf-highlights-2020
+author: Drew Bredvick
+---
+
+import OGImage from '../../components/OGImage'
+
+<OGImage />
+
+# Next.js Conf 2020 highlights
+
+### Next.js Conf 2021 tickets
+
+Next.js 2021 is here — get your ticket at [nextjs.org/conf](https://nextjs.org/conf)
+
+---
+
+Next.js Conf 2020 was streamed all around the world by over 34,500 viewers on a custom platform this week on Tuesday. It was full of great news for the Next.js framework and ecosystem.
+
+We'll do a deep dive of some Next.js 10.0 features later, but for now, this update includes a short overview of each.
+
+Here's the keynote:
+
+[https://youtube.com/video/1-NzQ9ObsfM](https://youtube.com/video/1-NzQ9ObsfM)
+
+So that keynote covered quite a few releases. Next 10 is out, Next.js Analytics launched, and Next.js starter kits were introduced with Commerce being the first.
+
+**Update:** the Vercel team recently uploaded the first batch of conference talks from Next.js Conf – check them out here: [https://www.youtube.com/playlist?list=PLBnKlKpPeagnT2Cmv4giCbosfrbKnuYTD](https://www.youtube.com/playlist?list=PLBnKlKpPeagnT2Cmv4giCbosfrbKnuYTD)
+
+Let's briefly get into these.
+
+Want to see more of my writing on Next.js?
+
+[Notes on Next.js](/posts/why-nextjs)
+
+# **Next.js 10.0**
+
+This announcement was somewhat expected. There were lots of indicators pointing to Next.js 10 being released at this conference. Coordinating planned secretive launches while working on open-source software in public is nearly impossible.
+
+What I was surprised by was how many updates were included in Next 10.
+
+They introduced **20 new features** while reducing the bundle size **by 16%** 🤯
+
+Let's talk about the feature 👇
+
+### **Next.js Image optimization**
+
+According to the Next.js 10 release [blog post](https://nextjs.org/blog/next-10#built-in-image-component-and-automatic-image-optimization), images take up 50% of the total bytes on web pages.
+
+When looking for performance optimizations, the first place I generally look is the images:
+
+- Are images properly sized?
+- Are images served with modern formats?
+- Are we serving images using a CDN?
+
+The Next.js Image Component takes care of a lot of that.
+
+The Next.js team, with help from the Chrome team at Google, came up with an RFC for the component only 55 days ago:
+
+**[[RFC] Image Component for Next.js · Discussion #16832 · vercel/next.js](https://github.com/vercel/next.js/discussions/16832)**
+
+Think of the Image component as mostly a drop-in replacement for the existing HTML element.
+
+Read more about it on the [release blog post](https://nextjs.org/blog/next-10#nextjs-image-component).
+
+### **Next.js Internationalization**
+
+One of the most common use cases for needing a custom server (opting out of the "[Pit of success](https://philosopherdeveloper.com/posts/pit-of-success.html)" of Next.js) is internationalization.
+
+Translating your site into multiple languages is critical to many business' success, yet it's often treated as an afterthought.
+
+This release of Next.js makes internationalization a first-class citizen.
+
+Now, you won't need to create a custom server to handle i18n routing, content, etc.
+
+Check out the [RFC](https://github.com/vercel/next.js/discussions/17078), [release notes](https://nextjs.org/blog/next-10#internationalized-routing), and [documentation](https://nextjs.org/docs/advanced-features/i18n-routing) to learn more.
+
+### **Next.js Analytics**
+
+I'm probably most excited about this added feature. Core Web Vitals are going to be a [big deal](/posts/the-ripple-of-web-vitals) & making it easy for developers to track them is a huge win.
+
+Vercel launched [Next.js Analytics](https://nextjs.org/analytics) yesterday, which are built right into both Next.js and the Vercel platform.
+
+Right now, you can enable Next.js Analytics on any app that's on version 10.
+
+![/images/enable-nextjs-analytics-vercel.png](/images/enable-nextjs-analytics-vercel.png)
+
+There is a catch though; you only get **one app per Hobby account.**
+
+This makes tons of sense, though. Recording and processing all of this real-time data is very hard, both in terms of processing and storage.
+
+To have an unlimited collection of Core Web Vitals, you'll likely have to be on one of the higher paying tiers at Vercel.
+
+A few quick questions below 👇
+
+**Is this feature Vercel only?** For now, yes.
+
+**Is there a limit on how much data I can collect?** Yes. Right now, only a single day view exists on Hobby tiers. I'd assume that limit is larger for paid plans.
+
+**Can I track Core Web Vitals some other way?** Totally! Under the hood, it's very likely this feature uses the existing `reportWebVitals` function that I wrote about a while back:
+
+![/images/CleanShot_2021-02-01_at_14.35.04.png](/images/CleanShot_2021-02-01_at_14.35.04.png)
+
+**[Monitoring performance in Next.js](/how-to-monitor-core-web-vitals-in-next-js/)**
+
+I'm excited to see where Next.js Analytics goes!
+
+### **Next.js Commerce**
+
+Next.js Commerce is borrowing the idea of headless CMS sites and applying it to ecommerce.
+
+**[Next.js Commerce](https://nextjs.org/commerce)**
+
+![https://nextjs.org/static/twitter-cards/commerce.png](https://nextjs.org/static/twitter-cards/commerce.png)
+
+This is a great option for people who want a custom front end with the performance and reliability of a platform like Shopify or BigCommerce
+
+BigCommerce is the first to partner with the Next.js team and right now you can configure a headless BigCommerce deployment with a custom Next.js site with just a few clicks.
+
+![/images/nextjs-commerce-partners.png](/images/nextjs-commerce-partners.png)
+
+I believe this will become the de facto starting point when building brand new Next.js ecommerce sites in the future.
+
+# **Other updates**
+
+Below are some notable updates that tackle performance and improving developer experience.
+
+- React 17 support was added
+- `as` properties no longer needed on `href`
+- [Improved CSS](https://nextjs.org/blog/next-10#importing-css-from-third-party-react-components) loading for 3rd party components
+- [Blocking mode](https://nextjs.org/docs/basic-features/data-fetching#fallback-true) for `getStaticPaths`
+- [Codemod CLI](https://nextjs.org/docs/advanced-features/codemods) (expect one soon for the Image Component)
+- Fast Refresh enabled for `.mdx` files
+
+# **FAQ**
+
+**Q: Can I view the talks online yet?**
+
+**A:** Not yet, they're working on getting them all uploaded to their [YouTube channel](https://www.youtube.com/c/ZEITHQ/videos).
+
+**Q: I heard there was swag. Where can I get it?**
+
+**A:** You can grab any remaining swag at [nextjs.org/give](https://nextjs.org/give). I'm personally hyped about these clogs.
+
+![/images/vercel-shoes.png](/images/vercel-shoes.png)
+
+P.S. - They're donating the profit to some great charities (check at the bottom of the /give page).
+
+**Q: What was the theme of this release of Next.js?**
+
+**A:** I'd say it's pretty clear the Next.js team cares *a lot* about performance. Almost every feature ties back to performance in some way.
+
+While the Commerce launch doesn't explicitly talk about performance, they did mention how important page speed is for conversion rates on ecommerce sites.
+
+Not only were features added in Next.js 10, but the overall bundle size decreased as well.
+
+**Q: I heard there is a Next.js Discord. Where can I join?**
+
+**A:** Here's an invite link: [https://discord.gg/KNKF84E](https://discord.gg/KNKF84E)
+
+**Q: Where can I get more info on Next.js Analytics/Commerce/Image Component?**
+
+**A:** Hey, glad you asked! I'm doing a deep dive into each of these features in the coming weeks. If you're not already, subscribe at the bottom of the page to get notified when they go out.
+
+For now, the Next.js docs do a pretty good job:
+
+- [Image component](https://nextjs.org/docs/basic-features/image-optimization)
+- [Commerce](https://nextjs.org/commerce)
+- [Analytics](https://nextjs.org/analytics)
+
+# **Conclusion**
+
+Overall, I'd say it's a great time to be a Next.js developer. The ecosystem is growing quite rapidly & the folks at Vercel seem to have the backing of quite a few tech giants (AWS, Google, Shopify, and Facebook to name a few).
+
+Next.js has a lot of momentum right now – I'm excited to see what happens next (pun intended).

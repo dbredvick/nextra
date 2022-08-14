@@ -1,0 +1,187 @@
+---
+title: Supabase — A Backend for IndieHackers
+created: March 30, 2021 9:05 PM
+tag: next.js, building-products, tech-decisions
+tweet: 1377053833948463109
+date: 2021/4/1
+description: Looking for a backend as a service? You probably haven't heard of Supabase, but you should. It's my default choice when building new businesses.
+author: Drew Bredvick
+---
+
+import OGImage from '../../components/OGImage'
+
+<OGImage />
+
+# Supabase — A Backend for IndieHackers
+
+## A review of Supabase
+
+Calling all IndieHackers & "[Makers who actually ship](https://twitter.com/i/lists/1368738285263159296)". Looking for a backend for your new project? **Don't pick Firebase.** Opt for Supabase instead.
+
+"Firebase has been around for a long time, how is a new startup the better option", you ask?
+
+It's simple but not easy — communicating with their users, relying on open source, and shipping new, meaningful features.
+
+**About the reviewer:** All advice should be taken with a grain of salt, so here's a bit about me before you decide if this advice applies to you:
+
+- I'm evaluating Supabase inside Next.js and use React + Next professionally.
+- I've used AWS Amplify, Google's Firebase, and plain old Node/Express as backends for side projects.
+- Projects I'm working on range from mild to moderate complexity, nothing extreme.
+- I generally host my projects in Vercel.
+
+Okay, so why do I think you should pick Supabase? Let's get into it.
+
+### What is Supabase?
+
+Their H1 reads "**The open source Firebase alternative**" and they've definitely met that claim. I think they're going to have to change that title soon, though. They're on the way to eclipsing Firebase in terms of functionality and developer experience.
+
+**So what's does Supabase include?**
+
+- A database
+- Authentication and authorization
+- 3rd party auth integrations
+- storage (launched this week!)
+- plenty of client libraries ([link](https://github.com/search?q=org%3Asupabase+supabase-&type=repositories))
+
+### Supabase pros
+
+Btw, I wrote the TL;DR for this post first. If the tweet explains the point well enough, I'll let the tweet stand. No reason to add filler words.
+
+**SQL**
+
+As an IndieHacker, you should lean on your strengths. If SQL is already something you know, take advantage of that by picking something that uses SQL under the hood. **If you have a super power, use it.**
+
+> SQL is good. Especially if you already know it. If you’re like me, spending time figuring out firebase syntax is more work than writing a sql query.
+
+[See Tweet](https://twitter.com/DBredvick/status/1377053835659726853)
+
+**Free tier**
+
+Here's a link to their [pricing page](https://supabase.io/pricing). The takeaway: it's free while you're developing & a lot of hobby projects can stay on the free tier forever. Need a bigger database, backups, and more storage? Opt for $25/mo. Not bad.
+
+> Free tier. Start free, upgrade when your project takes off 🚀
+
+[See Tweet](https://twitter.com/DBredvick/status/1377053836427284484)
+
+**One stop shop**
+
+Supabase combines a lot of tools (auth, storage, database, (soon functions)) into one. Speed is super important as an IndieHacker.
+
+Why? You're either competing with big companies and need to move faster or are working on your project on the side. If you only have one hour a day to code, you need to be able to move quickly during that hour.
+
+> One stop shop. Learn one tool, not 20.
+
+[See Tweet](https://twitter.com/DBredvick/status/1377053837140361217)
+
+**High quality examples**
+
+Take a look at this starter. It's literally a SaaS in a box and I'm not exaggerating.
+
+It includes:
+
+- Recurring payments
+- Billing (Stripe)
+- Stripe webhooks configured
+- Database schema for plans/users/pricing
+- Auth ready to go
+
+Just add your business logic and you're off to the races.
+
+_P.S. — I'm building [plzdm.me](http://plzdm.me) with this starter._
+
+[vercel/nextjs-subscription-payments](https://github.com/vercel/nextjs-subscription-payments)
+
+> High quality examples. Their next-payments example is a SaaS in a box 📦
+
+[See Tweet](https://twitter.com/DBredvick/status/1377053837815611392)
+
+**Incentives**
+
+Incentives [matter a lot](https://nav.al/principal-agent), and the Supabase team is highly incentivized to build the best product they can. Google is a complex, large company where incentives are unclear and [resources shift frequently.](https://killedbygoogle.com/)
+
+> Incentives. Deal with the smallest company you can. Supabase is small and is incentivized to listen to you, their customer.
+
+[See Tweet](https://twitter.com/DBredvick/status/1377053838490877952)
+
+**Product velocity**
+
+Check out their [blog](https://supabase.io/blog) — enough said.
+
+> Product velocity. Check out their monthly blog posts. They move fast. When is the last time firebase shipped a cool new feature?
+
+[See Tweet](https://twitter.com/DBredvick/status/1377053839166169093)
+
+**Responsive team**
+
+> Responsive team. You can DM the founding team on Twitter and they’ll probably respond.
+
+[See Tweet](https://twitter.com/DBredvick/status/1377053839883403269)
+
+**Built on open-source**
+
+The [Supabase CLI](https://supabase.io/blog/2021/03/31/supabase-cli) announced this week helps you easily eject from their hosting and run things yourself.
+
+> Built on open source. Don’t like it? Fork it and go your own way 🍴
+
+[See Tweet](https://twitter.com/DBredvick/status/1377053840764207110)
+
+### **Supabase cons**
+
+So, are those pros enough? Maybe. Let's take a look at why it might not work for you.
+
+**You prefer NoSQL**
+
+If you're a big believer in NoSQL or your use case calls for it, Supabase does not have an option for you. Also if you don't know SQL, Supabase is definitely a SQL-first platform. Understanding Postgres gives you a leg up on the platform
+
+**You need more complex options**
+
+I wrote up a whole section on why you might want to opt for AWS Amplify if you know you're going to need more obscure hosting options.
+
+**You don't trust beta products**
+
+It's true, Supabase is not generally available yet. It's technically still a beta product. This is a fair concern imo, especially if you're trying to convince other founding members of your company to take a bet on this platform. Then again, **this advice is NOT for big orgs or VC backed startups** — it's for IndieHackers and solofounders.
+
+### Supabase vs AWS Amplify
+
+Every strength is a weakness, so we could look at each of these "pros" and find a con for it. That's not what I'm going to focus on.
+
+I think the real con of choosing Supabase is just that there are _so_ _many_ great options out there right now, one being AWS Amplify.
+
+AWS Amplify is a strong contender here and has a great free tier (and the backing of AWS). Amplify allows you to progressively opt into the more complex world of AWS, whereas Supabase is limited to _just Supabase_.
+
+I don't think that's bad, though. In fact, you could almost view their limits as a strength. It means Supabase is focused on a few core things & that the developer experience of those products will be enjoyable.
+
+> The more constraints one imposes, the more one frees one's self. And the arbitrariness of the constraint serves only to obtain precision of execution.
+> — Igor Stravinsky
+
+I could write an in-depth summary of the differences of Amplify and Supabase, but I think the following sentence will do for now: **AWS Amplify is to Supabase as Android is to iOS.**
+
+So what does that mean?
+
+AWS is a complex place, and you can opt into as much of that complexity as you want in the Amplify world.
+
+Supabase is simpler and all of the included parts work great together, batteries included.
+
+But if you do need more complexity, consider mixing and matching AWS with Supabase. There's nothing stopping you from using them together.
+
+## So why pick Supbase as an IndieHacker?
+
+I have skin in the game on this topic — I'm building [plzdm.me](http://plzdm.me) with Supabase.
+
+While I can't share the entire codebase, it's heavily influenced by one of the great Supabase starters I [mentioned above]().
+
+I want to write as little code as I can to ship my project. After all, [each line of code is debt](https://www.kalzumeus.com/2010/03/20/running-a-software-business-on-5-hours-a-week/#relentlessly-cut-scope).
+
+![/images/fast.gif](/images/fast.gif)
+
+Basically, I need to go fast. And so do you. In IndieHacking, we're in the business of iterating 10,000 times, not putting in 10,000 hours.
+
+Supabase helps me ship quickly, and I think it will help you do the same.
+
+### Want to watch me "go fast" and build a startup with Supabase?
+
+Best of luck building out your business.
+
+See you on the other side,
+
+Drew
