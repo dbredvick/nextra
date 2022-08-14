@@ -4,47 +4,8 @@
         <description><![CDATA[drew.tech — side projects and startups with Next.js.]]></description>
         <link>https://drew.tech</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 13 Aug 2022 23:24:32 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 14 Aug 2022 03:32:07 GMT</lastBuildDate>
         <atom:link href="https://drew.tech/feed.xml" rel="self" type="application/rss+xml"/>
-        <item>
-            <title><![CDATA[Notes on A Programmable Web by Aaron Swartz]]></title>
-            <description><![CDATA[At the time when I was getting into web development, I had the chance to read one of the most inspiring book about the web, Aaron Swartz's A Programmable Web. And it completely changed my mind.]]></description>
-            <link>/posts/aaron-swartz-a-programmable-web</link>
-            <guid isPermaLink="true">/posts/aaron-swartz-a-programmable-web</guid>
-            <category><![CDATA[web development]]></category>
-            <dc:creator><![CDATA[Shu]]></dc:creator>
-            <pubDate>Sat, 21 May 2016 05:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Code blocks]]></title>
-            <description><![CDATA[En example of using code blocks in your blog.]]></description>
-            <link>/posts/code-blocks</link>
-            <guid isPermaLink="true">/posts/code-blocks</guid>
-            <category><![CDATA[web development]]></category>
-            <dc:creator><![CDATA[Dimitri POSTOLOV]]></dc:creator>
-            <pubDate>Fri, 29 Jul 2022 05:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[GAM re-renders in React with react-gpt]]></title>
-            <description><![CDATA[I struggled through integrating with Google Ad Manager for weeks at work. Here are my notes.]]></description>
-            <link>/posts/GAM-re-renders-in-react-gpt</link>
-            <guid isPermaLink="true">/posts/GAM-re-renders-in-react-gpt</guid>
-            <category><![CDATA[performance]]></category>
-            <category><![CDATA[react]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Sun, 28 Feb 2021 06:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Highlights from All-In ep. 41]]></title>
-            <description><![CDATA[This was one of my favorite All-In podcast episodes. There was a short 30-second clip from Chamath that sticks in my head.]]></description>
-            <link>/posts/chamath-on-luck</link>
-            <guid isPermaLink="true">/posts/chamath-on-luck</guid>
-            <category><![CDATA[podcasts]]></category>
-            <category><![CDATA[highlights]]></category>
-            <category><![CDATA[all-in]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Mon, 23 Aug 2021 05:00:00 GMT</pubDate>
-        </item>
         <item>
             <title><![CDATA[Bootstrap 1000 Challenge]]></title>
             <description><![CDATA[I'm starting a challenge to bootstrap my way to financial freedom in 1000 days of effort. Join me on Twitter.]]></description>
@@ -56,15 +17,14 @@
             <pubDate>Fri, 19 Nov 2021 06:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[A Developer's Guide - Building Great Software Incrementally with Analytics]]></title>
-            <description><![CDATA[How to use analytics to build what your users actually want.]]></description>
-            <link>/posts/a-developer&apos;s-guide-building-great-software-incrementally-with-analytics</link>
-            <guid isPermaLink="true">/posts/a-developer&apos;s-guide-building-great-software-incrementally-with-analytics</guid>
-            <category><![CDATA[building-products]]></category>
-            <category><![CDATA[software-as-a-service]]></category>
-            <category><![CDATA[tech-decisions]]></category>
+            <title><![CDATA[GAM re-renders in React with react-gpt]]></title>
+            <description><![CDATA[I struggled through integrating with Google Ad Manager for weeks at work. Here are my notes.]]></description>
+            <link>/posts/GAM-re-renders-in-react-gpt</link>
+            <guid isPermaLink="true">/posts/GAM-re-renders-in-react-gpt</guid>
+            <category><![CDATA[performance]]></category>
+            <category><![CDATA[react]]></category>
             <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Tue, 17 Sep 2019 05:00:00 GMT</pubDate>
+            <pubDate>Sun, 28 Feb 2021 06:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Divjoy Review — Is it worth it?]]></title>
@@ -89,6 +49,17 @@
             <pubDate>Sat, 04 Jun 2022 05:00:00 GMT</pubDate>
         </item>
         <item>
+            <title><![CDATA[A Developer's Guide - Building Great Software Incrementally with Analytics]]></title>
+            <description><![CDATA[How to use analytics to build what your users actually want.]]></description>
+            <link>/posts/a-developer&apos;s-guide-building-great-software-incrementally-with-analytics</link>
+            <guid isPermaLink="true">/posts/a-developer&apos;s-guide-building-great-software-incrementally-with-analytics</guid>
+            <category><![CDATA[building-products]]></category>
+            <category><![CDATA[software-as-a-service]]></category>
+            <category><![CDATA[tech-decisions]]></category>
+            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
+            <pubDate>Tue, 17 Sep 2019 05:00:00 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[Giving away my side project - GumroadWidgets.com]]></title>
             <description><![CDATA[Looking for a new side project and like Gumroad? I've got the perfect project for you — and you can get started for free.]]></description>
             <link>/posts/giving-away-my-gumroad-side-project</link>
@@ -111,66 +82,15 @@
             <pubDate>Tue, 15 Feb 2022 06:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Intro to Core Web Vitals]]></title>
-            <description><![CDATA[Core Web Vitals are a game changer for web performance monitoring. Here's an intro to how to monitor them.]]></description>
-            <link>/posts/how-to-improve-core-web-vitals-in-a-next-js-app</link>
-            <guid isPermaLink="true">/posts/how-to-improve-core-web-vitals-in-a-next-js-app</guid>
-            <category><![CDATA[core-web-vitals]]></category>
-            <category><![CDATA[nextjs]]></category>
-            <category><![CDATA[performance]]></category>
-            <pubDate>Mon, 06 Jul 2020 05:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[A Gravity Review]]></title>
-            <description><![CDATA[Longer review coming soon. TLDR; Gravity is great.]]></description>
-            <link>/posts/gravity</link>
-            <guid isPermaLink="true">/posts/gravity</guid>
-            <category><![CDATA[building-products]]></category>
-            <category><![CDATA[software-as-a-service]]></category>
-            <category><![CDATA[tech-decisions]]></category>
+            <title><![CDATA[Highlights from All-In ep. 41]]></title>
+            <description><![CDATA[This was one of my favorite All-In podcast episodes. There was a short 30-second clip from Chamath that sticks in my head.]]></description>
+            <link>/posts/chamath-on-luck</link>
+            <guid isPermaLink="true">/posts/chamath-on-luck</guid>
+            <category><![CDATA[podcasts]]></category>
+            <category><![CDATA[highlights]]></category>
+            <category><![CDATA[all-in]]></category>
             <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Thu, 23 Sep 2021 05:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[How I pick my tech stack for side projects]]></title>
-            <description><![CDATA[Either pick new tech to learn or use tech you know to build fast.]]></description>
-            <link>/posts/how-i-pick-my-tech-stack-for-side-projects</link>
-            <guid isPermaLink="true">/posts/how-i-pick-my-tech-stack-for-side-projects</guid>
-            <category><![CDATA[next.js]]></category>
-            <category><![CDATA[react]]></category>
-            <category><![CDATA[side-projects]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Tue, 15 Oct 2019 05:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Monitoring performance in Next.js]]></title>
-            <description><![CDATA[Next.js makes monitoring Core Web Vitals simple.]]></description>
-            <link>/posts/how-to-monitor-core-web-vitals-in-next-js</link>
-            <guid isPermaLink="true">/posts/how-to-monitor-core-web-vitals-in-next-js</guid>
-            <category><![CDATA[core-web-vitals]]></category>
-            <category><![CDATA[nextjs]]></category>
-            <category><![CDATA[performance]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Wed, 09 Sep 2020 05:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[How to Send Email with Vercel Domain through GSuite]]></title>
-            <description><![CDATA[Setting up a new domain and configuring email is often the first step in starting a project.]]></description>
-            <link>/posts/how-to-send-email-with-vercel-domain-through-gsuite</link>
-            <guid isPermaLink="true">/posts/how-to-send-email-with-vercel-domain-through-gsuite</guid>
-            <category><![CDATA[vercel]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Wed, 20 Nov 2019 06:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[I turned off my notifications]]></title>
-            <description><![CDATA[Maybe constant notifications aren't a good thing?]]></description>
-            <link>/posts/i-turned-off-my-notifications</link>
-            <guid isPermaLink="true">/posts/i-turned-off-my-notifications</guid>
-            <category><![CDATA[mental-health]]></category>
-            <category><![CDATA[writing]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Wed, 27 Nov 2019 06:00:00 GMT</pubDate>
+            <pubDate>Mon, 23 Aug 2021 05:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Cron jobs in Next.js on Vercel]]></title>
@@ -184,6 +104,47 @@
             <pubDate>Sun, 05 Jan 2020 06:00:00 GMT</pubDate>
         </item>
         <item>
+            <title><![CDATA[A Gravity Review]]></title>
+            <description><![CDATA[Longer review coming soon. TLDR; Gravity is great.]]></description>
+            <link>/posts/gravity</link>
+            <guid isPermaLink="true">/posts/gravity</guid>
+            <category><![CDATA[building-products]]></category>
+            <category><![CDATA[software-as-a-service]]></category>
+            <category><![CDATA[tech-decisions]]></category>
+            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
+            <pubDate>Thu, 23 Sep 2021 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[I turned off my notifications]]></title>
+            <description><![CDATA[Maybe constant notifications aren't a good thing?]]></description>
+            <link>/posts/i-turned-off-my-notifications</link>
+            <guid isPermaLink="true">/posts/i-turned-off-my-notifications</guid>
+            <category><![CDATA[mental-health]]></category>
+            <category><![CDATA[writing]]></category>
+            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
+            <pubDate>Wed, 27 Nov 2019 06:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[How I pick my tech stack for side projects]]></title>
+            <description><![CDATA[Either pick new tech to learn or use tech you know to build fast.]]></description>
+            <link>/posts/how-i-pick-my-tech-stack-for-side-projects</link>
+            <guid isPermaLink="true">/posts/how-i-pick-my-tech-stack-for-side-projects</guid>
+            <category><![CDATA[next.js]]></category>
+            <category><![CDATA[react]]></category>
+            <category><![CDATA[side-projects]]></category>
+            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
+            <pubDate>Tue, 15 Oct 2019 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[How to Send Email with Vercel Domain through GSuite]]></title>
+            <description><![CDATA[Setting up a new domain and configuring email is often the first step in starting a project.]]></description>
+            <link>/posts/how-to-send-email-with-vercel-domain-through-gsuite</link>
+            <guid isPermaLink="true">/posts/how-to-send-email-with-vercel-domain-through-gsuite</guid>
+            <category><![CDATA[vercel]]></category>
+            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
+            <pubDate>Wed, 20 Nov 2019 06:00:00 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[I'm your new podcast co-host]]></title>
             <description><![CDATA[Testing, testing, mic check two one two.]]></description>
             <link>/posts/im-your-new-podcast-co-host</link>
@@ -195,15 +156,24 @@
             <pubDate>Sun, 18 Apr 2021 05:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Highlights from IndieHackers ep. 220 with Michael Seibel]]></title>
-            <description><![CDATA[Seven highlights from YC's Michael Seibel advice for IndieHackers.]]></description>
-            <link>/posts/michael-seibel-indiehackers</link>
-            <guid isPermaLink="true">/posts/michael-seibel-indiehackers</guid>
-            <category><![CDATA[podcasts]]></category>
-            <category><![CDATA[highlights]]></category>
-            <category><![CDATA[indiehackers]]></category>
+            <title><![CDATA[Monitoring performance in Next.js]]></title>
+            <description><![CDATA[Next.js makes monitoring Core Web Vitals simple.]]></description>
+            <link>/posts/how-to-monitor-core-web-vitals-in-next-js</link>
+            <guid isPermaLink="true">/posts/how-to-monitor-core-web-vitals-in-next-js</guid>
+            <category><![CDATA[core-web-vitals]]></category>
+            <category><![CDATA[nextjs]]></category>
+            <category><![CDATA[performance]]></category>
             <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Thu, 05 Aug 2021 05:00:00 GMT</pubDate>
+            <pubDate>Wed, 09 Sep 2020 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[My principles for blogging]]></title>
+            <description><![CDATA[Don't let tech decisions get in the way of blogging about tech.]]></description>
+            <link>/posts/my-principles-for-blogging</link>
+            <guid isPermaLink="true">/posts/my-principles-for-blogging</guid>
+            <category><![CDATA[writing]]></category>
+            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
+            <pubDate>Wed, 22 Jan 2020 06:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Your Next JS dream job]]></title>
@@ -214,15 +184,6 @@
             <category><![CDATA[nextjs-jobs]]></category>
             <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
             <pubDate>Wed, 18 Nov 2020 06:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[My principles for blogging]]></title>
-            <description><![CDATA[Don't let tech decisions get in the way of blogging about tech.]]></description>
-            <link>/posts/my-principles-for-blogging</link>
-            <guid isPermaLink="true">/posts/my-principles-for-blogging</guid>
-            <category><![CDATA[writing]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Wed, 22 Jan 2020 06:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[HEY – let's talk about static sites]]></title>
@@ -245,6 +206,17 @@
             <pubDate>Wed, 28 Oct 2020 05:00:00 GMT</pubDate>
         </item>
         <item>
+            <title><![CDATA[Highlights from IndieHackers ep. 220 with Michael Seibel]]></title>
+            <description><![CDATA[Seven highlights from YC's Michael Seibel advice for IndieHackers.]]></description>
+            <link>/posts/michael-seibel-indiehackers</link>
+            <guid isPermaLink="true">/posts/michael-seibel-indiehackers</guid>
+            <category><![CDATA[podcasts]]></category>
+            <category><![CDATA[highlights]]></category>
+            <category><![CDATA[indiehackers]]></category>
+            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
+            <pubDate>Thu, 05 Aug 2021 05:00:00 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[Notes on Naval's Money]]></title>
             <description><![CDATA[You probably know who Naval is. Here are my notes from his 3+ hour long podcast about his Tweet thread on "How to get rich without being lucky".]]></description>
             <link>/posts/notes-on-naval&apos;s-money</link>
@@ -252,16 +224,6 @@
             <category><![CDATA[finance]]></category>
             <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
             <pubDate>Fri, 06 Sep 2019 05:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[On good tech debt]]></title>
-            <description><![CDATA[There's good debt and bad debt. Here's a look at technical debt through a financial lens. Believe it or not, some technical debt is good.]]></description>
-            <link>/posts/on-good-tech-debt</link>
-            <guid isPermaLink="true">/posts/on-good-tech-debt</guid>
-            <category><![CDATA[building-products]]></category>
-            <category><![CDATA[tech-decisions]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Mon, 17 May 2021 05:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[PlanetScale on a plane]]></title>
@@ -276,15 +238,24 @@
             <pubDate>Fri, 18 Mar 2022 05:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[SaaS due diligence - Instafeed API]]></title>
-            <description><![CDATA[Should you buy your first SaaS? Maybe. Quite a few others have. Instafeed API is a tool I debated buying.]]></description>
-            <link>/posts/saas-due-diligence-instafeed-api</link>
-            <guid isPermaLink="true">/posts/saas-due-diligence-instafeed-api</guid>
-            <category><![CDATA[deal-memos]]></category>
-            <category><![CDATA[finance]]></category>
-            <category><![CDATA[side-projects]]></category>
+            <title><![CDATA[On good tech debt]]></title>
+            <description><![CDATA[There's good debt and bad debt. Here's a look at technical debt through a financial lens. Believe it or not, some technical debt is good.]]></description>
+            <link>/posts/on-good-tech-debt</link>
+            <guid isPermaLink="true">/posts/on-good-tech-debt</guid>
+            <category><![CDATA[building-products]]></category>
+            <category><![CDATA[tech-decisions]]></category>
             <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Tue, 19 Jan 2021 06:00:00 GMT</pubDate>
+            <pubDate>Mon, 17 May 2021 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Rock beats scissors, paper beats rock, and Notion beats markdown.]]></title>
+            <description><![CDATA[Making it easy to write my blog by making the backend powered by Notion as the CMS.]]></description>
+            <link>/posts/notion-beats-markdown</link>
+            <guid isPermaLink="true">/posts/notion-beats-markdown</guid>
+            <category><![CDATA[next.js]]></category>
+            <category><![CDATA[notion]]></category>
+            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
+            <pubDate>Mon, 14 Dec 2020 06:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Rome wasn't built in a day, and neither was my SaaS app]]></title>
@@ -298,14 +269,25 @@
             <pubDate>Mon, 17 Aug 2020 05:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Rock beats scissors, paper beats rock, and Notion beats markdown.]]></title>
-            <description><![CDATA[Making it easy to write my blog by making the backend powered by Notion as the CMS.]]></description>
-            <link>/posts/notion-beats-markdown</link>
-            <guid isPermaLink="true">/posts/notion-beats-markdown</guid>
-            <category><![CDATA[next.js]]></category>
-            <category><![CDATA[notion]]></category>
+            <title><![CDATA[SaaS due diligence - Instafeed API]]></title>
+            <description><![CDATA[Should you buy your first SaaS? Maybe. Quite a few others have. Instafeed API is a tool I debated buying.]]></description>
+            <link>/posts/saas-due-diligence-instafeed-api</link>
+            <guid isPermaLink="true">/posts/saas-due-diligence-instafeed-api</guid>
+            <category><![CDATA[deal-memos]]></category>
+            <category><![CDATA[finance]]></category>
+            <category><![CDATA[side-projects]]></category>
             <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Mon, 14 Dec 2020 06:00:00 GMT</pubDate>
+            <pubDate>Tue, 19 Jan 2021 06:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Sent my first Next.js Newsletter (here's what was in it)]]></title>
+            <description><![CDATA[My first Next.js newsletter went out this week. Here's what was in it.]]></description>
+            <link>/posts/sent-my-first-nextjs-newsletter-(here&apos;s-what-was-in-it)</link>
+            <guid isPermaLink="true">/posts/sent-my-first-nextjs-newsletter-(here&apos;s-what-was-in-it)</guid>
+            <category><![CDATA[next.js]]></category>
+            <category><![CDATA[writing]]></category>
+            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
+            <pubDate>Fri, 19 Jun 2020 05:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[SaaS Starters — how to jump start your software as a service]]></title>
@@ -320,27 +302,6 @@
             <pubDate>Sat, 30 Jan 2021 06:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Sent my first Next.js Newsletter (here's what was in it)]]></title>
-            <description><![CDATA[My first Next.js newsletter went out this week. Here's what was in it.]]></description>
-            <link>/posts/sent-my-first-nextjs-newsletter-(here&apos;s-what-was-in-it)</link>
-            <guid isPermaLink="true">/posts/sent-my-first-nextjs-newsletter-(here&apos;s-what-was-in-it)</guid>
-            <category><![CDATA[next.js]]></category>
-            <category><![CDATA[writing]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Fri, 19 Jun 2020 05:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Sales engineering problems]]></title>
-            <description><![CDATA[A runing list of all the sales engineering problems I have encountered and potential solutions.]]></description>
-            <link>/posts/sales-engineering</link>
-            <guid isPermaLink="true">/posts/sales-engineering</guid>
-            <category><![CDATA[building-products]]></category>
-            <category><![CDATA[software-as-a-service]]></category>
-            <category><![CDATA[tech-decisions]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Sat, 20 Nov 2021 06:00:00 GMT</pubDate>
-        </item>
-        <item>
             <title><![CDATA[Should I use Google Analytics or one of these new privacy-friendly options?]]></title>
             <description><![CDATA[Google Analytics is a great tool, but there are plenty of new privacy-friendly paid options. Should you use them? Maybe, maybe not.]]></description>
             <link>/posts/should-i-use-google-analytics-or-not</link>
@@ -352,15 +313,15 @@
             <pubDate>Wed, 03 Feb 2021 06:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Supabase — A Backend for IndieHackers]]></title>
-            <description><![CDATA[Looking for a backend as a service? You probably haven't heard of Supabase, but you should. It's my default choice when building new businesses.]]></description>
-            <link>/posts/supabase-a-backend-for-indiehackers</link>
-            <guid isPermaLink="true">/posts/supabase-a-backend-for-indiehackers</guid>
+            <title><![CDATA[TailwindUI and Next.js styling issues]]></title>
+            <description><![CDATA[TailwindUI layouts and Next.js styling issues]]></description>
+            <link>/posts/tailwindui-nextjs-styling-issue</link>
+            <guid isPermaLink="true">/posts/tailwindui-nextjs-styling-issue</guid>
             <category><![CDATA[next.js]]></category>
             <category><![CDATA[building-products]]></category>
-            <category><![CDATA[tech-decisions]]></category>
+            <category><![CDATA[tailwind]]></category>
             <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Thu, 01 Apr 2021 05:00:00 GMT</pubDate>
+            <pubDate>Sun, 28 Nov 2021 06:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Tech decisions and developer guilt]]></title>
@@ -386,17 +347,6 @@
             <pubDate>Tue, 29 Dec 2020 06:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[TailwindUI and Next.js styling issues]]></title>
-            <description><![CDATA[TailwindUI layouts and Next.js styling issues]]></description>
-            <link>/posts/tailwindui-nextjs-styling-issue</link>
-            <guid isPermaLink="true">/posts/tailwindui-nextjs-styling-issue</guid>
-            <category><![CDATA[next.js]]></category>
-            <category><![CDATA[building-products]]></category>
-            <category><![CDATA[tailwind]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Sun, 28 Nov 2021 06:00:00 GMT</pubDate>
-        </item>
-        <item>
             <title><![CDATA[Multiple repos on the same domain in Vercel]]></title>
             <description><![CDATA[How to do micro-frontends on Vercel with a single domain.]]></description>
             <link>/posts/vercel-multiple-repos-same-domain</link>
@@ -405,36 +355,6 @@
             <category><![CDATA[vercel]]></category>
             <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
             <pubDate>Tue, 15 Dec 2020 06:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[What not to work on]]></title>
-            <description><![CDATA[Avoiding what you shouldn't work on is easier than knowing what to work on, but it's a start.]]></description>
-            <link>/posts/what-not-to-work-on</link>
-            <guid isPermaLink="true">/posts/what-not-to-work-on</guid>
-            <category><![CDATA[software-as-a-service]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Sat, 01 Feb 2020 06:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[▲Vercel]]></title>
-            <description><![CDATA[I've been a big fan of Vercel for years now, and I'm excited to announce I'm joining the team this month.]]></description>
-            <link>/posts/vercel</link>
-            <guid isPermaLink="true">/posts/vercel</guid>
-            <category><![CDATA[vercel]]></category>
-            <category><![CDATA[life]]></category>
-            <category><![CDATA[next.js]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Tue, 06 Jul 2021 05:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Why I didn't tell you]]></title>
-            <description><![CDATA[Childhood memories, health, and learning to include others.]]></description>
-            <link>/posts/why-i-didn&apos;t-tell-you</link>
-            <guid isPermaLink="true">/posts/why-i-didn&apos;t-tell-you</guid>
-            <category><![CDATA[mental-health]]></category>
-            <category><![CDATA[life]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Tue, 16 Jul 2019 05:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[What happened to getInitialProps?]]></title>
@@ -448,6 +368,37 @@
             <pubDate>Tue, 30 Nov 2021 06:00:00 GMT</pubDate>
         </item>
         <item>
+            <title><![CDATA[▲Vercel]]></title>
+            <description><![CDATA[I've been a big fan of Vercel for years now, and I'm excited to announce I'm joining the team this month.]]></description>
+            <link>/posts/vercel</link>
+            <guid isPermaLink="true">/posts/vercel</guid>
+            <category><![CDATA[vercel]]></category>
+            <category><![CDATA[life]]></category>
+            <category><![CDATA[next.js]]></category>
+            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
+            <pubDate>Tue, 06 Jul 2021 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Supabase — A Backend for IndieHackers]]></title>
+            <description><![CDATA[Looking for a backend as a service? You probably haven't heard of Supabase, but you should. It's my default choice when building new businesses.]]></description>
+            <link>/posts/supabase-a-backend-for-indiehackers</link>
+            <guid isPermaLink="true">/posts/supabase-a-backend-for-indiehackers</guid>
+            <category><![CDATA[next.js]]></category>
+            <category><![CDATA[building-products]]></category>
+            <category><![CDATA[tech-decisions]]></category>
+            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
+            <pubDate>Thu, 01 Apr 2021 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[What not to work on]]></title>
+            <description><![CDATA[Avoiding what you shouldn't work on is easier than knowing what to work on, but it's a start.]]></description>
+            <link>/posts/what-not-to-work-on</link>
+            <guid isPermaLink="true">/posts/what-not-to-work-on</guid>
+            <category><![CDATA[software-as-a-service]]></category>
+            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
+            <pubDate>Sat, 01 Feb 2020 06:00:00 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[Why Next.js?]]></title>
             <description><![CDATA[Next.js is my default choice when starting a new project, big or small. Here's why I think you should use it, pros and cons included.]]></description>
             <link>/posts/why-nextjs</link>
@@ -456,6 +407,37 @@
             <category><![CDATA[react]]></category>
             <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
             <pubDate>Sun, 28 Jun 2020 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Intro to Core Web Vitals]]></title>
+            <description><![CDATA[Core Web Vitals are a game changer for web performance monitoring. Here's an intro to how to monitor them.]]></description>
+            <link>/posts/how-to-improve-core-web-vitals-in-a-next-js-app</link>
+            <guid isPermaLink="true">/posts/how-to-improve-core-web-vitals-in-a-next-js-app</guid>
+            <category><![CDATA[core-web-vitals]]></category>
+            <category><![CDATA[nextjs]]></category>
+            <category><![CDATA[performance]]></category>
+            <pubDate>Mon, 06 Jul 2020 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Why I didn't tell you]]></title>
+            <description><![CDATA[Childhood memories, health, and learning to include others.]]></description>
+            <link>/posts/why-i-didn&apos;t-tell-you</link>
+            <guid isPermaLink="true">/posts/why-i-didn&apos;t-tell-you</guid>
+            <category><![CDATA[mental-health]]></category>
+            <category><![CDATA[life]]></category>
+            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
+            <pubDate>Tue, 16 Jul 2019 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Sales engineering problems]]></title>
+            <description><![CDATA[A runing list of all the sales engineering problems I have encountered and potential solutions.]]></description>
+            <link>/posts/sales-engineering</link>
+            <guid isPermaLink="true">/posts/sales-engineering</guid>
+            <category><![CDATA[building-products]]></category>
+            <category><![CDATA[software-as-a-service]]></category>
+            <category><![CDATA[tech-decisions]]></category>
+            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
+            <pubDate>Sat, 20 Nov 2021 06:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>

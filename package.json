@@ -8,6 +8,7 @@
     "dev:core": "turbo run dev --filter=nextra...",
     "dev:theme-blog": "turbo run dev --filter=blog...",
     "dev:theme-docs": "turbo run dev --filter=swr-site...",
+    "build:drew-tech": "pnpm run build --filter=drew-tech",
     "build:core": "pnpm run build --filter=nextra",
     "build:theme-blog": "pnpm run build --filter=nextra-theme-blog",
     "build:theme-docs": "pnpm run build --filter=nextra-theme-docs",
