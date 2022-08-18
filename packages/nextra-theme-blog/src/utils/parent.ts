@@ -6,6 +6,7 @@ export const getParent = ({ opts }: LayoutProps) => {
   let back: string | null = null
   const parentPages: PageMapItem[] = []
   const route = opts.route
+
   traverse(opts.pageMap, page => {
     if (
       route !== page.route &&

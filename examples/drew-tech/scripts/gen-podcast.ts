@@ -105,6 +105,7 @@ async function generate() {
 title: "${podcastEpTitle} — ${podcastTitle}"\n
 date: ${fileName}\n
 podcast_url: ${podcastUrl}\n
+author: Drew Bredvick\n
 tag: podcast, ${podcastTitle.replaceAll(' ', '-')}\n
 description: "${description.replaceAll('_____', '').replaceAll('---', '\n')}"\n
 

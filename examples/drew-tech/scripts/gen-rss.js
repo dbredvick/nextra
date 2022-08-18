@@ -12,6 +12,12 @@ async function generate() {
 
   const posts = await fs.readdir(path.join(__dirname, '..', 'pages', 'posts'))
 
+  const logs = await fs.readdir(path.join(__dirname, '..', 'pages', 'logs'))
+
+  const podcasts = await fs.readdir(
+    path.join(__dirname, '..', 'pages', 'podcasts')
+  )
+
   await Promise.all(
     posts.map(async (name) => {
       if (name.startsWith('index.')) return
@@ -26,6 +32,44 @@ async function generate() {
       feed.item({
         title: frontmatter.data.title,
         url: '/posts/' + name.replace(/\.mdx?/, ''),
+        date: frontmatter.data.date,
+        description: frontmatter.data.description,
+        categories: frontmatter.data.tag && frontmatter.data.tag.split(', '),
+        author: frontmatter.data.author
+      })
+    }),
+    podcasts.map(async (name) => {
+      if (name.startsWith('index.')) return
+
+      if (name.startsWith('_')) return
+
+      const content = await fs.readFile(
+        path.join(__dirname, '..', 'pages', 'podcasts', name)
+      )
+      const frontmatter = matter(content)
+
+      feed.item({
+        title: frontmatter.data.title,
+        url: '/podcasts/' + name.replace(/\.mdx?/, ''),
+        date: frontmatter.data.date,
+        description: frontmatter.data.description,
+        categories: frontmatter.data.tag && frontmatter.data.tag.split(', '),
+        author: frontmatter.data.author
+      })
+    }),
+    logs.map(async (name) => {
+      if (name.startsWith('index.')) return
+
+      if (name.startsWith('_')) return
+
+      const content = await fs.readFile(
+        path.join(__dirname, '..', 'pages', 'logs', name)
+      )
+      const frontmatter = matter(content)
+
+      feed.item({
+        title: frontmatter.data.title,
+        url: '/logs/' + name.replace(/\.mdx?/, ''),
         date: frontmatter.data.date,
         description: frontmatter.data.description,
         categories: frontmatter.data.tag && frontmatter.data.tag.split(', '),

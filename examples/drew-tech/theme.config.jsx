@@ -20,7 +20,7 @@ const config = {
   cusdis: {
     appId: 'cf5820c3-3998-40a8-a8dc-c5c769022fee'
   },
-  navs: [{ url: '/tags/podcast', name: 'Podcasts' }, { url: "/tags/log", name: "Log" }],
+  navs: [{ url: '/tags/podcast', name: 'Podcasts' }, { url: "/tags/log", name: "Logs" }],
   postFooter: (
     <div className="">
       <div
