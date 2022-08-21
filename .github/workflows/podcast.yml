@@ -20,18 +20,25 @@ jobs:
   store_data:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: actions/checkout@v3.0.0
+    - uses: actions/checkout@v2
+    - uses: pnpm/action-setup@v2.2.2
       with:
-        token: ${{ secrets.GH_PAT }}
-    # Runs a single command using the runners shell
-    - uses: borales/actions-yarn@v3.0.0
+        version: 7
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
       with:
-        cmd: install # will run `yarn install` command
+        node-version: ${{ matrix.node-version }}
+        cache: 'pnpm'
+    - name: Install dependencies
+      run: pnpm install
     - name: Create file
-      run: cd examples/drew-tech && npm run podcast "${{ github.event.inputs.data }}"
+      run: cd examples/drew-tech && pnpm run podcast "${{ github.event.inputs.data }}"
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: "bot: Automated commit to publish podcast highlights"
