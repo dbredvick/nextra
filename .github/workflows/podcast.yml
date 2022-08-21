@@ -31,7 +31,7 @@ jobs:
       with:
         cmd: install # will run `yarn install` command
     - name: Create file
-      run: npm run podcast "${{ github.event.inputs.data }}"
+      run: cd examples/drew-tech && npm run podcast "${{ github.event.inputs.data }}"
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: "bot: Automated commit to publish podcast highlights"
