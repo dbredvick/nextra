@@ -1,0 +1,44 @@
+# This is a basic workflow that is manually triggered
+
+name: Podcast sync
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  workflow_dispatch:
+    # Inputs the workflow accepts.
+    inputs:
+      data:
+        # Friendly description to be shown in the UI instead of 'name'
+        description: 'URL to podcast episode'
+        # Input has to be provided for the workflow to run
+        required: true
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "greet"
+  store_data:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    - uses: actions/checkout@v3.0.0
+      with:
+        token: ${{ secrets.GH_PAT }}
+    # Runs a single command using the runners shell
+    - uses: borales/actions-yarn@v3.0.0
+      with:
+        cmd: install # will run `yarn install` command
+    - name: Create file
+      run: npm run podcast "${{ github.event.inputs.data }}"
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: "bot: Automated commit to publish podcast highlights"
+        commit_user_name: dbredvick
+        commit_user_email: dbredvick@gmail.com
+    - name: Push changes # push the output folder to your repo
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        force: true
