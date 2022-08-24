@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import NextHead from "next/head";
 import { DocsThemeConfig, useConfig } from "nextra-theme-docs";
 
 const Logo = ({ height }) => (
@@ -61,7 +62,7 @@ const config: DocsThemeConfig = {
       <>
         <Logo height={12} />
         <span
-          className="mx-2 font-extrabold hidden md:inline select-none"
+          className="ltr:ml-2 rtl:mr-2 font-extrabold hidden md:inline select-none"
           title={"SWR: " + (TITLE_WITH_TRANSLATIONS[locale] || "")}
         >
           SWR
@@ -129,103 +130,83 @@ const config: DocsThemeConfig = {
   footerText() {
     const { locale } = useRouter();
 
+    const linkProps = {
+      target: "_blank",
+      rel: "noopener",
+      className: "inline-flex items-center font-semibold gap-2",
+      href:
+        {
+          "zh-CN": "https://vercel.com/?utm_source=swr_zh-cn",
+          "es-ES": "https://vercel.com/?utm_source=swr_es-es",
+          ja: "https://vercel.com/?utm_source=swr_ja",
+          ko: "https://vercel.com/?utm_source=swr_ko",
+          ru: "https://vercel.com/?utm_source=swr_ru",
+        }[locale] || "https://vercel.com/?utm_source=swr",
+    };
+
     switch (locale) {
       case "zh-CN":
         return (
-          <a
-            href="https://vercel.com/?utm_source=swr_zh-cn"
-            target="_blank"
-            rel="noopener"
-            className="inline-flex items-center no-underline text-current font-semibold"
-          >
-            <span className="mr-2">由</span>
-            <span className="mr-2">
-              <Vercel />
-            </span>
+          <a {...linkProps}>
+            由
+            <Vercel />
             驱动
           </a>
         );
       case "es-ES":
         return (
-          <a
-            href="https://vercel.com/?utm_source=swr_es-es"
-            target="_blank"
-            rel="noopener"
-            className="inline-flex items-center no-underline text-current font-semibold"
-          >
-            <span className="mr-2">Desarrollado por</span>
-            <span className="mr-2">
-              <Vercel />
-            </span>
+          <a {...linkProps}>
+            Desarrollado por
+            <Vercel />
           </a>
         );
       case "ja":
         return (
-          <a
-            href="https://vercel.com/?utm_source=swr_ja"
-            target="_blank"
-            rel="noopener"
-            className="inline-flex items-center no-underline text-current font-semibold"
-          >
-            <span className="mr-2">提供</span>
-            <span className="mr-2">
-              <Vercel />
-            </span>
+          <a {...linkProps}>
+            提供
+            <Vercel />
           </a>
         );
       case "ko":
         return (
-          <a
-            href="https://vercel.com/?utm_source=swr_ko"
-            target="_blank"
-            rel="noopener"
-            className="inline-flex items-center no-underline text-current font-semibold"
-          >
-            <span className="mr-2">Powered by</span>
-            <span className="mr-2">
-              <Vercel />
-            </span>
+          <a {...linkProps}>
+            Powered by
+            <Vercel />
           </a>
         );
       case "ru":
         return (
-          <a
-            href="https://vercel.com/?utm_source=swr_ru"
-            target="_blank"
-            rel="noopener"
-            className="inline-flex items-center no-underline text-current font-semibold"
-          >
-            <span className="mr-2">Работает на</span>
-            <span className="mr-2">
-              <Vercel />
-            </span>
+          <a {...linkProps}>
+            Работает на
+            <Vercel />
           </a>
         );
       default:
         return (
-          <a
-            href="https://vercel.com/?utm_source=swr"
-            target="_blank"
-            rel="noopener"
-            className="inline-flex items-center no-underline text-current font-semibold"
-          >
-            <span className="mr-1">Powered by</span>
-            <span>
-              <Vercel />
-            </span>
+          <a {...linkProps}>
+            Powered by
+            <Vercel />
           </a>
         );
     }
   },
   i18n: [
     { locale: "en-US", text: "English" },
-    { locale: "es-ES", text: "Español" },
+    { locale: "es-ES", text: "Español RTL", direction: "rtl" },
     { locale: "zh-CN", text: "简体中文" },
     { locale: "ja", text: "日本語" },
     { locale: "ko", text: "한국어" },
     { locale: "ru", text: "Русский" },
   ],
   gitTimestamp: "Last updated on",
+  bodyExtraContent() {
+    const router = useRouter();
+    return (
+      router.route.startsWith("/docs") && (
+        <>💪 content from `config.bodyExtraContent`</>
+      )
+    );
+  },
 };
 
 export default config;

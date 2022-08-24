@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react'
+import { FC, ReactElement, ReactNode } from 'react'
 import { ThemeProviderProps } from 'next-themes/dist/types'
 import { PageOpts } from 'nextra'
 
@@ -46,6 +46,7 @@ export interface DocsThemeConfig {
   notFoundLabels?: string
   serverSideErrorLink?: ReactNode | FC
   serverSideErrorLabels?: string
+  bodyExtraContent?: ReactNode | FC
 }
 
 export type PageTheme = {
@@ -64,4 +65,11 @@ export type Context = {
   Content: FC
   pageOpts: PageOpts
   themeConfig: DocsThemeConfig
+}
+
+export type SearchResult = {
+  id: string
+  route: string
+  prefix?: ReactNode
+  children: ReactNode
 }

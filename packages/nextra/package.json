@@ -1,6 +1,6 @@
 {
   "name": "nextra",
-  "version": "2.0.0-beta.17",
+  "version": "2.0.0-beta.18",
   "description": "Next.js and MDX based site generator.",
   "files": [
     "dist/*",
@@ -88,7 +88,7 @@
   "peerDependencies": {
     "next": ">=9.5.3",
     "react": ">=16.13.1",
-    "react-dom": ">=18.2.0"
+    "react-dom": ">=16.13.1"
   },
   "prettier": {
     "semi": false,
