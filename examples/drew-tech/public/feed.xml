@@ -4,7 +4,7 @@
         <description><![CDATA[drew.tech — side projects and startups with Next.js.]]></description>
         <link>https://drew.tech</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 18 Aug 2022 02:15:25 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 26 Aug 2022 14:57:53 GMT</lastBuildDate>
         <atom:link href="https://drew.tech/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[GAM re-renders in React with react-gpt]]></title>
@@ -15,6 +15,16 @@
             <category><![CDATA[react]]></category>
             <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
             <pubDate>Sun, 28 Feb 2021 06:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Bootstrap 1000 Challenge]]></title>
+            <description><![CDATA[I'm starting a challenge to bootstrap my way to financial freedom in 1000 days of effort. Join me on Twitter.]]></description>
+            <link>/posts/bootstrap-1000</link>
+            <guid isPermaLink="true">/posts/bootstrap-1000</guid>
+            <category><![CDATA[building-products]]></category>
+            <category><![CDATA[bootstrap-1000]]></category>
+            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
+            <pubDate>Fri, 19 Nov 2021 06:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[A Developer's Guide - Building Great Software Incrementally with Analytics]]></title>
@@ -28,27 +38,6 @@
             <pubDate>Tue, 17 Sep 2019 05:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Bootstrap 1000 Challenge]]></title>
-            <description><![CDATA[I'm starting a challenge to bootstrap my way to financial freedom in 1000 days of effort. Join me on Twitter.]]></description>
-            <link>/posts/bootstrap-1000</link>
-            <guid isPermaLink="true">/posts/bootstrap-1000</guid>
-            <category><![CDATA[building-products]]></category>
-            <category><![CDATA[bootstrap-1000]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Fri, 19 Nov 2021 06:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Highlights from All-In ep. 41]]></title>
-            <description><![CDATA[This was one of my favorite All-In podcast episodes. There was a short 30-second clip from Chamath that sticks in my head.]]></description>
-            <link>/posts/chamath-on-luck</link>
-            <guid isPermaLink="true">/posts/chamath-on-luck</guid>
-            <category><![CDATA[podcasts]]></category>
-            <category><![CDATA[highlights]]></category>
-            <category><![CDATA[all-in]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Mon, 23 Aug 2021 05:00:00 GMT</pubDate>
-        </item>
-        <item>
             <title><![CDATA[Cron jobs in Next.js on Vercel]]></title>
             <description><![CDATA[Cron jobs are the first tool I reach for when needing to automate a simple part of a project. Here's how I set them up in a Next.js app hosted on Vercel.]]></description>
             <link>/posts/cron-jobs-in-nextjs-on-vercel</link>
@@ -60,14 +49,15 @@
             <pubDate>Sun, 05 Jan 2020 06:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Giving away my side project - GumroadWidgets.com]]></title>
-            <description><![CDATA[Looking for a new side project and like Gumroad? I've got the perfect project for you — and you can get started for free.]]></description>
-            <link>/posts/giving-away-my-gumroad-side-project</link>
-            <guid isPermaLink="true">/posts/giving-away-my-gumroad-side-project</guid>
-            <category><![CDATA[building-products]]></category>
-            <category><![CDATA[tech-decisions]]></category>
+            <title><![CDATA[Divjoy Review — Is it worth it?]]></title>
+            <description><![CDATA[Divjoy can help you generate a Next.js starter and get your side project finished faster.]]></description>
+            <link>/posts/divjoy-is-it-worth-it</link>
+            <guid isPermaLink="true">/posts/divjoy-is-it-worth-it</guid>
+            <category><![CDATA[next.js]]></category>
+            <category><![CDATA[react]]></category>
+            <category><![CDATA[side-projects]]></category>
             <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Mon, 08 Feb 2021 06:00:00 GMT</pubDate>
+            <pubDate>Tue, 09 Jun 2020 05:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Ecom Manifesto]]></title>
@@ -93,26 +83,14 @@
             <pubDate>Sat, 04 Jun 2022 05:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Divjoy Review — Is it worth it?]]></title>
-            <description><![CDATA[Divjoy can help you generate a Next.js starter and get your side project finished faster.]]></description>
-            <link>/posts/divjoy-is-it-worth-it</link>
-            <guid isPermaLink="true">/posts/divjoy-is-it-worth-it</guid>
-            <category><![CDATA[next.js]]></category>
-            <category><![CDATA[react]]></category>
-            <category><![CDATA[side-projects]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Tue, 09 Jun 2020 05:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[A Gravity Review]]></title>
-            <description><![CDATA[Longer review coming soon. TLDR; Gravity is great.]]></description>
-            <link>/posts/gravity</link>
-            <guid isPermaLink="true">/posts/gravity</guid>
+            <title><![CDATA[Giving away my side project - GumroadWidgets.com]]></title>
+            <description><![CDATA[Looking for a new side project and like Gumroad? I've got the perfect project for you — and you can get started for free.]]></description>
+            <link>/posts/giving-away-my-gumroad-side-project</link>
+            <guid isPermaLink="true">/posts/giving-away-my-gumroad-side-project</guid>
             <category><![CDATA[building-products]]></category>
-            <category><![CDATA[software-as-a-service]]></category>
             <category><![CDATA[tech-decisions]]></category>
             <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Thu, 23 Sep 2021 05:00:00 GMT</pubDate>
+            <pubDate>Mon, 08 Feb 2021 06:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Intro to Core Web Vitals]]></title>
@@ -126,47 +104,35 @@
             <pubDate>Mon, 06 Jul 2020 05:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Monitoring performance in Next.js]]></title>
-            <description><![CDATA[Next.js makes monitoring Core Web Vitals simple.]]></description>
-            <link>/posts/how-to-monitor-core-web-vitals-in-next-js</link>
-            <guid isPermaLink="true">/posts/how-to-monitor-core-web-vitals-in-next-js</guid>
-            <category><![CDATA[core-web-vitals]]></category>
-            <category><![CDATA[nextjs]]></category>
-            <category><![CDATA[performance]]></category>
+            <title><![CDATA[Highlights from All-In ep. 41]]></title>
+            <description><![CDATA[This was one of my favorite All-In podcast episodes. There was a short 30-second clip from Chamath that sticks in my head.]]></description>
+            <link>/posts/chamath-on-luck</link>
+            <guid isPermaLink="true">/posts/chamath-on-luck</guid>
+            <category><![CDATA[podcasts]]></category>
+            <category><![CDATA[highlights]]></category>
+            <category><![CDATA[all-in]]></category>
             <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Wed, 09 Sep 2020 05:00:00 GMT</pubDate>
+            <pubDate>Mon, 23 Aug 2021 05:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[I turned off my notifications]]></title>
-            <description><![CDATA[Maybe constant notifications aren't a good thing?]]></description>
-            <link>/posts/i-turned-off-my-notifications</link>
-            <guid isPermaLink="true">/posts/i-turned-off-my-notifications</guid>
-            <category><![CDATA[mental-health]]></category>
-            <category><![CDATA[writing]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Wed, 27 Nov 2019 06:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[How I pick my tech stack for side projects]]></title>
-            <description><![CDATA[Either pick new tech to learn or use tech you know to build fast.]]></description>
-            <link>/posts/how-i-pick-my-tech-stack-for-side-projects</link>
-            <guid isPermaLink="true">/posts/how-i-pick-my-tech-stack-for-side-projects</guid>
-            <category><![CDATA[next.js]]></category>
-            <category><![CDATA[react]]></category>
-            <category><![CDATA[side-projects]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Tue, 15 Oct 2019 05:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[I'm your new podcast co-host]]></title>
-            <description><![CDATA[Testing, testing, mic check two one two.]]></description>
-            <link>/posts/im-your-new-podcast-co-host</link>
-            <guid isPermaLink="true">/posts/im-your-new-podcast-co-host</guid>
-            <category><![CDATA[podcasting]]></category>
+            <title><![CDATA[A Gravity Review]]></title>
+            <description><![CDATA[Longer review coming soon. TLDR; Gravity is great.]]></description>
+            <link>/posts/gravity</link>
+            <guid isPermaLink="true">/posts/gravity</guid>
             <category><![CDATA[building-products]]></category>
             <category><![CDATA[software-as-a-service]]></category>
+            <category><![CDATA[tech-decisions]]></category>
             <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Sun, 18 Apr 2021 05:00:00 GMT</pubDate>
+            <pubDate>Thu, 23 Sep 2021 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[How to Send Email with Vercel Domain through GSuite]]></title>
+            <description><![CDATA[Setting up a new domain and configuring email is often the first step in starting a project.]]></description>
+            <link>/posts/how-to-send-email-with-vercel-domain-through-gsuite</link>
+            <guid isPermaLink="true">/posts/how-to-send-email-with-vercel-domain-through-gsuite</guid>
+            <category><![CDATA[vercel]]></category>
+            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
+            <pubDate>Wed, 20 Nov 2019 06:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Highlights from IndieHackers ep. 220 with Michael Seibel]]></title>
@@ -180,13 +146,25 @@
             <pubDate>Thu, 05 Aug 2021 05:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[My principles for blogging]]></title>
-            <description><![CDATA[Don't let tech decisions get in the way of blogging about tech.]]></description>
-            <link>/posts/my-principles-for-blogging</link>
-            <guid isPermaLink="true">/posts/my-principles-for-blogging</guid>
-            <category><![CDATA[writing]]></category>
+            <title><![CDATA[NextAuth and backend APIs]]></title>
+            <description><![CDATA[How to use NextAuth when you've got a separate backend API.]]></description>
+            <link>/posts/next-auth-and-apis</link>
+            <guid isPermaLink="true">/posts/next-auth-and-apis</guid>
+            <category><![CDATA[next.js]]></category>
+            <category><![CDATA[vercel]]></category>
             <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Wed, 22 Jan 2020 06:00:00 GMT</pubDate>
+            <pubDate>Fri, 26 Aug 2022 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monitoring performance in Next.js]]></title>
+            <description><![CDATA[Next.js makes monitoring Core Web Vitals simple.]]></description>
+            <link>/posts/how-to-monitor-core-web-vitals-in-next-js</link>
+            <guid isPermaLink="true">/posts/how-to-monitor-core-web-vitals-in-next-js</guid>
+            <category><![CDATA[core-web-vitals]]></category>
+            <category><![CDATA[nextjs]]></category>
+            <category><![CDATA[performance]]></category>
+            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
+            <pubDate>Wed, 09 Sep 2020 05:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Next.js Conf 2020 Highlights]]></title>
@@ -199,14 +177,15 @@
             <pubDate>Wed, 28 Oct 2020 05:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Your Next JS dream job]]></title>
-            <description><![CDATA[A Next.js job board.]]></description>
-            <link>/posts/next-js-jobs</link>
-            <guid isPermaLink="true">/posts/next-js-jobs</guid>
-            <category><![CDATA[next.js]]></category>
-            <category><![CDATA[nextjs-jobs]]></category>
+            <title><![CDATA[I'm your new podcast co-host]]></title>
+            <description><![CDATA[Testing, testing, mic check two one two.]]></description>
+            <link>/posts/im-your-new-podcast-co-host</link>
+            <guid isPermaLink="true">/posts/im-your-new-podcast-co-host</guid>
+            <category><![CDATA[podcasting]]></category>
+            <category><![CDATA[building-products]]></category>
+            <category><![CDATA[software-as-a-service]]></category>
             <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Wed, 18 Nov 2020 06:00:00 GMT</pubDate>
+            <pubDate>Sun, 18 Apr 2021 05:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Rock beats scissors, paper beats rock, and Notion beats markdown.]]></title>
@@ -219,13 +198,14 @@
             <pubDate>Mon, 14 Dec 2020 06:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Notes on Naval's Money]]></title>
-            <description><![CDATA[You probably know who Naval is. Here are my notes from his 3+ hour long podcast about his Tweet thread on "How to get rich without being lucky".]]></description>
-            <link>/posts/notes-on-naval&apos;s-money</link>
-            <guid isPermaLink="true">/posts/notes-on-naval&apos;s-money</guid>
-            <category><![CDATA[finance]]></category>
+            <title><![CDATA[Your Next JS dream job]]></title>
+            <description><![CDATA[A Next.js job board.]]></description>
+            <link>/posts/next-js-jobs</link>
+            <guid isPermaLink="true">/posts/next-js-jobs</guid>
+            <category><![CDATA[next.js]]></category>
+            <category><![CDATA[nextjs-jobs]]></category>
             <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Fri, 06 Sep 2019 05:00:00 GMT</pubDate>
+            <pubDate>Wed, 18 Nov 2020 06:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[HEY – let's talk about static sites]]></title>
@@ -238,6 +218,17 @@
             <pubDate>Sun, 21 Jun 2020 05:00:00 GMT</pubDate>
         </item>
         <item>
+            <title><![CDATA[How I pick my tech stack for side projects]]></title>
+            <description><![CDATA[Either pick new tech to learn or use tech you know to build fast.]]></description>
+            <link>/posts/how-i-pick-my-tech-stack-for-side-projects</link>
+            <guid isPermaLink="true">/posts/how-i-pick-my-tech-stack-for-side-projects</guid>
+            <category><![CDATA[next.js]]></category>
+            <category><![CDATA[react]]></category>
+            <category><![CDATA[side-projects]]></category>
+            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
+            <pubDate>Tue, 15 Oct 2019 05:00:00 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[On good tech debt]]></title>
             <description><![CDATA[There's good debt and bad debt. Here's a look at technical debt through a financial lens. Believe it or not, some technical debt is good.]]></description>
             <link>/posts/on-good-tech-debt</link>
@@ -246,6 +237,36 @@
             <category><![CDATA[tech-decisions]]></category>
             <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
             <pubDate>Mon, 17 May 2021 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[My principles for blogging]]></title>
+            <description><![CDATA[Don't let tech decisions get in the way of blogging about tech.]]></description>
+            <link>/posts/my-principles-for-blogging</link>
+            <guid isPermaLink="true">/posts/my-principles-for-blogging</guid>
+            <category><![CDATA[writing]]></category>
+            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
+            <pubDate>Wed, 22 Jan 2020 06:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Notes on Naval's Money]]></title>
+            <description><![CDATA[You probably know who Naval is. Here are my notes from his 3+ hour long podcast about his Tweet thread on "How to get rich without being lucky".]]></description>
+            <link>/posts/notes-on-naval&apos;s-money</link>
+            <guid isPermaLink="true">/posts/notes-on-naval&apos;s-money</guid>
+            <category><![CDATA[finance]]></category>
+            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
+            <pubDate>Fri, 06 Sep 2019 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[SaaS Starters — how to jump start your software as a service]]></title>
+            <description><![CDATA[Don't waste your weekend writing boilerplate. Ship meaningful code on your side projects with help from these great tools.]]></description>
+            <link>/posts/saas-starters-jump-starting-your-saas</link>
+            <guid isPermaLink="true">/posts/saas-starters-jump-starting-your-saas</guid>
+            <category><![CDATA[building-products]]></category>
+            <category><![CDATA[software-as-a-service]]></category>
+            <category><![CDATA[tech-decisions]]></category>
+            <category><![CDATA[next.js]]></category>
+            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
+            <pubDate>Sat, 30 Jan 2021 06:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Rome wasn't built in a day, and neither was my SaaS app]]></title>
@@ -257,18 +278,6 @@
             <category><![CDATA[software-as-a-service]]></category>
             <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
             <pubDate>Mon, 17 Aug 2020 05:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[PlanetScale on a plane]]></title>
-            <description><![CDATA[Airplane WiFi and SaaS database solutions don't get along well. Here's the fix.]]></description>
-            <link>/posts/planetscale-on-a-plane</link>
-            <guid isPermaLink="true">/posts/planetscale-on-a-plane</guid>
-            <category><![CDATA[building-products]]></category>
-            <category><![CDATA[planetscale]]></category>
-            <category><![CDATA[next.js]]></category>
-            <category><![CDATA[prisma]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Fri, 18 Mar 2022 05:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[SaaS due diligence - Instafeed API]]></title>
@@ -291,28 +300,6 @@
             <category><![CDATA[tech-decisions]]></category>
             <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
             <pubDate>Sat, 20 Nov 2021 06:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Sent my first Next.js Newsletter (here's what was in it)]]></title>
-            <description><![CDATA[My first Next.js newsletter went out this week. Here's what was in it.]]></description>
-            <link>/posts/sent-my-first-nextjs-newsletter-(here&apos;s-what-was-in-it)</link>
-            <guid isPermaLink="true">/posts/sent-my-first-nextjs-newsletter-(here&apos;s-what-was-in-it)</guid>
-            <category><![CDATA[next.js]]></category>
-            <category><![CDATA[writing]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Fri, 19 Jun 2020 05:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[SaaS Starters — how to jump start your software as a service]]></title>
-            <description><![CDATA[Don't waste your weekend writing boilerplate. Ship meaningful code on your side projects with help from these great tools.]]></description>
-            <link>/posts/saas-starters-jump-starting-your-saas</link>
-            <guid isPermaLink="true">/posts/saas-starters-jump-starting-your-saas</guid>
-            <category><![CDATA[building-products]]></category>
-            <category><![CDATA[software-as-a-service]]></category>
-            <category><![CDATA[tech-decisions]]></category>
-            <category><![CDATA[next.js]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Sat, 30 Jan 2021 06:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Should I use Google Analytics or one of these new privacy-friendly options?]]></title>
@@ -348,25 +335,16 @@
             <pubDate>Sun, 28 Nov 2021 06:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[Multiple repos on the same domain in Vercel]]></title>
-            <description><![CDATA[How to do micro-frontends on Vercel with a single domain.]]></description>
-            <link>/posts/vercel-multiple-repos-same-domain</link>
-            <guid isPermaLink="true">/posts/vercel-multiple-repos-same-domain</guid>
+            <title><![CDATA[PlanetScale on a plane]]></title>
+            <description><![CDATA[Airplane WiFi and SaaS database solutions don't get along well. Here's the fix.]]></description>
+            <link>/posts/planetscale-on-a-plane</link>
+            <guid isPermaLink="true">/posts/planetscale-on-a-plane</guid>
+            <category><![CDATA[building-products]]></category>
+            <category><![CDATA[planetscale]]></category>
             <category><![CDATA[next.js]]></category>
-            <category><![CDATA[vercel]]></category>
+            <category><![CDATA[prisma]]></category>
             <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Tue, 15 Dec 2020 06:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[▲Vercel]]></title>
-            <description><![CDATA[I've been a big fan of Vercel for years now, and I'm excited to announce I'm joining the team this month.]]></description>
-            <link>/posts/vercel</link>
-            <guid isPermaLink="true">/posts/vercel</guid>
-            <category><![CDATA[vercel]]></category>
-            <category><![CDATA[life]]></category>
-            <category><![CDATA[next.js]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Tue, 06 Jul 2021 05:00:00 GMT</pubDate>
+            <pubDate>Fri, 18 Mar 2022 05:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Tech decisions and developer guilt]]></title>
@@ -380,16 +358,35 @@
             <pubDate>Fri, 05 Jul 2019 05:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[The ripple of Web Vitals]]></title>
-            <description><![CDATA[A paradigm shift is here for performance monitoring. Learn about how Vitals will make collaboration, analytics, and the web better.]]></description>
-            <link>/posts/the-ripple-of-web-vitals</link>
-            <guid isPermaLink="true">/posts/the-ripple-of-web-vitals</guid>
-            <category><![CDATA[core-web-vitals]]></category>
-            <category><![CDATA[fit-vitals]]></category>
-            <category><![CDATA[building-products]]></category>
-            <category><![CDATA[software-as-a-service]]></category>
+            <title><![CDATA[Multiple repos on the same domain in Vercel]]></title>
+            <description><![CDATA[How to do micro-frontends on Vercel with a single domain.]]></description>
+            <link>/posts/vercel-multiple-repos-same-domain</link>
+            <guid isPermaLink="true">/posts/vercel-multiple-repos-same-domain</guid>
+            <category><![CDATA[next.js]]></category>
+            <category><![CDATA[vercel]]></category>
             <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Tue, 29 Dec 2020 06:00:00 GMT</pubDate>
+            <pubDate>Tue, 15 Dec 2020 06:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[I turned off my notifications]]></title>
+            <description><![CDATA[Maybe constant notifications aren't a good thing?]]></description>
+            <link>/posts/i-turned-off-my-notifications</link>
+            <guid isPermaLink="true">/posts/i-turned-off-my-notifications</guid>
+            <category><![CDATA[mental-health]]></category>
+            <category><![CDATA[writing]]></category>
+            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
+            <pubDate>Wed, 27 Nov 2019 06:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[▲Vercel]]></title>
+            <description><![CDATA[I've been a big fan of Vercel for years now, and I'm excited to announce I'm joining the team this month.]]></description>
+            <link>/posts/vercel</link>
+            <guid isPermaLink="true">/posts/vercel</guid>
+            <category><![CDATA[vercel]]></category>
+            <category><![CDATA[life]]></category>
+            <category><![CDATA[next.js]]></category>
+            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
+            <pubDate>Tue, 06 Jul 2021 05:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[What happened to getInitialProps?]]></title>
@@ -403,13 +400,14 @@
             <pubDate>Tue, 30 Nov 2021 06:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[What not to work on]]></title>
-            <description><![CDATA[Avoiding what you shouldn't work on is easier than knowing what to work on, but it's a start.]]></description>
-            <link>/posts/what-not-to-work-on</link>
-            <guid isPermaLink="true">/posts/what-not-to-work-on</guid>
-            <category><![CDATA[software-as-a-service]]></category>
+            <title><![CDATA[Sent my first Next.js Newsletter (here's what was in it)]]></title>
+            <description><![CDATA[My first Next.js newsletter went out this week. Here's what was in it.]]></description>
+            <link>/posts/sent-my-first-nextjs-newsletter-(here&apos;s-what-was-in-it)</link>
+            <guid isPermaLink="true">/posts/sent-my-first-nextjs-newsletter-(here&apos;s-what-was-in-it)</guid>
+            <category><![CDATA[next.js]]></category>
+            <category><![CDATA[writing]]></category>
             <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Sat, 01 Feb 2020 06:00:00 GMT</pubDate>
+            <pubDate>Fri, 19 Jun 2020 05:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Why I didn't tell you]]></title>
@@ -422,15 +420,6 @@
             <pubDate>Tue, 16 Jul 2019 05:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[#098 – How to Make $2.5MM as a Solo Founder by Teaching What You Love with Adam Wathan — Indie Hackers]]></title>
-            <description><![CDATA[Courtland Allen interviews the ambitious indie hackers who are turning their ideas and side projects into profitable online businesses. Explore the latest strategies and tools founders are using to capitalize on new opportunities, escape the 9-to-5 grind, and create their own personal revenue-generating machines. The future is indie!]]></description>
-            <link>/podcasts/098--How-to-Make-2-5MM-as-a-Solo-Founder-by-Teaching-What-You-Love-with-Adam-Wathan</link>
-            <guid isPermaLink="true">/podcasts/098--How-to-Make-2-5MM-as-a-Solo-Founder-by-Teaching-What-You-Love-with-Adam-Wathan</guid>
-            <category><![CDATA[podcast]]></category>
-            <category><![CDATA[Indie-Hackers]]></category>
-            <pubDate>Sun, 16 Jan 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
             <title><![CDATA[#105 Seth Godin: Failing On Our Way To Mastery — The Knowledge Project with Shane Parrish]]></title>
             <description><![CDATA[Seth Godin is the author of 20 bestselling books, founder of altMBA, the Akimbo podcast and runs one of the most popular blogs in the world. Seth and Shane chat about creative work, fear, shame, trusting yourself, what it means to be a professional,...]]></description>
             <link>/podcasts/105-Seth-Godin:-Failing-On-Our-Way-To-Mastery</link>
@@ -438,6 +427,24 @@
             <category><![CDATA[podcast]]></category>
             <category><![CDATA[The-Knowledge-Project-with-Shane-Parrish]]></category>
             <pubDate>Mon, 10 Jan 2022 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[What not to work on]]></title>
+            <description><![CDATA[Avoiding what you shouldn't work on is easier than knowing what to work on, but it's a start.]]></description>
+            <link>/posts/what-not-to-work-on</link>
+            <guid isPermaLink="true">/posts/what-not-to-work-on</guid>
+            <category><![CDATA[software-as-a-service]]></category>
+            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
+            <pubDate>Sat, 01 Feb 2020 06:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[#143 Andrew Wilkinson: Entrepreneurial Insights — The Knowledge Project with Shane Parrish]]></title>
+            <description><![CDATA[Canadian businessman and billionaire investor Andrew Wilkinson has made a successful career out of channeling his entrepreneurial spirit, but he knows that sometimes that energy can be a double-edged sword. On this episode, Wilkinson goes in-depth on...]]></description>
+            <link>/podcasts/143-Andrew-Wilkinson-Entrepreneurial-Insights</link>
+            <guid isPermaLink="true">/podcasts/143-Andrew-Wilkinson-Entrepreneurial-Insights</guid>
+            <category><![CDATA[podcast]]></category>
+            <category><![CDATA[The-Knowledge-Project-with-Shane-Parrish]]></category>
+            <pubDate>Tue, 09 Aug 2022 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Why Next.js?]]></title>
@@ -450,13 +457,13 @@
             <pubDate>Sun, 28 Jun 2020 05:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[#143 Andrew Wilkinson: Entrepreneurial Insights — The Knowledge Project with Shane Parrish]]></title>
-            <description><![CDATA[Canadian businessman and billionaire investor Andrew Wilkinson has made a successful career out of channeling his entrepreneurial spirit, but he knows that sometimes that energy can be a double-edged sword. On this episode, Wilkinson goes in-depth on...]]></description>
-            <link>/podcasts/143-Andrew-Wilkinson-Entrepreneurial-Insights</link>
-            <guid isPermaLink="true">/podcasts/143-Andrew-Wilkinson-Entrepreneurial-Insights</guid>
+            <title><![CDATA[#098 – How to Make $2.5MM as a Solo Founder by Teaching What You Love with Adam Wathan — Indie Hackers]]></title>
+            <description><![CDATA[Courtland Allen interviews the ambitious indie hackers who are turning their ideas and side projects into profitable online businesses. Explore the latest strategies and tools founders are using to capitalize on new opportunities, escape the 9-to-5 grind, and create their own personal revenue-generating machines. The future is indie!]]></description>
+            <link>/podcasts/098--How-to-Make-2-5MM-as-a-Solo-Founder-by-Teaching-What-You-Love-with-Adam-Wathan</link>
+            <guid isPermaLink="true">/podcasts/098--How-to-Make-2-5MM-as-a-Solo-Founder-by-Teaching-What-You-Love-with-Adam-Wathan</guid>
             <category><![CDATA[podcast]]></category>
-            <category><![CDATA[The-Knowledge-Project-with-Shane-Parrish]]></category>
-            <pubDate>Tue, 09 Aug 2022 00:00:00 GMT</pubDate>
+            <category><![CDATA[Indie-Hackers]]></category>
+            <pubDate>Sun, 16 Jan 2022 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[20 Product: iPhone Creator, Tony Fadell on Marketing Lessons Learned from Steve Jobs, What is Truly Great Product Marketing, How The Best Product Teams Do Post — Mortems and Product Reviews & Is Product Art or Science, Data or Gut?]]></title>
@@ -468,15 +475,6 @@
             <pubDate>Wed, 11 May 2022 00:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[20VC: Matt Mullenweg on Relationships to Risk, Money and Insecurity as a Leader | Lessons from a Parent's Passing and the Pre — Grieving Process | What is High Performance in Leadership Today?]]></title>
-            <description><![CDATA[is the Founder of Automattic, the force behind WordPress, Tumblr, WooCommerce, Jetpack, Longreads, Simplenote, Pocket Casts, and more. What started as a simple open-source blogging platform, Matt has turned into one of the most significant internet...]]></description>
-            <link>/podcasts/20VC-Matt-Mullenweg-on-Relationships-to-Risk--Money-and-Insecurity-as-a-Leader---Lessons-from-a-Parents-Passing-and-the-Pre</link>
-            <guid isPermaLink="true">/podcasts/20VC-Matt-Mullenweg-on-Relationships-to-Risk--Money-and-Insecurity-as-a-Leader---Lessons-from-a-Parents-Passing-and-the-Pre</guid>
-            <category><![CDATA[podcast]]></category>
-            <category><![CDATA[Grieving-Process-|-What-is-High-Performance-in-Leadership-Today?]]></category>
-            <pubDate>Tue, 09 Aug 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
             <title><![CDATA[#241 – Money, Happiness, and Productivity as a Solo Founder with Pieter Levels (Part 1 of 2) — Indie Hackers]]></title>
             <description><![CDATA[Today I'm catching up with Pieter Levels (@levelsio) after 4 years. The world has changed dramatically since we last spoke. Attitudes toward remote work and global travel are all completely different now. We'll talk about what headwinds and tailwinds thes]]></description>
             <link>/podcasts/241--Money--Happiness--and-Productivity-as-a-Solo-Founder-with-Pieter-Levels--Part-1-of-2-</link>
@@ -486,39 +484,31 @@
             <pubDate>Fri, 21 Jan 2022 00:00:00 GMT</pubDate>
         </item>
         <item>
+            <title><![CDATA[20VC: Matt Mullenweg on Relationships to Risk, Money and Insecurity as a Leader | Lessons from a Parent's Passing and the Pre — Grieving Process | What is High Performance in Leadership Today?]]></title>
+            <description><![CDATA[is the Founder of Automattic, the force behind WordPress, Tumblr, WooCommerce, Jetpack, Longreads, Simplenote, Pocket Casts, and more. What started as a simple open-source blogging platform, Matt has turned into one of the most significant internet...]]></description>
+            <link>/podcasts/20VC-Matt-Mullenweg-on-Relationships-to-Risk--Money-and-Insecurity-as-a-Leader---Lessons-from-a-Parents-Passing-and-the-Pre</link>
+            <guid isPermaLink="true">/podcasts/20VC-Matt-Mullenweg-on-Relationships-to-Risk--Money-and-Insecurity-as-a-Leader---Lessons-from-a-Parents-Passing-and-the-Pre</guid>
+            <category><![CDATA[podcast]]></category>
+            <category><![CDATA[Grieving-Process-|-What-is-High-Performance-in-Leadership-Today?]]></category>
+            <pubDate>Tue, 09 Aug 2022 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[20 Sales: Three Reasons Why Sales People Fail | The Two Things That Matter When Hiring Sales Leaders | Why Revenue, Discounting and Price Do Not Matter in the Early Days with Jordan Van Horn, Revenue Leader @ Monte Carlo — The Twenty Minute VC (20VC): Venture Capital | Startup Funding | The Pitch]]></title>
+            <description><![CDATA[is a Revenue Leader @ , the world's first data observability company. Prior to this role, Jordan spent an incredible 4 years in sales at Segment including as VP of Sales leading a sales team of 50+ Account Executives and leading the first...]]></description>
+            <link>/podcasts/20-Sales-Three-Reasons-Why-Sales-People-Fail---The-Two-Things-That-Matter-When-Hiring-Sales-Leaders---Why-Revenue--Discounting-and-Price-Do-Not-Matter-in-the-Early-Days-with-Jordan-Van-Horn--Revenue-Leader---Monte-Carlo</link>
+            <guid isPermaLink="true">/podcasts/20-Sales-Three-Reasons-Why-Sales-People-Fail---The-Two-Things-That-Matter-When-Hiring-Sales-Leaders---Why-Revenue--Discounting-and-Price-Do-Not-Matter-in-the-Early-Days-with-Jordan-Van-Horn--Revenue-Leader---Monte-Carlo</guid>
+            <category><![CDATA[podcast]]></category>
+            <category><![CDATA[The-Twenty-Minute-VC-(20VC):-Venture-Capital-|-Startup-Funding-|-The-Pitch]]></category>
+            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
+            <pubDate>Sun, 21 Aug 2022 00:00:00 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[#290 — What Went Wrong? — Making Sense with Sam Harris]]></title>
             <description><![CDATA[A Conversation with Marc Andreessen]]></description>
             <link>/podcasts/290---What-Went-Wrong-</link>
             <guid isPermaLink="true">/podcasts/290---What-Went-Wrong-</guid>
             <category><![CDATA[podcast]]></category>
             <category><![CDATA[Making-Sense-with-Sam-Harris]]></category>
-            <pubDate>Tue, 09 Aug 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#606: Balaji S. Srinivasan — 5 — 10]]></title>
-            <description><![CDATA[Balaji S. Srinivasan — The Network State and How to Start a New Country | Brought to you by Eight Sleep’s Pod Pro Cover sleeping solution for dynamic cooling and heating, Athletic Greens all-in-one nutritional supplement, and Shopify global commerce platform providing tools to start, grow, market, and manage a retail business. More on all three below.]]></description>
-            <link>/podcasts/606-Balaji-S--Srinivasan---5</link>
-            <guid isPermaLink="true">/podcasts/606-Balaji-S--Srinivasan---5</guid>
-            <category><![CDATA[podcast]]></category>
-            <category><![CDATA[10]]></category>
-            <pubDate>Tue, 09 Aug 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[#63 with Andrew Wilkinson — Buying cash]]></title>
-            <description><![CDATA[Sam (@thesamparr) and Shaan (@shaanvp) are joined today by Andrew Wilkinson (@awilkinson) who is the co-founder of Tiny (tinycapital.com) - the internet version of Berkshire Hathaway. Shaan also launched a newsletter version of the podcast, subscribe t...]]></description>
-            <link>/podcasts/63-with-Andrew-Wilkinson</link>
-            <guid isPermaLink="true">/podcasts/63-with-Andrew-Wilkinson</guid>
-            <category><![CDATA[podcast]]></category>
-            <category><![CDATA[Buying-cash]]></category>
-            <pubDate>Sun, 16 Jan 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Billion Dollar Business Philosophies With Hubspot Co — Founder Dharmesh Shah]]></title>
-            <description><![CDATA[Sam Parr (@TheSamParr) and Shaan Puri (@ShaanVP) talk to Co-Founder & CTO of HubSpot, Dharmesh Shah (@dharmesh), about why a bad economy is a good time to start a business, creating an alternative to Wordle, and the trillion dollar Venn diagram of success.]]></description>
-            <link>/podcasts/Billion-Dollar-Business-Philosophies-With-Hubspot-Co</link>
-            <guid isPermaLink="true">/podcasts/Billion-Dollar-Business-Philosophies-With-Hubspot-Co</guid>
-            <category><![CDATA[podcast]]></category>
-            <category><![CDATA[Founder-Dharmesh-Shah]]></category>
             <pubDate>Tue, 09 Aug 2022 00:00:00 GMT</pubDate>
         </item>
         <item>
@@ -531,6 +521,24 @@
             <pubDate>Tue, 09 Aug 2022 00:00:00 GMT</pubDate>
         </item>
         <item>
+            <title><![CDATA[#63 with Andrew Wilkinson — Buying cash]]></title>
+            <description><![CDATA[Sam (@thesamparr) and Shaan (@shaanvp) are joined today by Andrew Wilkinson (@awilkinson) who is the co-founder of Tiny (tinycapital.com) - the internet version of Berkshire Hathaway. Shaan also launched a newsletter version of the podcast, subscribe t...]]></description>
+            <link>/podcasts/63-with-Andrew-Wilkinson</link>
+            <guid isPermaLink="true">/podcasts/63-with-Andrew-Wilkinson</guid>
+            <category><![CDATA[podcast]]></category>
+            <category><![CDATA[Buying-cash]]></category>
+            <pubDate>Sun, 16 Jan 2022 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[#606: Balaji S. Srinivasan — 5 — 10]]></title>
+            <description><![CDATA[Balaji S. Srinivasan — The Network State and How to Start a New Country | Brought to you by Eight Sleep’s Pod Pro Cover sleeping solution for dynamic cooling and heating, Athletic Greens all-in-one nutritional supplement, and Shopify global commerce platform providing tools to start, grow, market, and manage a retail business. More on all three below.]]></description>
+            <link>/podcasts/606-Balaji-S--Srinivasan---5</link>
+            <guid isPermaLink="true">/podcasts/606-Balaji-S--Srinivasan---5</guid>
+            <category><![CDATA[podcast]]></category>
+            <category><![CDATA[10]]></category>
+            <pubDate>Tue, 09 Aug 2022 00:00:00 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[E66: $FB's major pullback, Rogan/Spotify mess, Xi/Putin meetup and understanding supply chain issues with Bestie Guestie Ryan Petersen (Flexport CEO) — All]]></title>
             <description><![CDATA[0:00 Sacks' shining moment 2:34 Bestie Guestie Ryan Petersen joins to break down the supply chain situation: core issues, solutions, things to look out for 45:49 $FB's major pullback: causes, headwinds, and why going all-in on the Metaverse might have...]]></description>
             <link>/podcasts/E66-FBs-major-pullback--Rogan-Spotify-mess--Xi-Putin-meetup-and-understanding-supply-chain-issues-with-Bestie-Guestie-Ryan-Petersen--Flexport-CEO-</link>
@@ -538,33 +546,6 @@
             <category><![CDATA[podcast]]></category>
             <category><![CDATA[All]]></category>
             <pubDate>Sun, 06 Feb 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Finish Things [Zach Braff, Donald Faison] — The Swyx Mixtape]]></title>
-            <description><![CDATA[The Scrubs stars give advice to young creatives.]]></description>
-            <link>/podcasts/Finish-Things-[Zach-Braff,-Donald-Faison]</link>
-            <guid isPermaLink="true">/podcasts/Finish-Things-[Zach-Braff,-Donald-Faison]</guid>
-            <category><![CDATA[podcast]]></category>
-            <category><![CDATA[The-Swyx-Mixtape]]></category>
-            <pubDate>Mon, 10 Jan 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Guillermo Rauch, Founder & CEO of Vercel, on Using Open — Source to Make The Web Faster]]></title>
-            <description><![CDATA[Guillermo Rauch is the Founder and CEO of Vercel, a cloud platform provider used to develop, preview, and ship frontend websites and applications using their Next.js open-source framework. Original...]]></description>
-            <link>/podcasts/Guillermo-Rauch--Founder---CEO-of-Vercel--on-Using-Open</link>
-            <guid isPermaLink="true">/podcasts/Guillermo-Rauch--Founder---CEO-of-Vercel--on-Using-Open</guid>
-            <category><![CDATA[podcast]]></category>
-            <category><![CDATA[Source-to-Make-The-Web-Faster]]></category>
-            <pubDate>Thu, 02 Jun 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[It's your turn — Akimbo: A Podcast from Seth Godin]]></title>
-            <description><![CDATA[The power of 'no place to hide']]></description>
-            <link>/podcasts/Its-your-turn</link>
-            <guid isPermaLink="true">/podcasts/Its-your-turn</guid>
-            <category><![CDATA[podcast]]></category>
-            <category><![CDATA[Akimbo:-A-Podcast-from-Seth-Godin]]></category>
-            <pubDate>Fri, 14 Jan 2022 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[American Dynamism (with Katherine Boyle) — Acquired]]></title>
@@ -576,61 +557,22 @@
             <pubDate>Tue, 09 Aug 2022 00:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[One Question Friday:  Where Did You Succeed Where Others Did Not? — My First Million]]></title>
-            <description><![CDATA[Shaan Puri (@ShaanVP) answers one listener's question:  What did you do differently that allowed you to succeed, that you think other people who had similar circumstances to you, did not?  Where did you succeed where they did not?]]></description>
-            <link>/podcasts/One-Question-Friday--Where-Did-You-Succeed-Where-Others-Did-Not-</link>
-            <guid isPermaLink="true">/podcasts/One-Question-Friday--Where-Did-You-Succeed-Where-Others-Did-Not-</guid>
+            <title><![CDATA[Finish Things [Zach Braff, Donald Faison] — The Swyx Mixtape]]></title>
+            <description><![CDATA[The Scrubs stars give advice to young creatives.]]></description>
+            <link>/podcasts/Finish-Things-[Zach-Braff,-Donald-Faison]</link>
+            <guid isPermaLink="true">/podcasts/Finish-Things-[Zach-Braff,-Donald-Faison]</guid>
             <category><![CDATA[podcast]]></category>
-            <category><![CDATA[My-First-Million]]></category>
+            <category><![CDATA[The-Swyx-Mixtape]]></category>
+            <pubDate>Mon, 10 Jan 2022 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Billion Dollar Business Philosophies With Hubspot Co — Founder Dharmesh Shah]]></title>
+            <description><![CDATA[Sam Parr (@TheSamParr) and Shaan Puri (@ShaanVP) talk to Co-Founder & CTO of HubSpot, Dharmesh Shah (@dharmesh), about why a bad economy is a good time to start a business, creating an alternative to Wordle, and the trillion dollar Venn diagram of success.]]></description>
+            <link>/podcasts/Billion-Dollar-Business-Philosophies-With-Hubspot-Co</link>
+            <guid isPermaLink="true">/podcasts/Billion-Dollar-Business-Philosophies-With-Hubspot-Co</guid>
+            <category><![CDATA[podcast]]></category>
+            <category><![CDATA[Founder-Dharmesh-Shah]]></category>
             <pubDate>Tue, 09 Aug 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Patrick Campbell:  The Billion $ Quilting Industry And Using Spy Secrets To Gain A Competitive Edge — My First Million]]></title>
-            <description><![CDATA[Shaan Puri (@ShaanVP) and Sam Parr (@TheSamParr) talk to Founder & CEO at ProfitWell, Patrick Campbell (@Patticus), about the billion dollar quilting industry, using spy secrets in business, buying cheap debt and a hostile takeover of a person.]]></description>
-            <link>/podcasts/Patrick-Campbell--The-Billion--Quilting-Industry-And-Using-Spy-Secrets-To-Gain-A-Competitive-Edge</link>
-            <guid isPermaLink="true">/podcasts/Patrick-Campbell--The-Billion--Quilting-Industry-And-Using-Spy-Secrets-To-Gain-A-Competitive-Edge</guid>
-            <category><![CDATA[podcast]]></category>
-            <category><![CDATA[My-First-Million]]></category>
-            <pubDate>Tue, 09 Aug 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Pieter Levels:  Making $2.7M A Year With No Employees — My First Million]]></title>
-            <description><![CDATA[Shaan Puri (@ShaanVP) and Sam Parr (@TheSamParr) talk to Pieter Levels (@levelsio) about being a solopreneur who makes nearly $3M a year with no employees while living a nomadic lifestyle.]]></description>
-            <link>/podcasts/Pieter-Levels--Making-2-7M-A-Year-With-No-Employees</link>
-            <guid isPermaLink="true">/podcasts/Pieter-Levels--Making-2-7M-A-Year-With-No-Employees</guid>
-            <category><![CDATA[podcast]]></category>
-            <category><![CDATA[My-First-Million]]></category>
-            <pubDate>Tue, 09 Aug 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Saas Companies that Anyone Can Start with Rob Walling — My First Million]]></title>
-            <description><![CDATA[Sam Parr (@theSamParr) and Ben Wilson (@BenWilsonTweets) discuss Sam's article defending Theranos, airport houses, and conducting an end of year family review. They are then joined by Rob Walling (@RobWalling) who talks about great SaaS business that anyone could start.]]></description>
-            <link>/podcasts/Saas-Companies-that-Anyone-Can-Start-with-Rob-Walling</link>
-            <guid isPermaLink="true">/podcasts/Saas-Companies-that-Anyone-Can-Start-with-Rob-Walling</guid>
-            <category><![CDATA[podcast]]></category>
-            <category><![CDATA[My-First-Million]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Tue, 11 Jan 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[43/1000 — more (Tailwind)UI work]]></title>
-            <description><![CDATA[Since Bedrock isn't styled, I need to do plenty of styling work.]]></description>
-            <link>/logs/2022-02-10-more-ui-work</link>
-            <guid isPermaLink="true">/logs/2022-02-10-more-ui-work</guid>
-            <category><![CDATA[log]]></category>
-            <category><![CDATA[script-cron]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Thu, 10 Feb 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[42/1000 — work log setup]]></title>
-            <description><![CDATA[My first work log.]]></description>
-            <link>/logs/2022-02-09-hello-world</link>
-            <guid isPermaLink="true">/logs/2022-02-09-hello-world</guid>
-            <category><![CDATA[log]]></category>
-            <category><![CDATA[script-cron]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Wed, 09 Feb 2022 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[How to Get Rich: Every Episode — Naval]]></title>
@@ -642,43 +584,25 @@
             <pubDate>Tue, 11 Jan 2022 00:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[44/1000 — Components and Tailwind]]></title>
-            <description><![CDATA[One of the most critical steps for building with TailwindCSS is to lean into component-driven development.]]></description>
-            <link>/logs/2022-02-21-components-and-tailwind</link>
-            <guid isPermaLink="true">/logs/2022-02-21-components-and-tailwind</guid>
-            <category><![CDATA[log]]></category>
-            <category><![CDATA[script-cron]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Mon, 21 Feb 2022 00:00:00 GMT</pubDate>
+            <title><![CDATA[It's your turn — Akimbo: A Podcast from Seth Godin]]></title>
+            <description><![CDATA[The power of 'no place to hide']]></description>
+            <link>/podcasts/Its-your-turn</link>
+            <guid isPermaLink="true">/podcasts/Its-your-turn</guid>
+            <category><![CDATA[podcast]]></category>
+            <category><![CDATA[Akimbo:-A-Podcast-from-Seth-Godin]]></category>
+            <pubDate>Fri, 14 Jan 2022 00:00:00 GMT</pubDate>
         </item>
         <item>
-            <title><![CDATA[75/1000 — Long time no log]]></title>
-            <description><![CDATA[It's been a long time since I've done an update — let's catch you up.]]></description>
-            <link>/logs/2022-05-09-long-time-no-log</link>
-            <guid isPermaLink="true">/logs/2022-05-09-long-time-no-log</guid>
-            <category><![CDATA[log]]></category>
-            <category><![CDATA[script-cron]]></category>
+            <title><![CDATA[The ripple of Web Vitals]]></title>
+            <description><![CDATA[A paradigm shift is here for performance monitoring. Learn about how Vitals will make collaboration, analytics, and the web better.]]></description>
+            <link>/posts/the-ripple-of-web-vitals</link>
+            <guid isPermaLink="true">/posts/the-ripple-of-web-vitals</guid>
+            <category><![CDATA[core-web-vitals]]></category>
+            <category><![CDATA[fit-vitals]]></category>
+            <category><![CDATA[building-products]]></category>
+            <category><![CDATA[software-as-a-service]]></category>
             <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Mon, 09 May 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[45 and 46/1000 — Cron execution]]></title>
-            <description><![CDATA[Two updates in one.]]></description>
-            <link>/logs/2022-02-24-schedules</link>
-            <guid isPermaLink="true">/logs/2022-02-24-schedules</guid>
-            <category><![CDATA[log]]></category>
-            <category><![CDATA[script-cron]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Thu, 24 Feb 2022 00:00:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[How to Send Email with Vercel Domain through GSuite]]></title>
-            <description><![CDATA[Setting up a new domain and configuring email is often the first step in starting a project.]]></description>
-            <link>/posts/how-to-send-email-with-vercel-domain-through-gsuite</link>
-            <guid isPermaLink="true">/posts/how-to-send-email-with-vercel-domain-through-gsuite</guid>
-            <category><![CDATA[vercel]]></category>
-            <dc:creator><![CDATA[Drew Bredvick]]></dc:creator>
-            <pubDate>Wed, 20 Nov 2019 06:00:00 GMT</pubDate>
+            <pubDate>Tue, 29 Dec 2020 06:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>

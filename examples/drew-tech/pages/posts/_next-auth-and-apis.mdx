@@ -1,0 +1,51 @@
+---
+author: Drew Bredvick
+title: NextAuth and backend APIs
+tag: next.js, vercel
+date: 2022/08/26
+description: How to use NextAuth when you've got a separate backend API.
+---
+
+import OGImage from '../../components/OGImage'
+import Image from 'next/future/image'
+import NextAuthLogo from '../../public/images/next-auth.png'
+import TweetEmbed from 'react-tweet-embed'
+
+<OGImage />
+
+## So you're going headless
+
+If you're accustomed to monolithic web frameworks like ASP.NET, Ruby on Rails, or Django there's a good chance authentication and authorization were baked into your previous tech stack.
+
+This is one of the strengths of these types of frameworks: they give you a lot included out-of-the-box, auth included.
+
+So if we're breaking up the monolith, what's next?
+
+How do we solve for authentication in our Next.js app?
+
+## NextAuth
+
+Enter NextAuth.js — the fastest way to get up and running with authentication in a Next.js application. I've used NextAuth on several projects now and have been amazed at how great it works.
+
+Tons of companies small and large are trusting NextAuth for their authentication needs in Next.js.
+
+<div className="flex items-center justify-center">
+    <Image quality={100} src={NextAuthLogo}/>
+</div>
+
+NextAuth is one of the few Next.js libraries that offers frontend and backend features in the same package. This is something I've been extremely bullish on.
+
+<TweetEmbed id="1371600220853833733" />
+
+
+## How does NextAuth work?
+
+## What about my backend APIs?
+
+### FAQ
+
+### Is NextAuth the identity provider?
+
+### Do I have to validate tokens on the backend or can I only do it in my Next.js app?
+
+### Does NextAuth support XYZ provider?
