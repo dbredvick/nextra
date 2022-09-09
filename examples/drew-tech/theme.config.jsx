@@ -16,6 +16,8 @@ const config = {
       `}</style>
     </small>
   ),
+  unstable_defaultShowCopyCode: true,
+  unstable_readingTime: true,
   titleSuffix: ' — drew.tech',
   cusdis: {
     appId: 'cf5820c3-3998-40a8-a8dc-c5c769022fee'
